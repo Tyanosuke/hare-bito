@@ -1,0 +1,857 @@
+<head>
+  <link rel="stylesheet" href="./style.css" type="text/css" />
+</head>
+
+<body>
+  <!-- クラス -->
+  <section id="class">
+    <div class="sticky">
+      <h2>クラス</h2>
+    </div>
+
+    <div class="contents">
+      <p>
+        　<span class="t-bold">クラス</span>とは、ハレビトにおける戦いの流派です。<br />
+        　ハレビトは、<span class="t-bold">プライマリクラス</span>と<span class="t-bold">セカンダリクラス</span>の２つのクラスを持っています。<br />
+        　それぞれ、<a href="#ability">【能力】</a>と<a href="#arts">【アーツ】</a>に影響します。詳しい説明は各項目内でおこないますので、それを見ながら選んでください。
+      </p>
+
+      <p class="rule_Text">　【クラス】の中から、【プライマリクラス】と【セカンダリクラス】を１つずつ選択します。両方とも同じ【クラス】を選択しても構いません。</p>
+
+      <p>　各クラスの簡単な説明をします。</p>
+
+      <!-- カンナギ -->
+      <section id="class-kannagi">
+        <div class="">
+          <h3>カンナギ</h3>
+        </div>
+
+        <div class="contents">
+          <p>
+            　ハレビトの中でも、ハレの力の扱いに最も長けている者たちです。<br />
+            　能力としては《心》が得意です。味方を強化したり、敵を弱体化させるアーツを持ちます。
+          </p>
+        </div>
+      </section>
+
+      <!-- カラクリ -->
+      <section id="class-kannagi">
+        <div class="">
+          <h3>カラクリ</h3>
+        </div>
+
+        <div class="contents">
+          <p>
+            　様々な道具を使いこなす、技術者たちです。<br />
+            　能力としては《技》が得意です。特定の条件で強化される攻撃や、使いやすい常時発動アーツを持ちます。
+          </p>
+        </div>
+      </section>
+
+      <!-- アラゴト -->
+      <section id="class-kannagi">
+        <div class="">
+          <h3>アラゴト</h3>
+        </div>
+
+        <div class="contents">
+          <p>
+            　戦うこと自体を生業とする者たちです。<br />
+            　能力としては《体》が得意です。高いダメージを叩き出すためのアーツを持ちます。
+          </p>
+        </div>
+      </section>
+
+      <!-- モリビト -->
+      <section id="class-kannagi">
+        <div class="">
+          <h3>モリビト</h3>
+        </div>
+
+        <div class="contents">
+          <p>
+            　大切な何かを守るために戦う者たちです。<br />
+            　能力としては《心》と《体》が高めです。ダメージを減らしたり、味方をかばったりするアーツを持ちます。
+          </p>
+        </div>
+      </section>
+
+      <!-- オンミツ -->
+      <section id="class-kannagi">
+        <div class="">
+          <h3>オンミツ</h3>
+        </div>
+
+        <div class="contents">
+          <p>
+            　いわゆる忍者です。<br />
+            　能力としては《技》と《体》が高めです。敵の攻撃を無効化したり、行動速度を高めたりするアーツを持ちます。
+          </p>
+        </div>
+      </section>
+
+      <!-- センドー -->
+      <section id="class-kannagi">
+        <div class="">
+          <h3>センドー</h3>
+        </div>
+
+        <div class="contents">
+          <p>
+            　“気”の力を操る、仙医とも呼ばれる者たちです。<br />
+            能力としては《心》と《体》が高めです。味方を回復するアーツや、扱いづらいですが強力な攻撃アーツを持ちます。
+          </p>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- 能力 -->
+  <section id="ability">
+    <div class="sticky">
+      <h2>能力</h2>
+    </div>
+
+    <div class="contents">
+      <table>
+        <tbody>
+          <tr>
+            <!-- 《見出し -->
+            <th class="left">【ライフ】</th>
+            <!-- 《心》 -->
+            <td class="astral" colspan="3">《心》</td>
+            <!-- 《技》 -->
+            <td class="mental" colspan="3">《技》</td>
+            <!-- 《体》 -->
+            <td class="right ether" colspan="3">《体》</td>
+          </tr>
+
+          <tr>
+            <!-- 《見出し -->
+            <th class="left">【スキル】</th>
+            <!-- 《心》 -->
+            <td class="astral">〈博愛〉</td>
+            <td class="astral">〈忍耐〉</td>
+            <td class="astral">〈霊感〉</td>
+            <!-- 《技》 -->
+            <td class="mental">〈器用〉</td>
+            <td class="mental">〈知性〉</td>
+            <td class="mental">〈洞察〉</td>
+            <!-- 《体》 -->
+            <td class="ether">〈威風〉</td>
+            <td class="ether">〈反応〉</td>
+            <td class="right ether">〈迅速〉</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        　<span class="t-bold">能力</span>には上記の表のように、《心》《技》《体》の３つの<span class="t-bold">ライフ</span>と、それらに紐づく<span class="t-bold">スキル</span>があります。<br />
+        　それぞれにはランク（強さ）があり、「《心》２」や「〈忍耐〉３」のように表記されます。
+      </p>
+
+      <p class="rule_Text">
+        　これらは<a>【行為判定】</a>で振るダイスの数に関係します。<br />
+        　また、【ライフ】はいわゆるＨＰとしての役割を持ち、ダメージを受けた際などに減少します。当然、減少すれば判定が不利になり、さらにいずれかが０点になるとＰＣは<a>【戦闘不能】</a>になります。
+      </p>
+    </div>
+  </section>
+
+  <!-- アーツ -->
+  <section id="arts">
+    <div class="sticky">
+      <h2>アーツ</h2>
+    </div>
+
+    <div class="contents">
+      <p>
+        　ハレビトたちの戦いの技、それが<span class="t-bold">アーツ</span>です。<br />
+        　それは武器だったり、魔法のような力だったり、ここぞという時のための道具だったりします。<br />
+        　アーツにはあえて厳密なイメージは設定していません。あなたが「このアーツはこういうものなんだ！」と説明できるのなら、それがあなただけのアーツになります。<br />
+        　アーツはある意味でハレビトを特徴づけるアクセサリーとも言えるでしょう。自分だけのアーツ構成で、キャラクターの個性を際立たせましょう。もちろん、ゲーム的な強さを求めて選択するのも、やり方の一つです。
+      </p>
+
+      <p class="rule_Text">
+        　ハレビトは、『ブキ』カテゴリーから１つ、『プライマリクラス』に対応するものから１つ、『汎用』カテゴリーと『プライマリクラス』『セカンダリクラス』に対応するものから３つ、合計５つのアーツを習得します。
+      </p>
+
+      <!-- ブキ -->
+      <section id="arts-wearpon">
+        <div class="sticky">
+          <h3>ブキ</h3>
+        </div>
+
+        <div class="contents">
+          <p>
+            　ハレビトたちが、ケガレビトとの戦いで用いる装備。あるいは、戦闘スタイルそのものを<span class="t-bold">ブキ</span>と呼びます。<br />
+            　それは、剣や槍、弓矢や銃などの“文字通りの武器”だったり、傘や鉄パイプといった身近にある物だったり、炎や雷などの形の無いものだったり、心に訴えかける巧みな話術だったり……、ハレビトのブキは実に様々です。<br />
+            　以下の３つのアーツはそれぞれ、敵に与えることのできるダメージと、攻撃が届く距離が異なります。自分の考えるブキのイメージと合うものを選びましょう。
+          </p>
+
+          <p class="rule_Text">
+            　このカテゴリーの【アーツ】は、必ず１つは習得しなければなりません。習得しなければ、ケガレビトにダメージを与えることができなくなるからです。<br />
+            　【能力】は、習得時に任意のものを設定できます。セッション中に変更することはできないので、注意してください。
+          </p>
+
+          <!-- 近距離武器 -->
+          <div class="card">
+            <div class="area-head">
+              <div class="title">
+                <span class="ruby">きんきょりぶき</span>
+                <span class="main">近距離武器</span>
+              </div>
+
+              <div class="data">
+                <span class="cell fullWidth">
+                  <span class="cover">タイミング</span>
+                  攻撃
+                </span>
+
+                <span class="cell">
+                  <span class="cover">能力</span>
+                  任意
+                </span>
+
+                <span class="cell">
+                  <span class="cover">難度</span>
+                  １
+                </span>
+
+                <span class="cell">
+                  <span class="cover">対象</span>
+                  敵／１体
+                </span>
+
+                <span class="cell">
+                  <span class="cover">射程</span>
+                  ０
+                </span>
+              </div>
+            </div>
+
+            <div class="area-detail">
+              <div>
+                <p class="branch">
+                  <span class="condition">成功</span>
+                  対象に［達成数＋２］点のダメージを与える。
+                </p>
+              </div>
+
+              <div class="note">あなたは、近距離での戦闘を得意としている。</div>
+            </div>
+          </div>
+
+          <!-- 中距離武器 -->
+          <div class="card">
+            <div class="area-head">
+              <div class="title">
+                <span class="ruby">ちゅうきょりぶき</span>
+                <span class="main">中距離武器</span>
+              </div>
+
+              <div class="data">
+                <span class="cell fullWidth">
+                  <span class="cover">タイミング</span>
+                  攻撃
+                </span>
+
+                <span class="cell">
+                  <span class="cover">能力</span>
+                  任意
+                </span>
+
+                <span class="cell">
+                  <span class="cover">難度</span>
+                  １
+                </span>
+
+                <span class="cell">
+                  <span class="cover">対象</span>
+                  敵／１体
+                </span>
+
+                <span class="cell">
+                  <span class="cover">射程</span>
+                  １
+                </span>
+              </div>
+            </div>
+
+            <div class="area-detail">
+              <div>
+                <p class="branch">
+                  <span class="condition">成功</span>
+                  対象に［達成数＋１］点のダメージを与える。
+                </p>
+              </div>
+
+              <div class="note">あなたは、中距離での戦闘を得意としている。</div>
+            </div>
+          </div>
+
+          <!-- 遠距離武器 -->
+          <div class="card">
+            <div class="area-head">
+              <div class="title">
+                <span class="ruby">えんきょりぶき</span>
+                <span class="main">遠距離武器</span>
+              </div>
+
+              <div class="data">
+                <span class="cell fullWidth">
+                  <span class="cover">タイミング</span>
+                  攻撃
+                </span>
+
+                <span class="cell">
+                  <span class="cover">能力</span>
+                  任意
+                </span>
+
+                <span class="cell">
+                  <span class="cover">難度</span>
+                  １
+                </span>
+
+                <span class="cell">
+                  <span class="cover">対象</span>
+                  敵／１体
+                </span>
+
+                <span class="cell">
+                  <span class="cover">射程</span>
+                  ２
+                </span>
+              </div>
+            </div>
+
+            <div class="area-detail">
+              <div>
+                <p class="branch">
+                  <span class="condition">成功</span>
+                  対象に［達成数］点のダメージを与える。
+                </p>
+              </div>
+
+              <div class="note">あなたは、遠距離での戦闘を得意としている。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 汎用 -->
+      <section id="arts-common">
+        <div class="sticky">
+          <h3>汎用</h3>
+        </div>
+
+        <div class="contents">
+          <p>
+            　ハレビトたちには流派のようなものがあるのですが、『汎用』カテゴリーのアーツは、それに関係無く、誰でも習得できます。<br />
+            　劇的な効果はありませんが、あると便利。そんなアーツたちです。
+          </p>
+
+          <!-- 精神防壁 -->
+          <div class="card passive">
+            <div class="area-head">
+              <div class="title">
+                <span class="ruby">せいしんぼうへき</span>
+                <span class="main">精神防壁</span>
+              </div>
+
+              <div class="data">
+                <span class="cell fullWidth">
+                  <span class="cover">タイミング</span>
+                  常時
+                </span>
+
+                <span class="cell">
+                  <span class="cover">能力</span>
+                  ‐
+                </span>
+
+                <span class="cell">
+                  <span class="cover">難度</span>
+                  ‐
+                </span>
+
+                <span class="cell">
+                  <span class="cover">対象</span>
+                  ‐
+                </span>
+
+                <span class="cell">
+                  <span class="cover">射程</span>
+                  ‐
+                </span>
+              </div>
+            </div>
+
+            <div class="area-detail">
+              <p>あなたが受ける《心》ダメージを１点減少させる。</p>
+
+              <div class="note">精神汚染を防ぐための自己暗示。もしかしたら、単にポジティブなだけかもしれない。</div>
+            </div>
+          </div>
+
+          <!-- 万全の備え -->
+          <div class="card passive">
+            <div class="area-head">
+              <div class="title">
+                <span class="ruby">ばんぜんのそなえ</span>
+                <span class="main">万全の備え</span>
+              </div>
+
+              <div class="data">
+                <span class="cell fullWidth">
+                  <span class="cover">タイミング</span>
+                  常時
+                </span>
+
+                <span class="cell">
+                  <span class="cover">能力</span>
+                  ‐
+                </span>
+
+                <span class="cell">
+                  <span class="cover">難度</span>
+                  ‐
+                </span>
+
+                <span class="cell">
+                  <span class="cover">対象</span>
+                  ‐
+                </span>
+
+                <span class="cell">
+                  <span class="cover">射程</span>
+                  ‐
+                </span>
+              </div>
+            </div>
+
+            <div class="area-detail">
+              <p>あなたが受ける《技》ダメージを１点減少させる。</p>
+
+              <div class="note">「こういうこともあろうかと！」備えあれば患いなし。</div>
+            </div>
+          </div>
+
+          <!-- 装甲 -->
+          <div class="card passive">
+            <div class="area-head">
+              <div class="title">
+                <span class="ruby">そうこう</span>
+                <span class="main">装甲</span>
+              </div>
+
+              <div class="data">
+                <span class="cell fullWidth">
+                  <span class="cover">タイミング</span>
+                  常時
+                </span>
+
+                <span class="cell">
+                  <span class="cover">能力</span>
+                  ‐
+                </span>
+
+                <span class="cell">
+                  <span class="cover">難度</span>
+                  ‐
+                </span>
+
+                <span class="cell">
+                  <span class="cover">対象</span>
+                  ‐
+                </span>
+
+                <span class="cell">
+                  <span class="cover">射程</span>
+                  ‐
+                </span>
+              </div>
+            </div>
+
+            <div class="area-detail">
+              <p>あなたが受ける《技》ダメージを１点減少させる。</p>
+
+              <div class="note">肉体の損傷を防ぐための装甲。鎧や盾など。</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- -------------------------------------------------- -->
+      </section>
+
+      <!-- クラス：カンナギ -->
+      <section id="arts-kannagi">
+        <div class="sticky">
+          <h3>クラス：カンナギ</h3>
+        </div>
+
+        <div class="contents">
+          <p></p>
+
+          <!-- 調伏の力 -->
+          <div class="card">
+            <div class="area-head">
+              <div class="title">
+                <span class="ruby">ちょうぶくのちから</span>
+                <span class="main">調伏の力</span>
+              </div>
+
+              <div class="data">
+                <span class="cell fullWidth">
+                  <span class="cover">タイミング</span>
+                  攻撃
+                </span>
+
+                <span class="cell">
+                  <span class="cover">能力</span>
+                  〈霊感〉
+                </span>
+
+                <span class="cell">
+                  <span class="cover">難度</span>
+                  ２
+                </span>
+
+                <span class="cell">
+                  <span class="cover">対象</span>
+                  敵／１体
+                </span>
+
+                <span class="cell">
+                  <span class="cover">射程</span>
+                  ２
+                </span>
+              </div>
+            </div>
+
+            <div class="area-detail">
+              <div>
+                <p class="branch">
+                  <span class="condition">成功</span>
+                  対象に［達成数］点のダメージを与える。<br />
+                  ３ラウンドの間、対象の【攻撃判定】にー１の修正を与える。
+                </p>
+              </div>
+
+              <div class="note">悪しき心を静める霊術。</div>
+            </div>
+          </div>
+
+          <!-- 鬼神の神降ろし -->
+          <div class="card">
+            <div class="area-head">
+              <div class="title">
+                <span class="ruby">きしんのかみおろし</span>
+                <span class="main">鬼神の神降ろし</span>
+              </div>
+
+              <div class="data">
+                <span class="cell fullWidth">
+                  <span class="cover">タイミング</span>
+                  ラウンド
+                </span>
+
+                <span class="cell">
+                  <span class="cover">能力</span>
+                  〈霊感〉
+                </span>
+
+                <span class="cell">
+                  <span class="cover">難度</span>
+                  ２
+                </span>
+
+                <span class="cell">
+                  <span class="cover">対象</span>
+                  味方／１体
+                </span>
+
+                <span class="cell">
+                  <span class="cover">射程</span>
+                  １
+                </span>
+              </div>
+            </div>
+
+            <div class="area-detail">
+              <div>
+                <p class="branch">
+                  <span class="condition">成功</span>
+                  ラウンド中、対象の【攻撃判定】に１のプラス修正を与える。
+                </p>
+              </div>
+
+              <div class="note">鬼神の如き攻めの力を与える祈祷。</div>
+            </div>
+          </div>
+
+          <!-- 金剛の神降ろし -->
+          <div class="card">
+            <div class="area-head">
+              <div class="title">
+                <span class="ruby">こんごうのかみおろし</span>
+                <span class="main">金剛の神降ろし</span>
+              </div>
+
+              <div class="data">
+                <span class="cell fullWidth">
+                  <span class="cover">タイミング</span>
+                  ラウンド
+                </span>
+
+                <span class="cell">
+                  <span class="cover">能力</span>
+                  〈霊感〉
+                </span>
+
+                <span class="cell">
+                  <span class="cover">難度</span>
+                  ２
+                </span>
+
+                <span class="cell">
+                  <span class="cover">対象</span>
+                  味方／１体
+                </span>
+
+                <span class="cell">
+                  <span class="cover">射程</span>
+                  １
+                </span>
+              </div>
+            </div>
+
+            <div class="area-detail">
+              <div>
+                <p class="branch">
+                  <span class="condition">成功</span>
+                  ラウンド中、対象の【防御判定】に１のプラス修正を与える。
+                </p>
+              </div>
+
+              <div class="note">金剛の如き守りの力を与える祈祷。</div>
+            </div>
+          </div>
+
+          <!-- 奇門遁甲 -->
+          <div class="card">
+            <div class="area-head">
+              <div class="title">
+                <span class="ruby">きもんとんこう</span>
+                <span class="main">奇門遁甲</span>
+              </div>
+
+              <div class="data">
+                <span class="cell fullWidth">
+                  <span class="cover">タイミング</span>
+                  ターン
+                </span>
+
+                <span class="cell">
+                  <span class="cover">能力</span>
+                  〈霊感〉
+                </span>
+
+                <span class="cell">
+                  <span class="cover">難度</span>
+                  ２
+                </span>
+
+                <span class="cell">
+                  <span class="cover">対象</span>
+                  ‐
+                </span>
+
+                <span class="cell">
+                  <span class="cover">射程</span>
+                  ‐
+                </span>
+              </div>
+            </div>
+
+            <div class="area-detail">
+              <div>
+                <p class="branch">
+                  <span class="condition">成功</span>
+                  【ハレ】を３枚引く。その中から１つ選び、既に場にある【ハレ】１つと入れ替えることができる。入れ替えなかった場合、捨て札になる。
+                </p>
+              </div>
+
+              <div class="note">運命を占い、新たな【ハレ】の力を授かる。</div>
+            </div>
+          </div>
+
+          <!-- 神憑り -->
+          <div class="card passive">
+            <div class="area-head">
+              <div class="title">
+                <span class="ruby">かみがかり</span>
+                <span class="main">神憑り</span>
+              </div>
+
+              <div class="data">
+                <span class="cell fullWidth">
+                  <span class="cover">タイミング</span>
+                  常時
+                </span>
+
+                <span class="cell">
+                  <span class="cover">能力</span>
+                  ‐
+                </span>
+
+                <span class="cell">
+                  <span class="cover">難度</span>
+                  ‐
+                </span>
+
+                <span class="cell">
+                  <span class="cover">対象</span>
+                  ‐
+                </span>
+
+                <span class="cell">
+                  <span class="cover">射程</span>
+                  ‐
+                </span>
+              </div>
+            </div>
+
+            <div class="area-detail">
+              <div>セッション開始時、【加護】を３点獲得する。</div>
+
+              <div class="note">神に愛されており、より強い加護を得られる。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- クラス：カラクリ -->
+      <section id="arts-karakuri">
+        <div class="sticky">
+          <h3>クラス：カラクリ</h3>
+        </div>
+
+        <div class="contents">
+          <p></p>
+
+          <!-- 急所狙い -->
+          <div class="card">
+            <div class="area-head">
+              <div class="title">
+                <span class="ruby">きゅうしょねらい</span>
+                <span class="main">急所狙い</span>
+              </div>
+
+              <div class="data">
+                <span class="cell fullWidth">
+                  <span class="cover">タイミング</span>
+                  攻撃
+                </span>
+
+                <span class="cell">
+                  <span class="cover">能力</span>
+                  〈洞察〉
+                </span>
+
+                <span class="cell">
+                  <span class="cover">難度</span>
+                  ２
+                </span>
+
+                <span class="cell">
+                  <span class="cover">対象</span>
+                  敵／１体
+                </span>
+
+                <span class="cell">
+                  <span class="cover">射程</span>
+                  １
+                </span>
+              </div>
+            </div>
+
+            <div class="area-detail">
+              <div>
+                <p class="branch">
+                  <span class="condition">成功</span>
+                  対象に［達成数＋判定ダイス中の『６』の数］点のダメージを与える。
+                </p>
+              </div>
+
+              <div class="note">弱点を的確に狙う。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- クラス：オンミツ -->
+      <section id="arts-onmithu">
+        <div class="sticky">
+          <h3>クラス：オンミツ</h3>
+        </div>
+
+        <div class="contents">
+          <p></p>
+
+          <!-- 回避 -->
+          <div class="card chain">
+            <div class="area-head">
+              <div class="title">
+                <span class="ruby">かいひ</span>
+                <span class="main">回避</span>
+              </div>
+
+              <div class="data">
+                <span class="cell fullWidth">
+                  <span class="cover">タイミング</span>
+                  併用：防御
+                </span>
+
+                <span class="cell">
+                  <span class="cover">能力</span>
+                  〈迅速〉
+                </span>
+
+                <span class="cell">
+                  <span class="cover">難度</span>
+                  ＝３
+                </span>
+
+                <span class="cell">
+                  <span class="cover">対象</span>
+                  ‐
+                </span>
+
+                <span class="cell">
+                  <span class="cover">射程</span>
+                  ‐
+                </span>
+              </div>
+            </div>
+
+            <div class="area-detail">
+              <div>
+                <p class="branch">
+                  <span class="condition">成功</span>
+                  あなたが受けるダメージを無効化する。
+                </p>
+                <p class="branch">
+                  <span class="condition">失敗</span>
+                  あなたが受けるダメージに［足りなかった達成値］点を追加する。
+                </p>
+              </div>
+
+              <div class="note">物理的な攻撃を見切る。しかし、失敗するとダメージが増してしまう。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+</body>
