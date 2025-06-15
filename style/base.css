@@ -86,6 +86,15 @@ p+* {
   margin-top: 1em;
 }
 
+/* 箇条書きリスト */
+ul {
+  padding-left: 2em;
+}
+
+/* -------------------------------------------------- */
+/* 見出し */
+/* -------------------------------------------------- */
+
 /* 見出し１ */
 h1 {
   border-top: solid 3px currentColor;
@@ -116,17 +125,51 @@ h3 {
 /* 見出し４ */
 h4 {
   margin-bottom: 0.5em;
+  border-bottom: solid 2px var(--color-main);
 }
 
 /* 見出し４＋段落 */
 h4+p {
   margin-top: 0.5em;
+  padding-left: 1em;
+}
+
+/* 見出し４＋コンテンツ＞段落 */
+h4+.contents>p {
+  margin-top: 0;
 }
 
 /* 見出し４：先頭要素 */
 h4::before {
   content: "▼";
 }
+
+/* -------------------------------------------------- */
+/* レイアウト */
+/* -------------------------------------------------- */
+
+/* フレックス */
+.d-flex {
+  display: flex;
+  align-items: center;
+  margin-left: 1.5em;
+}
+
+/* フレックス＞見出し */
+.d-flex>.title {
+  border: solid 2px var(--color-main);
+  margin-right: 8px;
+  padding: 2px 4px;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+/* フレックス＞段落 */
+.d-flex>p {
+  flex: 1;
+  margin: 0;
+}
+
 
 /* -------------------------------------------------- */
 /* セクション */
@@ -215,20 +258,14 @@ table>tbody>tr>* {
   margin: 0 auto;
 }
 
+/* コンテンツ */
+.contents {
+  padding-left: 1em;
+}
+
 /* インナーコンテンツ */
 .inner_contents {
   margin-bottom: 2em;
-}
-
-/* スティッキーロウ＋コンテンツ */
-.sticky+.contents {
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-/* コンテンツ内コンテンツ */
-.contents .contents {
-  padding-left: 1em;
 }
 
 /* スティッキーロウ：２段目 */
