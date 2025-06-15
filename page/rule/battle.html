@@ -1,0 +1,98 @@
+<head>
+  <link rel="stylesheet" href="../../style/base.css" type="text/css" />
+  <link rel="stylesheet" href="../../style/rule.css" type="text/css" />
+</head>
+
+<body>
+  <a href="../../index.html">戻る</a>
+
+  <h1>ハラエフェイズ（戦闘シーン）</h1>
+
+  <main>
+    <!-- 攻撃判定と防御判定 -->
+    <section id="roll-battle">
+      <div class="sticky">
+        <h2>
+          攻撃判定と防御判定
+        </h2>
+      </div>
+
+      <div class="contents">
+        <div class="inner_contents">
+          <p>
+            　基本的に<span class="t-bold">攻撃判定</span>と<span class="t-bold">防御判定</span>はセットでおこなわれ、以下の手順で処理します。解説中では、攻撃判定をおこなうキャラクターを『攻撃側』、防御判定をおこなうキャラクターを『防御側』と呼びます。
+          </p>
+
+          <p class="rule_Text">
+            <span class="num">1</span>攻撃判定<br>
+            <span class="num">2</span>防御判定<br>
+            <span class="num">3</span>ダメージの決定
+          </p>
+        </div>
+
+        <!-- 攻撃判定 -->
+        <section>
+          <div class="sticky">
+            <h3>
+              <span class="num">1</span>
+              攻撃判定
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　攻撃側は、<a>攻撃アーツ（と組み合わせたアーツ）</a>で指定された技能で<a href="roll.html" target="_blank">判定</a>をおこなってください。難度は『１』ですが、組み合わせたアーツによって増加する場合もあります。<br>
+              　判定に成功した場合、成功数を<span class="t-bold">ダメージ</span>とします。失敗した場合、以降の処理はスキップされます。
+            </p>
+          </div>
+        </section>
+
+        <!-- 防御判定 -->
+        <section>
+          <div class="sticky">
+            <h3>
+              <span class="num">2</span>
+              防御判定
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　防御側は、攻撃判定で使用されたライフと、それに対応したいずれかのスキルで<a href="roll.html" target="_blank">判定</a>をおこなってください。難度は、ダメージと同じ値になります。<br>
+              　判定の成否に関わらず、『<span class="num">3</span>ダメージの決定』へ進んでください。
+            </p>
+          </div>
+        </section>
+
+        <!-- ダメージの決定 -->
+        <section>
+          <div class="sticky">
+            <h3>
+              <span class="num">3</span>
+              ダメージの決定
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　防御判定の成否によって、以下のように処理を行います。
+            </p>
+
+            <h4>防御判定が成功した場合</h4>
+
+            <p>
+              　攻撃判定が失敗した扱いとなり、攻撃アーツの効果が全て無効化されます。
+            </p>
+
+            <h4>防御判定が失敗した場合</h4>
+
+            <p>
+              　防御側は、攻撃判定で使用されたものと同じライフにダメージを受けることとなります。<br>
+              　この際、防御判定の成功数分、ダメージが減少します。
+            </p>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>

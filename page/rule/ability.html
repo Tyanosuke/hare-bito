@@ -1,0 +1,351 @@
+<head>
+  <link rel="stylesheet" href="../../style/base.css" type="text/css" />
+  <link rel="stylesheet" href="../../style/rule.css" type="text/css" />
+</head>
+
+<body>
+  <a href="../../index.html">戻る</a>
+
+  <h1>技能</h1>
+
+  <main>
+    <section>
+      <p>
+        　<span class="t-bold">技能</span>には下記の表のように、《心》《技》《体》の３つの<span class="t-bold">ライフ</span>と、それらに紐づく<span class="t-bold">スキル</span>があります。<br>
+        　それぞれにはレベルがあり、「《心》５」や「〈博愛〉２」のように表記されます。これらは<a href="./roll.html" target="_blank">判定</a>で振るダイスの数に関係します。
+      </p>
+
+      <table>
+        <tbody>
+          <tr>
+            <!-- 《見出し -->
+            <th>ライフ</th>
+            <!-- 《心》 -->
+            <td class="astral" colspan="3">《心》</td>
+            <!-- 《技》 -->
+            <td class="mental" colspan="3">《技》</td>
+            <!-- 《体》 -->
+            <td class="ether" colspan="3">《体》</td>
+          </tr>
+
+          <tr>
+            <!-- 《見出し -->
+            <th>スキル</th>
+            <!-- 《心》 -->
+            <td class="astral">〈博愛〉</td>
+            <td class="astral">〈忍耐〉</td>
+            <td class="astral">〈霊感〉</td>
+            <!-- 《技》 -->
+            <td class="mental">〈器用〉</td>
+            <td class="mental">〈知性〉</td>
+            <td class="mental">〈洞察〉</td>
+            <!-- 《体》 -->
+            <td class="ether">〈威風〉</td>
+            <td class="ether">〈反応〉</td>
+            <td class="ether">〈迅速〉</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ライフ -->
+    <section id="ability-life">
+      <div class="sticky">
+        <h2>
+          ライフ
+        </h2>
+      </div>
+
+      <div class="contents">
+        <div class="inner_contents">
+          <div class="contents">
+            <p>
+              　ハレビトの、能力の根幹となる値です。<span class="t-bold">《心》《技》《体》</span>の３つを持ちます。<br>
+              　いわゆるＨＰとしての役割を持ち、ダメージを受けた際に減少します。いずれかが０点になるとハレビトは<a href="#ability-down">戦闘不能</a>になります。また、全てが０点になった場合、<a href="#ability-retreat">撤退</a>となります。
+            </p>
+
+            <!-- 《心》 -->
+            <section>
+              <div class="sticky">
+                <h3>
+                  《心》
+                </h3>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　ハレビトの精神力を表します。<br>
+                  　紐づくスキルとして、〈博愛〉〈忍耐〉〈霊感〉があります。<br>
+                  　これにダメージを受けることは、精神的なショックを受けることを意味します。
+                </p>
+              </div>
+            </section>
+
+            <!-- 《技》 -->
+            <section>
+              <div class="sticky">
+                <h3>
+                  《技》
+                </h3>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　ハレビトの技術力を表します。<br>
+                  　紐づくスキルとして、〈器用〉〈知性〉〈洞察〉があります。<br>
+                  　これにダメージを受けることは、用意した装備品や戦略が無効化されることを意味します。
+                </p>
+              </div>
+            </section>
+
+            <!-- 《体》 -->
+            <section>
+              <div class="sticky">
+                <h3>
+                  《体》
+                </h3>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　ハレビトの身体能力を表します。<br>
+                  　紐づくスキルとして、〈筋力〉〈反応〉〈迅速〉があります。<br>
+                  　これにダメージを受けることは、肉体的な損傷を受けることを意味します。
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+    </section>
+
+    <!-- スキル -->
+    <section id="ability-skill">
+      <div class="sticky">
+        <h2>
+          スキル
+        </h2>
+      </div>
+
+      <div class="contents">
+        <div class="inner_contents">
+          <div class="contents">
+            <p>
+              　ハレビトが自身の《心》《技》《体》を用いて、何ができるかを表す値です。
+            </p>
+
+            <!-- 〈博愛〉 -->
+            <section>
+              <div class="sticky">
+                <h3>
+                  〈博愛〉
+                </h3>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　《心》のスキルです。<br>
+                  　他者への共感や優しさを表します。
+                </p>
+              </div>
+            </section>
+
+            <!--  -->
+            <section>
+              <div class="sticky">
+                <h3>
+                  〈忍耐〉
+                </h3>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　《心》のスキルです。<br>
+                  　困難に耐える心の強さを表します。
+                </p>
+              </div>
+            </section>
+
+            <!--  -->
+            <section>
+              <div class="sticky">
+                <h3>
+                  〈霊感〉
+                </h3>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　《心》のスキルです。<br>
+                  　霊的な存在を感じ取り、交信する力を表します。
+                </p>
+              </div>
+            </section>
+
+            <!-- 〈器用〉 -->
+            <section>
+              <div class="sticky">
+                <h3>
+                  〈器用〉
+                </h3>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　《技》のスキルです。<br>
+                  　手先の器用さ、応用力を表します。
+                </p>
+              </div>
+            </section>
+
+            <!-- 〈知性〉 -->
+            <section>
+              <div class="sticky">
+                <h3>
+                  〈知性〉
+                </h3>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　《技》のスキルです。<br>
+                  　学力、記憶力を表します。
+                </p>
+              </div>
+            </section>
+
+            <!-- 〈洞察〉 -->
+            <section>
+              <div class="sticky">
+                <h3>
+                  〈洞察〉
+                </h3>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　《技》のスキルです。<br>
+                  　細かい事象を見逃さない力を表します。
+                </p>
+              </div>
+            </section>
+
+            <!-- 〈威風〉 -->
+            <section>
+              <div class="sticky">
+                <h3>
+                  〈威風〉
+                </h3>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　《体》のスキルです。<br>
+                  　腕っぷしの強さ、身体の頑丈さを表します。
+                </p>
+              </div>
+            </section>
+
+            <!-- 〈反応〉 -->
+            <section>
+              <div class="sticky">
+                <h3>
+                  〈反応〉
+                </h3>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　《体》のスキルです。<br>
+                  　反射神経、平衡感覚を表します。
+                </p>
+              </div>
+            </section>
+
+            <!-- 〈迅速〉 -->
+            <section>
+              <div class="sticky">
+                <h3>
+                  〈迅速〉
+                </h3>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　《体》のスキルです。<br>
+                  　足の速さ、跳躍力を表します。
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+    </section>
+
+    <!-- 戦闘不能 -->
+    <section id="ability-down">
+      <div class="sticky">
+        <h2>
+          戦闘不能
+        </h2>
+      </div>
+
+      <div class="contents">
+        <div class="inner_contents">
+          <div class="contents">
+            <p>
+              　ライフのいずれかが０点になると、ハレビトは<span class="t-bold">戦闘不能</span>になります。<br>
+              　この状態では、<span class="t-bold">復活判定</span>以外の判定をおこなうことができなくなります。
+            </p>
+
+            <!-- 復活判定 -->
+            <section>
+              <div class="sticky">
+                <h3>
+                  復活判定
+                </h3>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　戦闘不能になっているハレビトが、各ラウンドの終了時におこなえる特殊な判定です。<br>
+                  　以下のようなルールがあります。
+                </p>
+
+                <ul>
+                  <li>
+                    ０点になっていないライフと、それに対応したスキルを使用します。
+                  </li>
+                  <li>
+                    難度は、［気絶した回数×２］（初回は２）になります。
+                  </li>
+                  <li>
+                    【加護】は使用できません。
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+          </div>
+        </div>
+    </section>
+
+    <!-- 撤退 -->
+    <section id="ability-retreat">
+      <div class="sticky">
+        <h2>
+          撤退
+        </h2>
+      </div>
+
+      <div class="contents">
+        <div class="inner_contents">
+          <div class="contents">
+            <p>
+              　全てのライフが０点になると、ハレビトは即座に<span class="t-bold">撤退</span>します。<br>
+              　この状態になると、エンディングフェイズ開始時まで一切の行動ができなくなります。復活判定もおこなうことはできません。
+            </p>
+          </div>
+        </div>
+    </section>
+
+  </main>
+</body>

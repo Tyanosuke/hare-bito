@@ -1,0 +1,260 @@
+/* -------------------------------------------------- */
+/* 定数 */
+/* -------------------------------------------------- */
+
+:root {
+  /* 《心》；サブカラー */
+  --color-astral: rgba(128, 160, 128, 100%);
+
+  /* 《心》；サブカラー（透過） */
+  --color-astral-alpha: rgba(128, 192, 128, 25%);
+
+  /* 《技》；サブカラー */
+  --color-mental: rgba(128, 128, 160, 100%);
+
+  /* 《技》；サブカラー（透過） */
+  --color-mental-alpha: rgba(128, 128, 192, 25%);
+
+  /* 《体》；サブカラー */
+  --color-ether: rgba(160, 128, 128, 100%);
+
+  /* 《体》；サブカラー（透過） */
+  --color-ether-alpha: rgba(192, 128, 128, 25%);
+}
+
+/* -------------------------------------------------- */
+/* カード */
+/* -------------------------------------------------- */
+
+/* コンテナ */
+.card {
+  background: var(--color-sub);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  padding: 2px;
+}
+
+/* ヘッダー */
+.card>.area-head {
+  display: flex;
+  background: var(--color-sub);
+  border-bottom: solid 1px var(--color-sub);
+  border-radius: 8px 8px 0 0;
+  color: #fff;
+}
+
+/* タイトル */
+.card>.area-head>.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 240px;
+  padding: 12px;
+  background-repeat: no-repeat;
+  background-position: right 8px bottom 50%;
+}
+
+/* タイトル：併用 */
+.card.chain>.area-head>.title {
+  background-image: url(../img/arts/chain.png);
+}
+
+/* タイトル：常時 */
+.card.passive>.area-head>.title {
+  background-image: url(../img/arts/passive.png);
+}
+
+/* タイトル：ルビ */
+.card>.area-head>.title>span.ruby {
+  font-size: 0.8em;
+  line-height: 1;
+}
+
+/* タイトル：メイン */
+.card>.area-head>.title>span.main {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* データ */
+.card>.area-head>.data {
+  display: grid;
+  grid-template-columns: 1fr calc(5em + 28px) 1fr calc(6em + 28px);
+  flex: 1;
+  background: #fff;
+  border-top-right-radius: 8px;
+  color: #000;
+}
+
+/* データ＞文章＞セル＞ */
+.card>.area-head>.data>.cell {
+  display: flex;
+  align-items: center;
+  border: solid 1px var(--color-sub);
+}
+
+/* データ＞文章＞セル＞見出し */
+.card>.area-head>.data>.cell>.cover {
+  display: flex;
+  height: 100%;
+  background: var(--color-sub-alpha);
+  margin-right: 12px;
+  padding: 2px 8px;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+}
+
+/* データ＞文章＞セル：全幅 */
+.card>.area-head>.data>.cell.fullWidth {
+  grid-column: 1 / 5;
+}
+
+/* 説明文 */
+.card>.area-detail {
+  background: #fff;
+  border: solid 1px var(--color-sub);
+  border-radius: 0 0 8px 8px;
+  padding: 12px;
+}
+
+/* 説明文 */
+.card>.area-detail p {
+  margin: 0;
+}
+
+/* 説明文：間隔 */
+.card>.area-detail p+p {
+  margin-top: 8px;
+}
+
+/* 説明文：分岐 */
+.card>.area-detail .branch {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+/* 説明文：分岐＞条件 */
+.card>.area-detail .branch>.condition {
+  display: inline-block;
+  background: var(--color-sub-alpha);
+  height: fit-content;
+  padding: 0 8px;
+  padding-right: 18px;
+  word-break: keep-all;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 100% 100%, 0 100%);
+}
+
+/* 説明文：フレーバー */
+.card>.area-detail>.note {
+  margin-top: 12px;
+  color: var(--color-sub);
+  text-align: right;
+  transform: skewX(-20deg);
+}
+
+/* -------------------------------------------------- */
+/* カード：《心》 */
+/* -------------------------------------------------- */
+
+/* コンテナ */
+.card.astral {
+  background-color: var(--color-astral);
+}
+
+/* ヘッダー */
+.card.astral>.area-head {
+  background-color: var(--color-astral);
+  border-color: var(--color-astral);
+}
+
+/* データ＞文章＞セル＞ */
+.card.astral>.area-head>.data>.cell {
+  border-color: var(--color-astral);
+}
+
+/* データ＞文章＞セル＞見出し */
+.card.astral>.area-head>.data>.cell>.cover {
+  background-color: var(--color-astral-alpha);
+}
+
+/* 説明文 */
+.card.astral>.area-detail {
+  border-color: var(--color-astral);
+}
+
+/* 説明文：分岐＞条件 */
+.card.astral>.area-detail .branch>.condition {
+  background-color: var(--color-astral-alpha);
+}
+
+/* -------------------------------------------------- */
+/* カード：《技》 */
+/* -------------------------------------------------- */
+
+/* コンテナ */
+.card.mental {
+  background-color: var(--color-mental);
+}
+
+/* ヘッダー */
+.card.mental>.area-head {
+  background-color: var(--color-mental);
+  border-color: var(--color-mental);
+}
+
+/* データ＞文章＞セル＞ */
+.card.mental>.area-head>.data>.cell {
+  border-color: var(--color-mental);
+}
+
+/* データ＞文章＞セル＞見出し */
+.card.mental>.area-head>.data>.cell>.cover {
+  background-color: var(--color-mental-alpha);
+}
+
+/* 説明文 */
+.card.mental>.area-detail {
+  border-color: var(--color-mental);
+}
+
+/* 説明文：分岐＞条件 */
+.card.mental>.area-detail .branch>.condition {
+  background-color: var(--color-mental-alpha);
+}
+
+/* -------------------------------------------------- */
+/* カード：《体》 */
+/* -------------------------------------------------- */
+
+/* コンテナ */
+.card.ether {
+  background-color: var(--color-ether);
+}
+
+/* ヘッダー */
+.card.ether>.area-head {
+  background-color: var(--color-ether);
+  border-color: var(--color-ether);
+}
+
+/* データ＞文章＞セル＞ */
+.card.ether>.area-head>.data>.cell {
+  border-color: var(--color-ether);
+}
+
+/* データ＞文章＞セル＞見出し */
+.card.ether>.area-head>.data>.cell>.cover {
+  background-color: var(--color-ether-alpha);
+}
+
+/* 説明文 */
+.card.ether>.area-detail {
+  border-color: var(--color-ether);
+}
+
+/* 説明文：分岐＞条件 */
+.card.ether>.area-detail .branch>.condition {
+  background-color: var(--color-ether-alpha);
+}

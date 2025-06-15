@@ -1,11 +1,12 @@
 <head>
-  <link rel="stylesheet" href="../style.css" type="text/css" />
+  <link rel="stylesheet" href="../style/base.css" type="text/css" />
+  <link rel="stylesheet" href="../style/making.css" type="text/css" />
 </head>
 
 <body>
   <a href="../index.html">戻る</a>
 
-  <h1>メイキングセクション</h1>
+  <h1>ハレビト作成</h1>
 
   <main>
     <!-- 【１】パーソナリティ -->
@@ -38,7 +39,7 @@
         <p>
           　<span class="t-bold">クラス</span>とは、ハレビトにおける戦いの流派です。<br>
           　ハレビトは、<span class="t-bold">プライマリクラス</span>と<span class="t-bold">セカンダリクラス</span>の２つのクラスを持っています。<br>
-          　それぞれ、<a href="#ability">技能</a>のランクと、習得できる<a href="./arts.html" target="_blank">アーツ</a>に影響します。詳しい説明は各項目内でおこないますので、それを見ながら選んでください。
+          　それぞれ、<a href="#ability">技能</a>のレベルと、習得できる<a href="#arts">アーツ</a>に影響します。詳しい説明は各項目内でおこないますので、それを見ながら選んでください。
         </p>
 
         <div class="rule_Text">
@@ -114,10 +115,10 @@
             </div>
           </section>
 
-          <!-- サキモリ -->
+          <!-- モリビト -->
           <section id="class-kannagi">
             <div class="">
-              <h3>サキモリ</h3>
+              <h3>モリビト</h3>
             </div>
 
             <div class="contents">
@@ -195,42 +196,9 @@
       <div class="contents">
         <div class="inner_contents">
           <p>
-            　<span class="t-bold">技能</span>には下記の表のように、《心》《技》《体》の３つの<span class="t-bold">ライフ</span>と、それらに紐づく<span class="t-bold">スキル</span>があります。<br>
-            　それぞれにはランク（強さ）があり、「《心》２」や「〈忍耐〉３」のように表記されます。これらは<a>行為判定</a>で振るダイスの数に関係します。<br>
-            　また、ライフはいわゆるＨＰとしての役割を持ち、ダメージを受けた際に減少します。ライフが減少すれば判定のダイス数も減ってしまい、さらにいずれかが０点になるとＰＣは<a>戦闘不能</a>になります。
+            　ハレビトが持つ能力を<span class="t-bold">技能</span>と呼びます。技能には、<span class="t-bold">ライフ</span>と、それらに紐づく<span class="t-bold">スキル</span>があります。<br>
+            　詳しくは、<a href="./rule/ability.html" target="_blank">技能</a>を確認してください。
           </p>
-
-          <table>
-            <tbody>
-              <tr>
-                <!-- 《見出し -->
-                <th>ライフ</th>
-                <!-- 《心》 -->
-                <td class="astral" colspan="3">《心》</td>
-                <!-- 《技》 -->
-                <td class="mental" colspan="3">《技》</td>
-                <!-- 《体》 -->
-                <td class="ether" colspan="3">《体》</td>
-              </tr>
-
-              <tr>
-                <!-- 《見出し -->
-                <th>スキル</th>
-                <!-- 《心》 -->
-                <td class="astral">〈博愛〉</td>
-                <td class="astral">〈忍耐〉</td>
-                <td class="astral">〈霊感〉</td>
-                <!-- 《技》 -->
-                <td class="mental">〈器用〉</td>
-                <td class="mental">〈知性〉</td>
-                <td class="mental">〈洞察〉</td>
-                <!-- 《体》 -->
-                <td class="ether">〈威風〉</td>
-                <td class="ether">〈反応〉</td>
-                <td class="ether">〈迅速〉</td>
-              </tr>
-            </tbody>
-          </table>
         </div>
 
         <!-- ライフの習得 -->
@@ -245,7 +213,7 @@
           <div class="contents">
             <div class="rule_Text">
               <p>
-                　ライフのランクは、プライマリクラスに応じて変わります。
+                　ライフのレベルは、プライマリクラスに応じて変わります。
               </p>
             </div>
 
@@ -280,7 +248,7 @@
                 </tr>
 
                 <tr>
-                  <td>サキモリ</td>
+                  <td>モリビト</td>
                   <td class="astral">4</td>
                   <td class="mental">2</td>
                   <td class="ether">4</td>
@@ -316,8 +284,8 @@
           <div class="contents">
             <div class="rule_Text">
               <p>
-                　スキルのランクは、プライマリクラスとセカンダリクラスに応じて変わります。<br>
-                　２つのクラスのランクを合計してください。
+                　スキルのレベルは、プライマリクラスとセカンダリクラスに応じて変わります。<br>
+                　２つのクラスのレベルを合計してください。
               </p>
             </div>
 
@@ -376,7 +344,7 @@
                 </tr>
 
                 <tr>
-                  <td>サキモリ</td>
+                  <td>モリビト</td>
                   <td class="astral"></td>
                   <td class="astral">+2</td>
                   <td class="astral"></td>
@@ -431,8 +399,8 @@
           <div class="contents">
             <div class="rule_Text">
               <p>
-                　プライマリクラスとセカンダリクラスが同一の場合は『４』ランク分、そうでない場合は『３』ランク分のスキルを追加で習得します。<br>
-                　ただし、各スキルのランクは『５』までです。
+                　プライマリクラスとセカンダリクラスが同一の場合は『４』レベル分、そうでない場合は『３』レベル分のスキルを追加で習得します。<br>
+                　ただし、各スキルのレベルは『５』までです。
               </p>
             </div>
           </div>
@@ -452,7 +420,7 @@
       <div class="contents">
         <div class="inner_contents">
           <p>
-            　ハレビトたちの戦いの技、それが<span class="t-bold">アーツ</span>です。<a href="./arts.html#arts-wearpon" target="_blank">ハラエフェイズ</a>にて、ケガレビトに対抗するための手段となります。<br>
+            　ハレビトたちの戦いの技、それが<span class="t-bold">アーツ</span>です。<a href="../page/rule/battle.html" target="_blank">ハラエフェイズ</a>にて、ケガレビトに対抗するための手段となります。<br>
             　アーツにはあえて厳密なイメージは設定していません。あなたが「このアーツはこういうものなんだ！」と説明できるのなら、それがあなただけのアーツになります。<br>
             　ある意味でアーツはハレビトを特徴づけるアクセサリーとも言えるでしょう。自分だけのアーツ構成で、キャラクターの個性を際立たせましょう。もちろん、ゲーム的な強さを求めて選択するのも、やり方の一つです。
           </p>
@@ -471,7 +439,7 @@
             <p>
               　<span class="t-bold">基本攻撃アーツ</span>は、ハレビトたちがケガレビトとの戦いで用いる武器、あるいは戦闘スタイルそのものを指します。<br>
               　それは、剣や槍、弓矢や銃などの文字通りの武器だったり、傘や鉄パイプといった身近にある物だったり、炎や雷などの形の無いものだったり、心に訴えかける巧みな話術だったり……、ハレビトの攻撃方法は実に様々です。<br>
-              　基本攻撃アーツには、【近距離武器】と【遠距離武器】の２つがあります。キャラクターのイメージに合うものを選んで習得してください。なお、ここではどちらか１つしか修得できませんが、『<span class="num">4-3</span>自由なアーツの習得』にてもう片方を習得することも可能です。
+              　基本攻撃アーツには、【近距離武器】と【遠距離武器】の２つがあります。キャラクターのイメージに合うものを選んで習得してください。なお、ここではどちらか１つしか修得できませんが、『<span class="num">4-3</span>アーツの自由習得』にてもう片方を習得することも可能です。
             </p>
 
             <div class="rule_Text">
@@ -509,12 +477,12 @@
           </div>
         </section>
 
-        <!-- 自由なアーツの習得 -->
+        <!-- アーツの自由習得 -->
         <section id="arts-free">
           <div class="sticky">
             <h3>
               <span class="num">4-3</span>
-              自由なアーツの習得
+              アーツの自由習得
             </h3>
           </div>
 

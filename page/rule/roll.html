@@ -1,0 +1,188 @@
+<head>
+  <link rel="stylesheet" href="../../style/base.css" type="text/css" />
+  <link rel="stylesheet" href="../../style/rule.css" type="text/css" />
+</head>
+
+<body>
+  <a href="../../index.html">戻る</a>
+
+  <h1>判定</h1>
+
+  <main>
+    <!-- 判定の処理 -->
+    <section id="roll">
+      <div class="sticky">
+        <h2>
+          判定の処理
+        </h2>
+      </div>
+
+      <div class="contents">
+        <div class="inner_contents">
+          <p>
+            　セッション中、ハレビトは<span class="t-bold">判定</span>を求められることがあります。これは、ハレビトの行動が予測通りに成功するか、あるいは失敗するかを判定するものです。
+            <br>
+            　判定は、以下の順番で処理を行います。
+          </p>
+
+          <p class="rule_Text">
+            <span class="num">1</span>使用する技能の決定<br>
+            <span class="num">2</span>判定ダイスの個数の決定<br>
+            <span class="num">3</span>難度の決定<br>
+            <span class="num">4</span>成功数の決定<br>
+            <span class="num">5</span>成功数と難度の比較<br>
+          </p>
+        </div>
+
+        <!-- 使用する技能の決定 -->
+        <section>
+          <div class="sticky">
+            <h3>
+              <span class="num">1</span>
+              使用する技能の決定
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　ＧＭが、判定で使用する技能（ライフ＋スキル）を決定します。<br>
+              　基本的に、シナリオ上で要求される判定には、どの技能で判定すべきかが記載されているため、それを参照してください。
+            </p>
+          </div>
+        </section>
+
+        <!-- 判定ダイスの個数の決定 -->
+        <section>
+          <div class="sticky">
+            <h3>
+              <span class="num">2</span>
+              判定ダイスの個数の決定
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　ハレビトは、指定されたライフとスキルのレベルを合計し、<span class="t-bold">判定ダイス</span>の個数とします。ダイスは６面のものを使用します。<br>
+              　この際、判定に<span class="t-bold">修正</span>が与えられていたならば、ダイス個数がその数値分増減します。修正は、<a href="./arts.html" target="_blank">アーツ</a>の効果や<a>加護</a>によって与えられます。修正の結果、判定ダイスが０個以下になった場合、その時点で<span class="t-bold">失敗</span>扱いとなり、以降の手順をスキップします。
+            </p>
+          </div>
+        </section>
+
+        <!-- 難度の決定 -->
+        <section>
+          <div class="sticky">
+            <h3>
+              <span class="num">3</span>
+              難度の決定
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　ＧＭが、判定の<span class="t-bold">難度</span>を決定します。<br>
+              　こちらもシナリオに記載されているため、それを参照してください。<br>
+              　シナリオ上必須ではない、突発的な判定の場合は、以下を参考に決定してください。
+            </p>
+
+            <table class="difficulty">
+              <tbody>
+                <tr>
+                  <th rowspan="2">難度</th>
+                  <th colspan="4">判定ダイス個数ごとの成功率（切り捨て）</th>
+                  <th rowspan="2">目安</th>
+                </tr>
+
+                <tr>
+                  <th>２個</th>
+                  <th>５個</th>
+                  <th>８個</th>
+                  <th>１０個</th>
+                </tr>
+
+                <tr>
+                  <td>１</td>
+                  <td>７５％</td>
+                  <td>９６％</td>
+                  <td>９９％</td>
+                  <td>９９％</td>
+                  <td class="t-left">誰にでもできる、ごく簡単な行動。</td>
+                </tr>
+
+                <tr>
+                  <td>２</td>
+                  <td>２５％</td>
+                  <td>８１％</td>
+                  <td>９６％</td>
+                  <td>９８％</td>
+                  <td class="t-left">ある程度の知識があれば可能な行動。</td>
+                </tr>
+
+                <tr>
+                  <td>３</td>
+                  <td>０％</td>
+                  <td>５０％</td>
+                  <td>８５％</td>
+                  <td>９４％</td>
+                  <td class="t-left">専門家でなければ困難な行動。</td>
+                </tr>
+
+                <tr>
+                  <td>４</td>
+                  <td>０％</td>
+                  <td>１８％</td>
+                  <td>６３％</td>
+                  <td>８２％</td>
+                  <td class="t-left">専門家でも困難な行動。</td>
+                </tr>
+
+                <tr>
+                  <td>５</td>
+                  <td>０％</td>
+                  <td>３％</td>
+                  <td>３６％</td>
+                  <td>６２％</td>
+                  <td class="t-left">運に任せた不確実な行動。<span class="t-red">※非推奨</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 成功数の決定 -->
+        <section>
+          <div class="sticky">
+            <h3>
+              <span class="num">4</span>
+              成功数の決定
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　ハレビトは、判定ダイスを振ります。４・５・６の出目を数え、<span class="t-bold">成功数</span>とします。<br>
+              　また、１の出目を数え、その個数と同じだけの<a>加護</a>を獲得します。
+            </p>
+          </div>
+        </section>
+
+        <!-- 成功数と難度の比較 -->
+        <section>
+          <div class="sticky">
+            <h3>
+              <span class="num">5</span>
+              成功数と難度の比較
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　成功数が難度以上の場合、<span class="t-bold">成功</span>とします。そうでなければ、<span class="t-bold">失敗</span>とします。
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+  </main>
+</body>

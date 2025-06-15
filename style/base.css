@@ -1,0 +1,367 @@
+/* -------------------------------------------------- */
+/* 定数 */
+/* -------------------------------------------------- */
+
+@font-face {
+  font-family: "my_font";
+  src: url(../font/BIZUDPMincho-Regular.ttf);
+}
+
+/* -------------------------------------------------- */
+/* 定数 */
+/* -------------------------------------------------- */
+
+:root {
+  /* 最大幅 */
+  --max-width: 1000px;
+
+  /* スティッキーロウ：高さ */
+  --sticky-row-height: 60px;
+
+  /* メインカラー */
+  --color-main: rgba(64, 64, 64, 100%);
+
+  /* メインカラー（透過） */
+  --color-main-alpha: rgba(64, 64, 64, 25%);
+
+  /* サブカラー */
+  --color-sub: rgba(128, 128, 128, 100%);
+
+  /* サブカラー（透過） */
+  --color-sub-alpha: rgba(158, 158, 158, 25%);
+
+  /* 選択 */
+  --color-select: rgba(128, 128, 128, 100%);
+
+  /* 背景色 */
+  --color-bg: #fff;
+}
+
+/* -------------------------------------------------- */
+/* 【汎用】テキスト */
+/* -------------------------------------------------- */
+
+/* 赤字 */
+.t-red {
+  color: #c00 !important;
+}
+
+/* 太字 */
+.t-bold {
+  font-weight: bold !important;
+}
+
+/* 左寄せ */
+.t-left {
+  text-align: left !important;
+}
+
+/* 中央寄せ */
+.t-center {
+  text-align: center !important;
+}
+
+/* -------------------------------------------------- */
+/* 基本 */
+/* -------------------------------------------------- */
+
+/* ボディ */
+body {
+  background: var(--color-bg);
+  margin: 0;
+  padding: 8px;
+  font-family: my_font;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* メイン */
+main {
+  width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* 段落の次 */
+p+* {
+  margin-top: 1em;
+}
+
+/* 見出し１ */
+h1 {
+  border-top: solid 3px currentColor;
+  border-bottom: solid 3px currentColor;
+  margin-top: 1em;
+  padding: 0.5em 0;
+  color: var(--color-main);
+  text-align: center;
+}
+
+/* 見出し２ */
+h2 {
+  background: var(--color-main);
+  border-radius: 8px;
+  padding: 12px;
+  color: #fff;
+}
+
+/* 見出し３ */
+h3 {
+  border-bottom: solid 3px var(--color-main);
+  border-left: solid 15px var(--color-main);
+  margin-top: 12px;
+  padding-left: 12px;
+  color: var(--color-main);
+}
+
+/* 見出し４ */
+h4 {
+  margin-bottom: 0.5em;
+}
+
+/* 見出し４＋段落 */
+h4+p {
+  margin-top: 0.5em;
+}
+
+/* 見出し４：先頭要素 */
+h4::before {
+  content: "▼";
+}
+
+/* -------------------------------------------------- */
+/* セクション */
+/* -------------------------------------------------- */
+
+/* 基本 */
+section {
+  margin-bottom: 2em;
+}
+
+/* タグジャンプ用 */
+section section {
+  margin-top: calc(var(--sticky-row-height) * -1);
+  padding-top: calc(var(--sticky-row-height));
+}
+
+/* -------------------------------------------------- */
+/* 文章 */
+/* -------------------------------------------------- */
+
+/* ルール */
+.rule_Text {
+  position: relative;
+  border: solid 3px var(--color-sub);
+  margin: 1em 0;
+  padding: 12px;
+}
+
+/* ルール＞段落 */
+.rule_Text>p {
+  margin: 0;
+}
+
+/* ルール＞ボタンエリア */
+.rule_Text>.area-button {
+  margin-top: 1em;
+  text-align: right;
+}
+
+/* -------------------------------------------------- */
+/* テーブル */
+/* -------------------------------------------------- */
+
+/* テーブル */
+table {
+  table-layout: fixed;
+  background: var(--color-sub-alpha);
+  border-radius: 8px;
+  border-spacing: 4px;
+  width: 100%;
+  margin: 0 auto;
+  margin: 1em 0;
+  padding: 8px;
+}
+
+/* セル */
+table>tbody>tr>* {
+  background: #fff;
+  padding: 8px;
+  text-align: center;
+}
+
+/* -------------------------------------------------- */
+/* スティッキーロウ */
+/* -------------------------------------------------- */
+
+/* スティッキーロウ：１段目 */
+.sticky {
+  display: flex;
+  background: var(--color-bg);
+  width: 100%;
+  height: var(--sticky-row-height);
+  margin-bottom: 1em;
+  padding-top: 8px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* スティッキーロウ＞要素 */
+.sticky>* {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* インナーコンテンツ */
+.inner_contents {
+  margin-bottom: 2em;
+}
+
+/* スティッキーロウ＋コンテンツ */
+.sticky+.contents {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* コンテンツ内コンテンツ */
+.contents .contents {
+  padding-left: 1em;
+}
+
+/* スティッキーロウ：２段目 */
+.contents .sticky {
+  height: var(--sticky-row-height);
+  padding: 0;
+  padding-top: 8px;
+  top: var(--sticky-row-height);
+  z-index: 1;
+}
+
+/* -------------------------------------------------- */
+/* 番号 */
+/* -------------------------------------------------- */
+
+/* 通常 */
+.num {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 1em;
+  margin-right: 12px;
+  padding: 4px 8px;
+  background: var(--color-main);
+  border-radius: 8px;
+  color: #fff;
+  font-weight: normal !important;
+  line-height: 1;
+}
+
+/* h2内 */
+h2 .num {
+  background: #fff;
+  color: var(--color-main);
+}
+
+/* 段落内 */
+p>.num {
+  margin: 0 4px;
+}
+
+/* -------------------------------------------------- */
+/* ボタン */
+/* -------------------------------------------------- */
+
+/* リンク */
+a {
+  display: inline-block;
+  background: var(--color-sub-alpha);
+  border-radius: 4px;
+  margin: 0 2px;
+  padding: 0 8px;
+  cursor: pointer;
+  color: currentColor;
+  text-decoration: none;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+/* リンク：ホバー */
+a:hover {
+  background-color: var(--color-select);
+  color: #fff;
+}
+
+/* 別タブリンク */
+a[target="_blank"] {
+  position: relative;
+  padding-right: 24px;
+}
+
+/* 別タブリンク：末尾要素 */
+a[target="_blank"]::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  border-right: solid 2px currentColor;
+  border-bottom: solid 2px currentColor;
+  transform: translate(0, -50%) rotate(-45deg);
+}
+
+/* リンクボタン */
+a.link_button {
+  position: relative;
+  background: #fff;
+  border: solid 3px var(--color-main);
+  border-radius: 100px;
+  padding: 4px 24px;
+  padding-right: 36px;
+  color: var(--color-main);
+}
+
+/* リンクボタン：末尾要素 */
+a.link_button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 10px;
+  height: 10px;
+  border-right: solid 3px currentColor;
+  border-bottom: solid 3px currentColor;
+  transform: translate(0, -50%) rotate(-45deg);
+}
+
+/* リンクボタン：ホバー */
+a.link_button:hover {
+  background: var(--color-main);
+  color: #fff;
+}
+
+/* -------------------------------------------------- */
+/* 技能テーブル */
+/* -------------------------------------------------- */
+
+/* セル */
+table.ability>tbody>tr>th:first-child {
+  width: 90px;
+}
+
+/* セル：《心》 */
+table *.astral {
+  background: #efffef;
+}
+
+/* セル：《技》 */
+table *.mental {
+  background: #efefff;
+}
+
+/* セル：《体》 */
+table *.ether {
+  background: #ffefef;
+}
