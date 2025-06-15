@@ -1,6 +1,7 @@
 <head>
   <link rel="stylesheet" href="../../style/base.css" type="text/css" />
   <link rel="stylesheet" href="../../style/rule.css" type="text/css" />
+  <link rel="stylesheet" href="../../style/arts.css" type="text/css" />
 </head>
 
 <body>
@@ -20,10 +21,10 @@
       <div class="contents">
         <div class="inner_contents">
           <p>
-            　基本的に<span class="t-bold">攻撃判定</span>と<span class="t-bold">防御判定</span>はセットでおこなわれ、以下の手順で処理します。解説中では、攻撃判定をおこなうキャラクターを『攻撃側』、防御判定をおこなうキャラクターを『防御側』と呼びます。
+            　<span class="t-bold">攻撃判定</span>と<span class="t-bold">防御判定</span>は基本的にセットでおこなわれ、以下の手順で処理します。解説中では、攻撃判定をおこなうキャラクターを『攻撃側』、防御判定をおこなうキャラクターを『防御側』と表記します。
           </p>
 
-          <p class="rule_Text">
+          <p class="rule_text">
             <span class="num">1</span>攻撃判定<br>
             <span class="num">2</span>防御判定<br>
             <span class="num">3</span>ダメージの決定
@@ -41,7 +42,8 @@
 
           <div class="contents">
             <p>
-              　攻撃側は、<a>攻撃アーツ（と組み合わせたアーツ）</a>で指定された技能で<a href="roll.html" target="_blank">判定</a>をおこなってください。難度は『１』ですが、組み合わせたアーツによって増加する場合もあります。<br>
+              　攻撃側は、基本攻撃アーツを１つ選び、使用を宣言します。また、これに<a href="">組み合わせ</a>られるアーツがある場合、合わせて宣言します。<br>
+              　基本攻撃アーツ（と組み合わせたアーツ）で指定された技能で<a href="roll.html" target="_blank">判定</a>をおこなってください。難度は『１』ですが、組み合わせたアーツによって増加する場合もあります。<br>
               　判定に成功した場合、成功数を<span class="t-bold">ダメージ</span>とします。失敗した場合、以降の処理はスキップされます。
             </p>
           </div>
@@ -61,6 +63,50 @@
               　防御側は、攻撃判定で使用されたライフと、それに対応したいずれかのスキルで<a href="roll.html" target="_blank">判定</a>をおこなってください。難度は、ダメージと同じ値になります。<br>
               　判定の成否に関わらず、『<span class="num">3</span>ダメージの決定』へ進んでください。
             </p>
+
+            <div class="card">
+              <div class="area-head">
+                <div class="title">
+                  <span class="main">防御判定</span>
+                </div>
+
+                <div class="data">
+                  <span class="cell fullWidth">
+                    <span class="cover">タイミング</span>
+                    防御
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">技能</span>
+                    ※
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">難度</span>
+                    ※
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">対象</span>
+                    自身
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">射程</span>
+                    ‐
+                  </span>
+                </div>
+              </div>
+
+              <div class="area-detail">
+                <p>
+                  　技能は、攻撃判定で使用されたライフになる。スキルは、対応するものをあなたが選ぶ。<br>
+                  　難度は、［ダメージ点数］になる。<br>
+                  　あなたが受けるダメージを［成功数］点減少させる。
+                </p>
+
+              </div>
+            </div>
           </div>
         </section>
 
@@ -92,6 +138,762 @@
             </p>
           </div>
         </section>
+      </div>
+    </section>
+
+    <!-- コンボアーツ -->
+    <section id="roll-combo">
+      <div class="sticky">
+        <h2>
+          コンボアーツ
+        </h2>
+      </div>
+
+      <div class="contents">
+        <div class="inner_contents">
+          <p>
+            　<span class="t-bold">コンボアーツ</span>とは、攻撃判定や防御判定などの特定の判定と組み合わせて使用するアーツです。１回の判定につき、２つまでコンボアーツを組み合わせることができます。<br>
+            　以下のように処理をおこないます。
+          </p>
+
+          <p class="rule_text">
+            <span class="num">1</span>技能の一致の確認<br>
+            <span class="num">2</span>難度の決定<br>
+            <span class="num">3</span>対象の決定<br>
+            <span class="num">4</span>範囲の決定<br>
+            <span class="num">5</span>判定
+          </p>
+        </div>
+
+        <!-- 技能の一致の確認 -->
+        <section>
+          <div class="sticky">
+            <h3>
+              <span class="num">1</span>
+              技能の一致の確認
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　おこなおうとしている判定と、コンボアーツの『技能』が全て一致していることを確認します。アーツの技能に「《体》」などのライフが記載されている場合は、ライフのみが一致していれば組み合わせが可能です。<br>
+              　一致していない場合、組み合わせることはできません。
+            </p>
+
+            <div class="inner_contents">
+              <h4>組み合わせ例</h4>
+
+              <p>
+                技能が、『《体》＋〈迅速〉』で一致しています。
+              </p>
+
+              <div class="card easy ether">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="main">攻撃判定<span class="t-small">（近距離武器）</span></span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>
+                      攻撃
+                    </span>
+
+                    <span class="cell strong_cell">
+                      <span class="cover">技能</span>
+                      〈迅速〉
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">難度</span>
+                      １
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">対象</span>
+                      敵／１体
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">射程</span>
+                      ０
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card easy ether chain">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="ruby">こんしん</span>
+                    <span class="main">渾身</span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>
+                      コンボ：攻撃
+                    </span>
+
+                    <span class="cell strong_cell">
+                      <span class="cover">技能</span>
+                      《体》
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">難度</span>
+                      ±０
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">対象</span>
+                      -
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">射程</span>
+                      ‐
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card easy ether chain">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="ruby">いっきとうせん</span>
+                    <span class="main">一騎当千</span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>
+                      コンボ：攻撃
+                    </span>
+
+                    <span class="cell strong_cell">
+                      <span class="cover">技能</span>
+                      〈迅速〉
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">難度</span>
+                      ＋１
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">対象</span>
+                      -
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">射程</span>
+                      ‐
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </section>
+
+        <!-- 難度の決定 -->
+        <section>
+          <div class="sticky">
+            <h3>
+              <span class="num">2</span>
+              難度の決定
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　難度は、判定と全てのコンボアーツのものを合計した値になります。
+            </p>
+
+            <div class="inner_contents">
+              <h4>組み合わせ例</h4>
+
+              <p>
+                難度は、『２』（＝１＋１）になります。
+              </p>
+
+              <div class="card easy astral">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="main">攻撃判定<span class="t-small">（近距離武器）</span></span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>
+                      攻撃
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">技能</span>
+                      〈霊感〉
+                    </span>
+
+                    <span class="cell strong_cell">
+                      <span class="cover">難度</span>
+                      １
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">対象</span>
+                      敵／１体
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">射程</span>
+                      ０
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card easy astral chain">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="ruby">ちょうぶくのちから</span>
+                    <span class="main">調伏の力</span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>
+                      コンボ：攻撃
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">技能</span>
+                      《心》
+                    </span>
+
+                    <span class="cell strong_cell">
+                      <span class="cover">難度</span>
+                      ＋１
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">対象</span>
+                      ‐
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">射程</span>
+                      ‐
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="inner_contents">
+              <h4>組み合わせ例</h4>
+
+              <p>
+                難度は、『０』（＝１－１）になります。この場合は判定ダイスを振らず、成功扱いとなります。
+              </p>
+
+              <div class="card easy ether">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="main">防御判定<span class="t-small">（《体》ダメージ１点）</span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>
+
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">技能</span>
+                      〈迅速〉
+                    </span>
+
+                    <span class="cell strong_cell">
+                      <span class="cover">難度</span>
+                      １
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">対象</span>
+                      自身
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">射程</span>
+                      ‐
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card easy ether chain">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="ruby">かいひ</span>
+                    <span class="main">回避</span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>
+                      コンボ：防御
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">技能</span>
+                      〈迅速〉
+                    </span>
+
+                    <span class="cell strong_cell">
+                      <span class="cover">難度</span>
+                      －１
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">対象</span>
+                      ‐
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">射程</span>
+                      ‐
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 対象の決定 -->
+        <section>
+          <div class="sticky">
+            <h3>
+              <span class="num">3</span>
+              対象の決定
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　対象は、コンボアーツの中で最少のもの（１体＜１エリア＜全エリア）になります。<br>
+              　コンボアーツの対象が全て『‐』だった場合は、組み合わせた判定のものが適用されます。
+            </p>
+
+            <div class="inner_contents">
+              <h4>組み合わせ例：１</h4>
+
+              <p>
+                対象は、『敵／１体』になります（つまり、【乱舞】を組み合わせる意味はありません）。
+              </p>
+
+              <div class="card easy mental">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="main">攻撃判定<span class="t-small">（近距離武器）</span></span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>
+                      攻撃
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">技能</span>
+                      〈洞察〉
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">難度</span>
+                      １
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">対象</span>
+                      敵／１体
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">射程</span>
+                      ０
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card easy mental chain">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="ruby">しかくからのいちげき</span>
+                    <span class="main">死角からの一撃</span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>
+                      コンボ：攻撃
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">技能</span>
+                      〈洞察〉
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">難度</span>
+                      ＋２
+                    </span>
+
+                    <span class="cell strong_cell">
+                      <span class="cover">対象</span>
+                      敵／１体
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">射程</span>
+                      -
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card easy chain">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="ruby">らんぶ</span>
+                    <span class="main">乱舞</span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>
+                      コンボ：攻撃
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">技能</span>
+                      ‐
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">難度</span>
+                      ±０
+                    </span>
+
+                    <span class="cell strong_cell">
+                      <span class="cover">対象</span>
+                      敵／１エリア
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">射程</span>
+                      －１
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="inner_contents">
+              <h4>組み合わせ例：２</h4>
+
+              <p>
+                対象は、『敵／１体』になります。
+              </p>
+
+              <div class="card easy mental">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="main">攻撃判定<span class="t-small">（遠距離武器）</span></span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>
+                      攻撃
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">技能</span>
+                      〈洞察〉
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">難度</span>
+                      １
+                    </span>
+
+                    <span class="cell strong_cell">
+                      <span class="cover">対象</span>
+                      敵／１体
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">射程</span>
+                      １～２
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card easy mental chain">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="ruby">ひらめき</span>
+                    <span class="main">閃き</span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>
+                      コンボ：攻撃
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">技能</span>
+                      《技》
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">難度</span>
+                      ±０
+                    </span>
+
+                    <span class="cell strong_cell">
+                      <span class="cover">対象</span>
+                      -
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">射程</span>
+                      ‐
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card easy mental chain">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="ruby">きゅうしょねらい</span>
+                    <span class="main">急所狙い</span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>
+                      コンボ：攻撃
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">技能</span>
+                      《技》
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">難度</span>
+                      ＋１
+                    </span>
+
+                    <span class="cell strong_cell">
+                      <span class="cover">対象</span>
+                      ‐
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">射程</span>
+                      ‐
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 範囲の決定 -->
+        <section>
+          <div class="sticky">
+            <h3>
+              <span class="num">4</span>
+              範囲の決定
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　範囲は、判定と全てのコンボアーツのものを合計した値になります。<br>
+              　「＝●」と記載されたコンボアーツがある場合、それが優先されます。
+            </p>
+
+            <div class="inner_contents">
+              <h4>組み合わせ例</h4>
+
+              <p>
+                範囲は、『３』になります。
+              </p>
+
+              <div class="card easy mental">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="main">攻撃判定<span class="t-small">（近距離武器）</span></span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>
+                      攻撃
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">技能</span>
+                      〈器用〉
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">難度</span>
+                      ０
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">対象</span>
+                      敵／１体
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">射程</span>
+                      １
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card easy chain">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="ruby">たかのめ</span>
+                    <span class="main">鷹の目</span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>
+                      コンボ：攻撃
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">技能</span>
+                      ‐
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">難度</span>
+                      ±０
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">対象</span>
+                      ‐
+                    </span>
+
+                    <span class="cell strong_cell">
+                      <span class="cover">射程</span>
+                      ３
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="inner_contents">
+              <h4>組み合わせ例</h4>
+
+              <p>
+                範囲は、『０』になります。
+              </p>
+
+              <div class="card easy mental">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="main">攻撃判定<span class="t-small">（遠距離武器）</span></span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>
+                      攻撃
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">技能</span>
+                      〈器用〉
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">難度</span>
+                      １
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">対象</span>
+                      敵／１体
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">射程</span>
+                      １～２
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card easy chain">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="ruby">ふみこみ</span>
+                    <span class="main">踏み込み</span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>
+                      コンボ：攻撃
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">技能</span>
+                      ‐
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">難度</span>
+                      ±０
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">対象</span>
+                      ‐
+                    </span>
+
+                    <span class="cell strong_cell">
+                      <span class="cover">射程</span>
+                      ０
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
       </div>
     </section>
   </main>

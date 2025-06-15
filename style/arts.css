@@ -4,22 +4,22 @@
 
 :root {
   /* 《心》；サブカラー */
-  --color-astral: rgba(128, 160, 128, 100%);
+  --color-astral: rgb(128, 160, 128);
 
   /* 《心》；サブカラー（透過） */
-  --color-astral-alpha: rgba(128, 192, 128, 25%);
+  --color-astral-alpha: rgb(210, 230, 210);
 
   /* 《技》；サブカラー */
-  --color-mental: rgba(128, 128, 160, 100%);
+  --color-mental: rgb(128, 128, 160);
 
   /* 《技》；サブカラー（透過） */
-  --color-mental-alpha: rgba(128, 128, 192, 25%);
+  --color-mental-alpha: rgb(210, 210, 230);
 
   /* 《体》；サブカラー */
-  --color-ether: rgba(160, 128, 128, 100%);
+  --color-ether: rgb(160, 128, 128);
 
   /* 《体》；サブカラー（透過） */
-  --color-ether-alpha: rgba(192, 128, 128, 25%);
+  --color-ether-alpha: rgb(230, 210, 210);
 }
 
 /* -------------------------------------------------- */
@@ -79,14 +79,14 @@
 /* データ */
 .card>.area-head>.data {
   display: grid;
-  grid-template-columns: 1fr calc(5em + 28px) 1fr calc(6em + 28px);
+  grid-template-columns: 1fr calc(5em + 28px) 1fr calc(7em + 28px);
   flex: 1;
   background: #fff;
   border-top-right-radius: 8px;
   color: #000;
 }
 
-/* データ＞文章＞セル＞ */
+/* データ＞文章＞セル */
 .card>.area-head>.data>.cell {
   display: flex;
   align-items: center;
@@ -152,6 +152,22 @@
   color: var(--color-sub);
   text-align: right;
   transform: skewX(-20deg);
+}
+
+/* 説明文なし：ヘッダー */
+.card.easy>.area-head {
+  border-bottom: none;
+}
+
+/* 説明文なし：右下角丸 */
+.card.easy>.area-head>.data,
+.card.easy>.area-head>.data>.cell:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+/* 強調セル */
+.strong_cell {
+  background: #ffc;
 }
 
 /* -------------------------------------------------- */

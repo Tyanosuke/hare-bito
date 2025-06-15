@@ -28,7 +28,7 @@
   --color-sub: rgba(128, 128, 128, 100%);
 
   /* サブカラー（透過） */
-  --color-sub-alpha: rgba(158, 158, 158, 25%);
+  --color-sub-alpha: rgb(230, 230, 230);
 
   /* 選択 */
   --color-select: rgba(128, 128, 128, 100%);
@@ -41,7 +41,12 @@
 /* 【汎用】テキスト */
 /* -------------------------------------------------- */
 
-/* 赤字 */
+/* 文字サイズ：小 */
+.t-small {
+  font-size: 0.75em;
+}
+
+/* 文字色：赤 */
 .t-red {
   color: #c00 !important;
 }
@@ -191,7 +196,7 @@ section section {
 /* -------------------------------------------------- */
 
 /* ルール */
-.rule_Text {
+.rule_text {
   position: relative;
   border: solid 3px var(--color-sub);
   margin: 1em 0;
@@ -199,12 +204,12 @@ section section {
 }
 
 /* ルール＞段落 */
-.rule_Text>p {
+.rule_text>p {
   margin: 0;
 }
 
 /* ルール＞ボタンエリア */
-.rule_Text>.area-button {
+.rule_text>.area-button {
   margin-top: 1em;
   text-align: right;
 }
