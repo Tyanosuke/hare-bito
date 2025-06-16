@@ -44,11 +44,22 @@
 /* 文字サイズ：小 */
 .t-small {
   font-size: 0.75em;
+  font-weight: normal;
 }
 
 /* 文字色：赤 */
 .t-red {
   color: #c00 !important;
+}
+
+/* 文字色：メイン */
+.t-color-main {
+  color: var(--color-main) !important;
+}
+
+/* 文字色：サブ */
+.t-color-sub {
+  color: var(--color-sub) !important;
 }
 
 /* 太字 */

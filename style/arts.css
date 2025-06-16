@@ -32,6 +32,7 @@
   border-radius: 8px;
   margin-bottom: 12px;
   padding: 2px;
+  position: relative;
 }
 
 /* ヘッダー */
@@ -168,6 +169,24 @@
 /* 強調セル */
 .strong_cell {
   background: #ffc;
+}
+
+/* ベース判定 */
+.card.tag {
+  margin-top: 2em;
+}
+
+/* ベース判定：先頭要素 */
+.card.tag::before {
+  content: attr(tag);
+  background: var(--color-main);
+  border-radius: 4px;
+  padding: 2px 8px;
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  color: #fff;
+  font-size: 14px;
 }
 
 /* -------------------------------------------------- */
