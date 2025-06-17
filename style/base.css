@@ -7,6 +7,11 @@
   src: url(../font/BIZUDPMincho-Regular.ttf);
 }
 
+@font-face {
+  font-family: "num_font";
+  src: url(../font/GenShinGothic-Medium.ttf);
+}
+
 /* -------------------------------------------------- */
 /* 定数 */
 /* -------------------------------------------------- */
@@ -45,6 +50,11 @@
 .t-small {
   font-size: 0.75em;
   font-weight: normal;
+}
+
+/* 等幅数字 */
+.num-fixed {
+  font-family: num_font;
 }
 
 /* 文字色：赤 */
@@ -97,6 +107,11 @@ main {
   margin: 0 auto;
 }
 
+/* セクション */
+section {
+  margin-bottom: 2em;
+}
+
 /* 段落の次 */
 p+* {
   margin-top: 1em;
@@ -124,7 +139,7 @@ h1 {
 /* 見出し２ */
 h2 {
   background: var(--color-main);
-  border-radius: 8px;
+  border-radius: 0 8px 0 8px;
   padding: 12px;
   color: #fff;
 }
@@ -140,7 +155,9 @@ h3 {
 
 /* 見出し４ */
 h4 {
+  margin-top: 0;
   margin-bottom: 0.5em;
+  padding: 4px;
   border-bottom: solid 2px var(--color-main);
 }
 
@@ -155,25 +172,40 @@ h4+.contents>p {
   margin-top: 0;
 }
 
-/* 見出し４：先頭要素 */
-h4::before {
-  content: "▼";
-}
-
 /* -------------------------------------------------- */
 /* レイアウト */
 /* -------------------------------------------------- */
 
+/* コンテンツ */
+.contents {
+  padding-left: 1em;
+}
+
+/* インナーコンテンツ */
+.inner_contents {
+  margin-bottom: 2em;
+}
+
+/* インナーコンテンツ：間隔 */
+.inner_contents+.inner_contents {
+  margin-top: 2em;
+}
+
 /* フレックス */
 .d-flex {
   display: flex;
-  align-items: center;
   margin-left: 1.5em;
+}
+
+/* フレックス：間隔 */
+.d-flex+.d-flex  {
+  margin-top: 0.5em;
 }
 
 /* フレックス＞見出し */
 .d-flex>.title {
   border: solid 2px var(--color-main);
+  height: fit-content;
   margin-right: 8px;
   padding: 2px 4px;
   font-size: 0.75em;
@@ -186,17 +218,11 @@ h4::before {
   margin: 0;
 }
 
-
 /* -------------------------------------------------- */
-/* セクション */
+/* タグジャンプ */
 /* -------------------------------------------------- */
 
-/* 基本 */
-section {
-  margin-bottom: 2em;
-}
-
-/* タグジャンプ用 */
+/* ヘッダー分マージン */
 section section {
   margin-top: calc(var(--sticky-row-height) * -1);
   padding-top: calc(var(--sticky-row-height));
@@ -225,102 +251,17 @@ section section {
   text-align: right;
 }
 
-/* -------------------------------------------------- */
-/* テーブル */
-/* -------------------------------------------------- */
-
-/* テーブル */
-table {
-  table-layout: fixed;
-  background: var(--color-sub-alpha);
-  border-radius: 8px;
-  border-spacing: 4px;
-  width: 100%;
-  margin: 0 auto;
-  margin: 1em 0;
-  padding: 8px;
+/* 分岐タイトル */
+.branch_title {
+  font-weight: bold;
+  margin-bottom: 0.5em;
 }
 
-/* セル */
-table>tbody>tr>* {
-  background: #fff;
-  padding: 8px;
-  text-align: center;
-}
-
-/* -------------------------------------------------- */
-/* スティッキーロウ */
-/* -------------------------------------------------- */
-
-/* スティッキーロウ：１段目 */
-.sticky {
-  display: flex;
-  background: var(--color-bg);
-  width: 100%;
-  height: var(--sticky-row-height);
-  margin-bottom: 1em;
-  padding-top: 8px;
-  box-sizing: border-box;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
-
-/* スティッキーロウ＞要素 */
-.sticky>* {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto;
-}
-
-/* コンテンツ */
-.contents {
-  padding-left: 1em;
-}
-
-/* インナーコンテンツ */
-.inner_contents {
-  margin-bottom: 2em;
-}
-
-/* スティッキーロウ：２段目 */
-.contents .sticky {
-  height: var(--sticky-row-height);
-  padding: 0;
-  padding-top: 8px;
-  top: var(--sticky-row-height);
-  z-index: 1;
-}
-
-/* -------------------------------------------------- */
-/* 番号 */
-/* -------------------------------------------------- */
-
-/* 通常 */
-.num {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 1em;
-  margin-right: 12px;
-  padding: 4px 8px;
-  background: var(--color-main);
-  border-radius: 8px;
-  color: #fff;
-  font-weight: normal !important;
-  line-height: 1;
-}
-
-/* h2内 */
-h2 .num {
-  background: #fff;
+/* 分岐タイトル：戦闘 */
+.branch_title::before {
+  content: "▼";
+  margin-right: 2px;
   color: var(--color-main);
-}
-
-/* 段落内 */
-p>.num {
-  margin: 0 4px;
 }
 
 /* -------------------------------------------------- */
@@ -333,7 +274,7 @@ a {
   background: var(--color-sub-alpha);
   border-radius: 4px;
   margin: 0 2px;
-  padding: 0 8px;
+  padding: 0 4px;
   cursor: pointer;
   color: currentColor;
   text-decoration: none;
@@ -396,6 +337,147 @@ a.link_button:hover {
 }
 
 /* -------------------------------------------------- */
+/* テーブル */
+/* -------------------------------------------------- */
+
+/* テーブル */
+table {
+  table-layout: fixed;
+  background: var(--color-sub-alpha);
+  border-radius: 8px;
+  border-spacing: 4px;
+  width: 100%;
+  margin: 0 auto;
+  margin: 1em 0;
+  padding: 8px;
+}
+
+/* セル */
+table>tbody>tr>* {
+  background: #fff;
+  padding: 8px;
+  text-align: center;
+}
+
+/* ヘッダーセル */
+table>tbody>tr>th {
+  background: var(--color-sub);
+  color: #fff;
+  font-weight: normal;
+}
+
+/* 説明テーブル＞セル */
+table.tutorial td {
+  text-align: left;
+}
+
+/* 説明テーブル＞ヘッダーセル */
+table.tutorial th {
+  width: 7em;
+  text-align: center;
+}
+
+/* -------------------------------------------------- */
+/* スティッキーロウ */
+/* -------------------------------------------------- */
+
+/* スティッキーロウ：１段目 */
+.sticky {
+  display: flex;
+  background: var(--color-bg);
+  width: 100%;
+  height: var(--sticky-row-height);
+  margin-bottom: 1em;
+  padding-top: 8px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* スティッキーロウ＞要素 */
+.sticky>* {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* スティッキーロウ：２段目 */
+.contents .sticky {
+  height: var(--sticky-row-height);
+  padding: 0;
+  padding-top: 8px;
+  top: var(--sticky-row-height);
+  z-index: 1;
+}
+
+/* -------------------------------------------------- */
+/* 番号 */
+/* -------------------------------------------------- */
+
+/* 通常 */
+.num {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 1em;
+  margin-right: 8px;
+  padding: 6px;
+  padding-left: 8px;
+  background: var(--color-main);
+  border-radius: 8px;
+  color: #fff;
+  font-family: num_font;
+  font-size: 0.75em;
+  font-weight: bold !important;
+  line-height: 1;
+  letter-spacing: 2px;
+  vertical-align: middle;
+}
+
+/* h2内 */
+h2 .num {
+  background: #fff;
+  color: var(--color-main);
+}
+
+/* 段落内 */
+p>.num {
+  margin: 0 4px;
+}
+
+/* -------------------------------------------------- */
+/* 処理順 */
+/* -------------------------------------------------- */
+
+/* 処理順 */
+.rule_text>.process {
+    padding: 1em 0;
+}
+
+/* 処理順：最初の要素 */
+.rule_text>.process:first-child {
+    padding-top: 0;
+}
+
+/* 処理順：最後の要素 */
+.rule_text>.process:last-child {
+    padding-bottom: 0;
+}
+
+/* 処理順：洞察 */
+.process+.process {
+    border-top: solid 3px var(--color-sub);
+}
+
+/* 処理順＞内容 */
+.process>.detail {
+    margin-top: 0.5em;
+    padding-left: 2em;
+}
+
+/* -------------------------------------------------- */
 /* 技能テーブル */
 /* -------------------------------------------------- */
 
@@ -405,16 +487,31 @@ table.ability>tbody>tr>th:first-child {
 }
 
 /* セル：《心》 */
-table *.astral {
+table td.astral {
   background: #efffef;
 }
 
+/* ヘッダーセル：《心》 */
+table th.astral {
+  color: #efffef;
+}
+
 /* セル：《技》 */
-table *.mental {
+table td.mental {
   background: #efefff;
 }
 
+/* ヘッダーセル：《技》 */
+table th.mental {
+  color: #efefff;
+}
+
 /* セル：《体》 */
-table *.ether {
+table td.ether {
   background: #ffefef;
+}
+
+/* ヘッダーセル：《体》 */
+table th.ether {
+  color: #ffefef;
 }

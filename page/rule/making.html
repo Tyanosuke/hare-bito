@@ -13,14 +13,52 @@
       <p>
         　ＰＣの作成手順について解説します。
       </p>
+
+      <div class="rule_text">
+        <div class="process">
+          <div class="title">
+            <span class="num">1</span><a href="#personality">パーソナリティ</a>
+          </div>
+        </div>
+
+        <div class="process">
+          <div class="title">
+            <span class="num">2</span><a href="#class">クラス</a>
+          </div>
+        </div>
+
+        <div class="process">
+          <div class="title">
+            <span class="num">3</span><a href="#ability">技能</a>
+          </div>
+
+          <div class="detail">
+            <span class="num">3-1</span><a href="#ability-life">ライフの習得</a><br>
+            <span class="num">3-2</span><a href="#ability-skill">スキルの習得</a><br>
+            <span class="num">3-3</span><a href="#ability-free">スキルの自由習得</a>
+          </div>
+        </div>
+
+        <div class="process">
+          <div class="title">
+            <span class="num">4</span><a href="#arts">アーツ</a>
+          </div>
+
+          <div class="detail">
+            <span class="num">4-1</span><a href="#arts-wearpon">攻撃アーツの習得</a><br>
+            <span class="num">4-2</span><a href="#arts-primary">プライマリクラスのアーツの習得</a><br>
+            <span class="num">4-3</span><a href="#arts-free">アーツの自由習得</a>
+          </div>
+        </div>
+
+      </div>
     </div>
 
     <!-- 【１】パーソナリティ -->
     <section id="personality">
       <div class="sticky">
         <h2>
-          <span class="num">1</span>
-          パーソナリティ
+          <span class="num">1</span>パーソナリティ
         </h2>
       </div>
 
@@ -36,8 +74,7 @@
     <section id="class">
       <div class="sticky">
         <h2>
-          <span class="num">2</span>
-          クラス
+          <span class="num">2</span>クラス
         </h2>
       </div>
 
@@ -45,7 +82,7 @@
         <p>
           　<span class="t-bold">クラス</span>とは、ハレビトにおける戦いの流派です。<br>
           　ＰＣは、<span class="t-bold">プライマリクラス</span>と<span class="t-bold">セカンダリクラス</span>の２つのクラスを持ちます。<br>
-          　それぞれ、<a href="#ability">技能</a>のレベルと、習得できる<a href="#arts">アーツ</a>に影響します。詳しい説明は各項目内でおこないますので、それを見ながら選んでください。
+          　それぞれ、<a href="#ability">技能</a>のレベルと、習得できる<a href="#arts">アーツ</a>に影響します。詳しい説明は各項目内で行いますので、それを見ながら選んでください。
         </p>
 
         <div class="rule_text">
@@ -88,7 +125,7 @@
                 <p>
                   　様々な道具を使いこなす、技術者たちです。<br>
                   　《技》の技能に優れます。<br>
-                  　基本攻撃の性能変化させるアーツや、特定条件で強化される攻撃アーツを持ちます。
+                  　攻撃の性能変化させるアーツや、特定条件で強化される攻撃アーツを持ちます。
                 </p>
 
                 <div class="class_image">
@@ -190,29 +227,115 @@
       </div>
     </section>
 
-    <!-- 【３】技能 -->
+    <!-- 技能 -->
     <section id="ability">
       <div class="sticky">
         <h2>
-          <span class="num">3</span>
-          技能
+          <span class="num">3</span>技能
         </h2>
       </div>
 
       <div class="contents">
-        <div class="inner_contents">
-          <p>
-            　ＰＣが持つ行動能力を<span class="t-bold">技能</span>と呼びます。技能には、<span class="t-bold">ライフ</span>と、それらに紐づく<span class="t-bold">スキル</span>があります。<br>
-            　詳しくは、<a href="../rule/ability.html#ability" target="_blank">技能</a>を確認してください。
-          </p>
-        </div>
+        <p>
+          　<span class="t-bold">技能</span>には下記の表のように、《心》《技》《体》の３つの<span class="t-bold">ライフ</span>と、それらに紐づく<span class="t-bold">スキル</span>があります。<br>
+          　それぞれにはレベルがあり、「《心》５」や「〈博愛〉２」のように表記されます。これらは<a href="roll.html" target="_blank">判定</a>で振るダイスの数に関係します。
+        </p>
+
+        <table>
+          <tbody>
+            <tr>
+              <!-- 《見出し -->
+              <th>ライフ</th>
+              <!-- 《心》 -->
+              <td class="astral" colspan="3">《心》</td>
+              <!-- 《技》 -->
+              <td class="mental" colspan="3">《技》</td>
+              <!-- 《体》 -->
+              <td class="ether" colspan="3">《体》</td>
+            </tr>
+
+            <tr>
+              <!-- 《見出し -->
+              <th>スキル</th>
+              <!-- 《心》 -->
+              <td class="astral">〈博愛〉</td>
+              <td class="astral">〈忍耐〉</td>
+              <td class="astral">〈幻想〉</td>
+              <!-- 《技》 -->
+              <td class="mental">〈器用〉</td>
+              <td class="mental">〈学知〉</td>
+              <td class="mental">〈洞察〉</td>
+              <!-- 《体》 -->
+              <td class="ether">〈威風〉</td>
+              <td class="ether">〈反応〉</td>
+              <td class="ether">〈迅速〉</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- ライフ -->
+        <section>
+          <div class="sticky">
+            <h3>
+              ライフ
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　ハレビトの力の根幹となる値です。<span class="t-bold">《心》《技》《体》</span>の３つを持ちます。<br>
+              　いわゆるＨＰとしての役割を持ち、ダメージを受けた際に減少します。いずれかが０点になった際、ＰＣは<a href="battle.html#battle-down" target="_blank">戦闘不能</a>状態になります。また、３つ全てが０点になった場合、<a href="battle.html#battle-retreat" target="_blank">撤退</a>状態になります。<br>
+              　最大値は、『そのライフのレベル』と同じになります。セッション開始時は、最大値の状態になっています。<br>
+              　最低値は、『０』です。なお、一度０点になったライフは、そのセッション中、それ以上減少することもなければ、１点以上に増加することもありません。
+            </p>
+
+            <!-- 《心》 -->
+            <section>
+              <h4>
+                《心》
+              </h4>
+
+              <p>
+                　ハレビトの精神力を表します。<br>
+                　紐づくスキルとして、〈博愛〉〈忍耐〉〈幻想〉があります。<br>
+                　これにダメージを受けることは、精神的なショックを受けることを意味します。
+              </p>
+            </section>
+
+            <!-- 《技》 -->
+            <section>
+              <h4>
+                《技》
+              </h4>
+
+              <p>
+                　ハレビトの技術力を表します。<br>
+                　紐づくスキルとして、〈器用〉〈学知〉〈洞察〉があります。<br>
+                　これにダメージを受けることは、用意した装備品や戦略が無力化されることを意味します。
+              </p>
+            </section>
+
+            <!-- 《体》 -->
+            <section>
+              <h4>
+                《体》
+              </h4>
+
+              <p>
+                　ハレビトの身体能力を表します。<br>
+                　紐づくスキルとして、〈威風〉〈反応〉〈迅速〉があります。<br>
+                　これにダメージを受けることは、肉体的な損傷を受けることを意味します。
+              </p>
+            </section>
+
+          </div>
+        </section>
 
         <!-- ライフの習得 -->
         <section id="ability-life">
           <div class="sticky">
             <h3>
-              <span class="num">3-1</span>
-              ライフの習得
+              <span class="num">3-1</span>ライフの習得
             </h3>
           </div>
 
@@ -226,7 +349,7 @@
             <table class="ability">
               <tbody>
                 <tr>
-                  <th>ライフ</th>
+                  <th>クラス</th>
                   <th class="astral">《心》</th>
                   <th class="mental">《技》</th>
                   <th class="ether">《体》</th>
@@ -278,12 +401,225 @@
           </div>
         </section>
 
+        <!-- スキル -->
+        <section>
+          <div class="sticky">
+            <h3>
+              スキル
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　ハレビトが自身の《心》《技》《体》を用いて、何ができるかを表す値です。<br>
+              　アーツなどの効果によって一時的に増減することはあれど、その効果が消えれば元の値に戻ります。
+            </p>
+
+            <!-- 〈博愛〉 -->
+            <section>
+              <h4>
+                〈博愛〉
+              </h4>
+
+              <p>
+                　《心》のスキルです。<br>
+                　他者への共感や優しさを表します。単なる社交性に留まらず、相手を思いやり、感情を理解し、信頼を築くためのコミュニケーション能力です。
+              </p>
+
+              <div class="d-flex">
+                <div class="title">
+                  使用例
+                </div>
+
+                <p>
+                  誰かを助けるために、危険な場所へと踏み込む。混乱している人を落ち着かせる。説得する。
+                </p>
+              </div>
+            </section>
+
+            <!-- 〈忍耐〉 -->
+            <section>
+              <h4>
+                〈忍耐〉
+              </h4>
+
+              <p>
+                　《心》のスキルです。<br>
+                　困難に耐える心の強さを表します。恐怖、怒り、悲しみといった負の感情は、ケガレを呼び寄せてしまいます。確固とした信念を持つことは、ハレビトにとって重要なものです。
+              </p>
+
+              <div class="d-flex">
+                <div class="title">
+                  使用例
+                </div>
+
+                <p>
+                  痛みや精神的ショックに耐える。本心を隠し、無感情を装う。嘘を吐く。
+                </p>
+              </div>
+            </section>
+
+            <!-- 〈幻想〉 -->
+            <section>
+              <h4>
+                〈幻想〉
+              </h4>
+
+              <p>
+                　《心》のスキルです。<br>
+                　妄想力と言い換えても差し支えありません。非現実的な“何か”を感じ取り、相互に影響し合う力です。ただし、それはハレビトの世界では常識的な行動です。
+              </p>
+
+              <div class="d-flex">
+                <div class="title">
+                  使用例
+                </div>
+
+                <p>
+                  突拍子もないことを思いつく。神や霊と交信する。言葉を解さない存在と意思疎通を図る。
+                </p>
+              </div>
+            </section>
+
+            <!-- 〈器用〉 -->
+            <section>
+              <h4>
+                〈器用〉
+              </h4>
+
+              <p>
+                　《技》のスキルです。<br>
+                　繊細かつ正確な動作を行うための、手先の巧みさを表します。また、習得した知識や技術を応用して用いる、“知恵”を意味します。例え慣れていない道具でも使いこなすことができるでしょう。
+              </p>
+
+              <div class="d-flex">
+                <div class="title">
+                  使用例
+                </div>
+
+                <p>
+                  物を製作する。機械の故障を直す。鍵を開ける。罠を解除する。持っている情報から、新たな真実を導き出す。
+                </p>
+              </div>
+            </section>
+
+            <!-- 〈学知〉 -->
+            <section>
+              <h4>
+                〈学知〉
+              </h4>
+
+              <p>
+                　《技》のスキルです。<br>
+                　語学、数学、理化学、歴史学、雑学など……、あらゆる学術の“知識”を表します。また、どれだけの物事を記憶し、それを即座に引き出すことができます。
+              </p>
+
+              <div class="d-flex">
+                <div class="title">
+                  使用例
+                </div>
+
+                <p>
+                  知識を活用する。専門的な知識を、分かりやすく説明する。過去にあった出来事を思い出す。
+                </p>
+              </div>
+            </section>
+
+            <!-- 〈洞察〉 -->
+            <section>
+              <h4>
+                〈洞察〉
+              </h4>
+
+              <p>
+                　《技》のスキルです。<br>
+                　目に見える物だけでなく、気配や兆候を読み取り、僅かな状況の変化をも見逃さない力を表します。他者があなたを騙そうとしたり、真実を隠そうとしたりしていることを、言動の違和感から見抜くことができます。
+              </p>
+
+              <div class="d-flex">
+                <div class="title">
+                  使用例
+                </div>
+
+                <p>
+                  隠された物を見つける。小さな物音を聞き取る。相手の嘘を見抜く。状況の変化を感じ取る。
+                </p>
+              </div>
+            </section>
+
+            <!-- 〈威風〉 -->
+            <section>
+              <h4>
+                〈威風〉
+              </h4>
+
+              <p>
+                　《体》のスキルです。<br>
+                　肉体の頑強さと、それに裏打ちされた存在感の強さを表します。単純な筋力はもちろん、その身体から醸し出されるオーラ、威圧感も含まれます。また、厳しい鍛錬は、病気や毒物への抵抗力に繋がるでしょう。
+              </p>
+
+              <div class="d-flex">
+                <div class="title">
+                  使用例
+                </div>
+
+                <p>
+                  重い物を動かす。扉や壁などを破壊する。他者を威圧する。病気や毒物への抵抗。
+                </p>
+              </div>
+            </section>
+
+            <!-- 〈反応〉 -->
+            <section>
+              <h4>
+                〈反応〉
+              </h4>
+
+              <p>
+                　《体》のスキルです。<br>
+                　外部からの刺激に対して、どれだけ素早く反応できるかを示します。また、身体のバランスを保つための平衡感覚を含みます。考えるよりも早く、身体を反応させ、的確に状況に対処するための力です。
+              </p>
+
+              <div class="d-flex">
+                <div class="title">
+                  使用例
+                </div>
+
+                <p>
+                  素早い動きを見切る。不意打ちを見破る。不安定な足場を進む。相手の隙を突く。
+                </p>
+              </div>
+            </section>
+
+            <!-- 〈迅速〉 -->
+            <section>
+              <h4>
+                〈迅速〉
+              </h4>
+
+              <p>
+                　《体》のスキルです。<br>
+                　足の速さ、跳躍力を表します。また、壁や断崖をよじ登ったり、障害物を乗り越えるための能力でもあります。単なる移動の素早さだけでなく、最短のルートを導き出すセンスを含みます。
+              </p>
+
+              <div class="d-flex">
+                <div class="title">
+                  使用例
+                </div>
+
+                <p>
+                  誰かを追跡する。誰かから逃げる。高い場所や離れた場所へと飛び移る。障害物を乗り越える。
+                </p>
+              </div>
+            </section>
+          </div>
+        </section>
+
         <!-- スキルの習得 -->
         <section id="ability-skill">
           <div class="sticky">
             <h3>
-              <span class="num">3-2</span>
-              スキルの習得
+              <span class="num">3-2</span>スキルの習得
             </h3>
           </div>
 
@@ -298,12 +634,12 @@
             <table class="ability">
               <tbody>
                 <tr>
-                  <th>スキル</th>
+                  <th>クラス</th>
                   <th class="astral">〈博愛〉</th>
                   <th class="astral">〈忍耐〉</th>
-                  <th class="astral">〈霊感〉</th>
+                  <th class="astral">〈幻想〉</th>
                   <th class="mental">〈器用〉</th>
-                  <th class="mental">〈知性〉</th>
+                  <th class="mental">〈学知〉</th>
                   <th class="mental">〈洞察〉</th>
                   <th class="ether">〈威風〉</th>
                   <th class="ether">〈反応〉</th>
@@ -394,11 +730,10 @@
         </section>
 
         <!-- スキルの自由習得 -->
-        <section id="ability-flee">
+        <section id="ability-free">
           <div class="sticky">
             <h3>
-              <span class="num">3-3</span>
-              スキルの自由習得
+              <span class="num">3-3</span>スキルの自由習得
             </h3>
           </div>
 
@@ -418,8 +753,7 @@
     <section id="arts">
       <div class="sticky">
         <h2>
-          <span class="num">4</span>
-          アーツ
+          <span class="num">4</span>アーツ
         </h2>
       </div>
 
@@ -428,34 +762,35 @@
           <p>
             　ハレビトたちの戦いの技、それが<span class="t-bold">アーツ</span>です。<a href="../rule/battle.html" target="_blank">ハラエフェイズ</a>にて、ケガレビトに対抗するための手段となります。<br>
             　アーツにはあえて厳密なイメージは設定していません。あなたが「このアーツはこういうものなんだ！」と説明できるのなら、それがあなただけのアーツになります。<br>
-            　ある意味でアーツはＰＣを特徴づけるアクセサリーとも言えるでしょう。自分だけのアーツ構成で、キャラクターの個性を際立たせましょう。もちろん、ゲーム的な強さを求めて選択するのも、やり方の一つです。
+            　ある意味でアーツはＰＣを特徴づけるアクセサリーとも言えるでしょう。自分だけのアーツ構成で、キャラクターの個性を際立たせましょう。もちろん、ゲーム的な強さを求めて選択するのも、やり方の一つです。<br>
+            　アーツの発動には、技能による<a href="/page/rule/roll.html" target="_blank">判定</a>が必要です。
           </p>
         </div>
 
-        <!-- 基本攻撃アーツの習得 -->
+        <!-- 攻撃アーツの習得 -->
         <section id="arts-wearpon">
           <div class="sticky">
             <h3>
-              <span class="num">4-1</span>
-              基本攻撃アーツの習得
+              <span class="num">4-1</span>攻撃アーツの習得
             </h3>
           </div>
 
           <div class="contents">
             <p>
-              　<span class="t-bold">基本攻撃アーツ</span>は、ハレビトたちがケガレビトとの戦いで用いる武器、あるいは戦闘スタイルそのものを指します。<br>
+              　<span class="t-bold">攻撃アーツ</span>は、ハレビトたちがケガレビトとの戦いで用いる武器、あるいは戦闘スタイルそのものを指します。<br>
               　それは、剣や槍、弓矢や銃などの文字通りの武器だったり、傘や鉄パイプといった身近にある物だったり、炎や雷などの形の無いものだったり、心に訴えかける巧みな話術だったり……、ハレビトの攻撃方法は実に様々です。<br>
-              　基本攻撃アーツには、【近距離武器】と【遠距離武器】の２つがあります。キャラクターのイメージに合うものを選んで習得してください。なお、ここではどちらか１つしか修得できませんが、『<span class="num">4-3</span>アーツの自由習得』にてもう片方を習得することも可能です。
+              　攻撃アーツには、【近距離武器】と【遠距離武器】の２つがあります。キャラクターのイメージに合うものを選んで習得してください。なお、ここではどちらか１つしか修得できませんが、『<span class="num">4-3</span>アーツの自由習得』にてもう片方を習得することも可能です。<br>
+              　また、<a href="/page/rule/battle.html#battle-combo" target="_blank">コンボ</a>という、アーツを組み合わせて性能を変化させるシステムがあります。戦闘演出に個性を加えるだけでなく、ゲーム面でも非常に有効な要素なので、アーツ選択の指針として意識してみてください。
             </p>
 
             <div class="rule_text">
               <p>
-                　基本攻撃アーツを１つ習得します。<br>
+                　攻撃アーツを１つ習得します。<br>
                 　技能は、習得時に任意のものを設定できます。セッション中に変更することはできないので、注意してください。
               </p>
 
               <div class="area-button">
-                <a class="link_button" href="../data/arts.html#arts-wearpon" target="_blank">基本攻撃アーツを確認する</a>
+                <a class="link_button" href="../data/arts.html#arts-wearpon" target="_blank">攻撃アーツを確認する</a>
               </div>
             </div>
           </div>
@@ -465,15 +800,14 @@
         <section id="arts-primary">
           <div class="sticky">
             <h3>
-              <span class="num">4-2</span>
-              プライマリクラスのアーツの習得
+              <span class="num">4-2</span>プライマリクラスのアーツの習得
             </h3>
           </div>
 
           <div class="contents">
             <div class="rule_text">
               <p>
-                　プライマリクラスのアーツを１つ習得します。
+                　プライマリクラスのアーツを２つ習得します。
               </p>
 
               <div class="area-button">
@@ -487,15 +821,14 @@
         <section id="arts-free">
           <div class="sticky">
             <h3>
-              <span class="num">4-3</span>
-              アーツの自由習得
+              <span class="num">4-3</span>アーツの自由習得
             </h3>
           </div>
 
           <div class="contents">
             <div class="rule_text">
               <p>
-                　汎用カテゴリー（基本攻撃・共通）と、プライマリクラス・セカンダリクラスのアーツの中から、合計で３つ習得します。
+                　汎用カテゴリー（攻撃・共通）と、プライマリクラス・セカンダリクラスのアーツの中から、合計で３つ習得します。
               </p>
 
               <div class="area-button">
@@ -504,7 +837,6 @@
             </div>
           </div>
         </section>
-
       </div>
     </section>
   </main>

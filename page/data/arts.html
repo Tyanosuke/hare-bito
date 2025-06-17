@@ -6,9 +6,198 @@
 <body>
   <a href="/index.html">戻る</a>
 
-  <h1>アーツ一覧</h1>
+  <h1>アーツ</h1>
 
   <main>
+    <!-- アーツの見方 -->
+    <section id="arts-tutorial">
+      <div class="sticky">
+        <h2>
+          アーツの見方
+        </h2>
+      </div>
+
+      <div class="contents">
+        <div class="inner_contents">
+          <div class="card">
+            <div class="area-head">
+              <div class="title">
+                ①
+              </div>
+
+              <div class="data">
+                <span class="cell fullWidth">
+                  <span class="cover">タイミング</span>②
+                </span>
+
+                <span class="cell">
+                  <span class="cover">技能</span>③
+                </span>
+
+                <span class="cell">
+                  <span class="cover">難度</span>④
+                </span>
+
+                <span class="cell">
+                  <span class="cover">射程</span>⑤
+                </span>
+
+                <span class="cell">
+                  <span class="cover">対象</span>⑥
+                </span>
+              </div>
+            </div>
+
+            <div class="area-detail">
+              <p>
+                ⑦
+              </p>
+
+              <p class="note">⑧</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="inner_contents">
+          <h3>
+            ①名称
+          </h3>
+
+          <p>
+            　名称です。
+          </p>
+        </div>
+
+        <div class="inner_contents">
+          <h3>
+            ②タイミング
+          </h3>
+
+          <p>
+            　使用できるタイミングです。サポートアーツの場合「コンボ：●●」のように記載されます。<br>
+            　タイミングの詳細は<a href="/page/rule/battle.html#battle" target="_blank">ハラエフェイズ／戦闘の流れ</a>を、コンボについては<a href="/page/rule/battle.html#battle-combo" target="_blank">ハラエフェイズ／コンボ</a>を参照してください。
+          </p>
+        </div>
+
+        <div class="inner_contents">
+          <h3>
+            ③技能
+          </h3>
+
+          <p>
+            　判定で使用する技能です。<br>
+            　詳細は<a href="/page/rule/roll.html#roll-1" target="_blank">判定／使用する技能の決定</a>を参照してください。
+          </p>
+        </div>
+
+        <div class="inner_contents">
+          <h3>
+            ④難度
+          </h3>
+
+          <p>
+            　判定の難度です。使用には、この値以上の成功数が必要です。<br>
+            　詳細は、<a href="/page/rule/roll.html#roll-3" target="_blank">判定／難度の決定</a>を参照してください。
+          </p>
+        </div>
+
+        <div class="inner_contents">
+          <h3>
+            ⑤射程
+          </h3>
+
+          <p>
+            　何列先のエリアまで対象にできるかを示します。<br>
+            　対象が、敵の場合のみ記載されています。
+          </p>
+
+          <table class="tutorial">
+            <tbody>
+              <tr>
+                <th>１</th>
+                <td>
+                  あなたが味方フロントエリアにいる場合、敵フロントエリアが射程内です。<br>
+                  あなたが味方バックエリアにいる場合、このアーツは使用できません。
+                </td>
+              </tr>
+
+              <tr>
+                <th>２</th>
+                <td>
+                  あなたが味方フロントエリアにいる場合、敵エリア全てが射程内です<br>
+                  あなたが味方バックエリアにいる場合、敵フロントエリアが射程内です。
+                </td>
+              </tr>
+
+              <tr>
+                <th>３</th>
+                <td>あなたがいるエリアに関係無く、敵エリア全てが射程内です</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="inner_contents">
+          <h3>
+            ⑥対象
+          </h3>
+
+          <p>
+            　効果を適用する範囲です。
+          </p>
+
+          <table class="tutorial">
+            <tbody>
+              <tr>
+                <th>敵／１体</th>
+                <td>射程内の敵を１体選び、効果を適用します。</td>
+              </tr>
+
+              <tr>
+                <th>敵／１列</th>
+                <td>射程内の１列を選び、そのエリア内の全ての敵に効果を適用します。</td>
+              </tr>
+
+              <tr>
+                <th>味方／１体</th>
+                <td>味方から１体選び、効果を適用します。</td>
+              </tr>
+
+              <tr>
+                <th>味方／同列</th>
+                <td>あなたと同じエリア内の全ての味方に効果を適用します。</td>
+              </tr>
+
+              <tr>
+                <th>味方／全体</th>
+                <td>全ての味方に効果を適用します。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="inner_contents">
+          <h3>
+            ⑦効果
+          </h3>
+
+          <p>
+            　どのような効果が適用されるのか記載しています。
+          </p>
+        </div>
+
+        <div class="inner_contents">
+          <h3>
+            ⑧フレーバーテキスト
+          </h3>
+
+          <p>
+            　そのアーツがどのようなものなのか、一例を記載しています。
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- 汎用 -->
     <section id="arts-general">
       <div class="sticky">
@@ -18,11 +207,11 @@
       </div>
 
       <div class="contents">
-        <!-- 基本攻撃 -->
+        <!-- 攻撃 -->
         <section id="arts-wearpon">
           <div class="sticky">
             <h3>
-              基本攻撃
+              攻撃
             </h3>
           </div>
 
@@ -37,28 +226,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    攻撃
+                    <span class="cover">タイミング</span>攻撃
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    ※
+                    <span class="cover">技能</span>※
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    １
+                    <span class="cover">難度</span>１
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    敵／１体
+                    <span class="cover">射程</span>１
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ０
+                    <span class="cover">対象</span>敵／１体
                   </span>
                 </div>
               </div>
@@ -67,8 +251,7 @@
                 <p>
                   このアーツの技能は、習得時に任意のものを選択する。
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    対象に［成功数＋２］点のダメージを与える。
+                    <span class="condition">成功</span>対象に［成功数＋２］点のダメージを与える。
                   </span>
                 </p>
 
@@ -86,28 +269,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    攻撃
+                    <span class="cover">タイミング</span>攻撃
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    ※
+                    <span class="cover">技能</span>※
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    １
+                    <span class="cover">難度</span>１
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    敵／１体
+                    <span class="cover">射程</span>２
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ２
+                    <span class="cover">対象</span>敵／１体
                   </span>
                 </div>
               </div>
@@ -116,8 +294,7 @@
                 <p>
                   このアーツの技能は、習得時に任意のものを選択する。
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    対象に［成功数］点のダメージを与える。
+                    <span class="condition">成功</span>対象に［成功数］点のダメージを与える。
                   </span>
                 </p>
 
@@ -146,28 +323,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    コンボ：攻撃
+                    <span class="cover">タイミング</span>コンボ：攻撃
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    《心》
+                    <span class="cover">技能</span><span class="astral">《心》</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ±０
+                    <span class="cover">難度</span>±０
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    -
+                    <span class="cover">射程</span>±０
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ±０
+                    <span class="cover">対象</span>-
                   </span>
                 </div>
               </div>
@@ -191,28 +363,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    コンボ：攻撃
+                    <span class="cover">タイミング</span>コンボ：攻撃
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    《技》
+                    <span class="cover">技能</span><span class="mental">《技》</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ±０
+                    <span class="cover">難度</span>±０
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    -
+                    <span class="cover">射程</span>±０
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ±０
+                    <span class="cover">対象</span>-
                   </span>
                 </div>
               </div>
@@ -236,28 +403,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    コンボ：攻撃
+                    <span class="cover">タイミング</span>コンボ：攻撃
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    《体》
+                    <span class="cover">技能</span><span class="ether">《体》</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ±０
+                    <span class="cover">難度</span>±０
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    -
+                    <span class="cover">射程</span>±０
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ±０
+                    <span class="cover">対象</span>-
                   </span>
                 </div>
               </div>
@@ -267,7 +429,7 @@
                   その攻撃判定に１のプラス修正を与える。
                 </p>
 
-                <p class="note">攻撃に、持てる限りの力を込める。</p>
+                <p class="note">持てる限りの力を、攻撃に込める。</p>
               </div>
             </div>
 
@@ -281,34 +443,29 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    常時
+                    <span class="cover">タイミング</span>常時
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    ‐
+                    <span class="cover">技能</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ‐
+                    <span class="cover">難度</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
+                    <span class="cover">射程</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
+                    <span class="cover">対象</span>‐
                   </span>
                 </div>
               </div>
 
               <div class="area-detail">
-                <p>あなたが受ける《心》ダメージを１点減少させる。</p>
+                <p>あなたが受ける<span class="astral">《心》</span>ダメージを１点減少させる。</p>
 
                 <p class="note">平静を保つ自己暗示。あるいはポジティブなだけかもしれない。</p>
               </div>
@@ -324,34 +481,29 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    常時
+                    <span class="cover">タイミング</span>常時
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    ‐
+                    <span class="cover">技能</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ‐
+                    <span class="cover">難度</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
+                    <span class="cover">射程</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
+                    <span class="cover">対象</span>‐
                   </span>
                 </div>
               </div>
 
               <div class="area-detail">
-                <p>あなたが受ける《技》ダメージを１点減少させる。</p>
+                <p>あなたが受ける<span class="mental">《技》</span>ダメージを１点減少させる。</p>
 
                 <p class="note">備えあれば患いなし。あなたは十重二十重に策を巡らせている。</p>
               </div>
@@ -367,34 +519,29 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    常時
+                    <span class="cover">タイミング</span>常時
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    ‐
+                    <span class="cover">技能</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ‐
+                    <span class="cover">難度</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
+                    <span class="cover">射程</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
+                    <span class="cover">対象</span>‐
                   </span>
                 </div>
               </div>
 
               <div class="area-detail">
-                <p>あなたが受ける《体》ダメージを１点減少させる。</p>
+                <p>あなたが受ける<span class="ether">《体》</span>ダメージを１点減少させる。</p>
 
                 <p class="note">肉体の損傷を防ぐための装甲。鎧や盾など。</p>
               </div>
@@ -425,50 +572,45 @@
 
           <div class="contents">
             <!-- 調伏の力 -->
-            <div class="card astral chain">
-              <div class="area-head">
-                <div class="title">
-                  <span class="ruby">ちょうぶくのちから</span>
-                  <span class="main">調伏の力</span>
+            <div id="choubuku_no_chikara" class="jump_tag">
+              <div class="card astral chain">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="ruby">ちょうぶくのちから</span><span class="main">調伏の力</span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>コンボ：攻撃
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">技能</span><span class="astral">《心》</span>
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">難度</span>＋１
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">対象</span>‐
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">射程</span>±０
+                    </span>
+                  </div>
                 </div>
 
-                <div class="data">
-                  <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    コンボ：攻撃
-                  </span>
+                <div class="area-detail">
+                  <p>
+                    <span class="branch">
+                      <span class="condition">成功</span>ラウンド中、対象の攻撃判定に１のマイナス修正を与える。
+                    </span>
+                  </p>
 
-                  <span class="cell">
-                    <span class="cover">技能</span>
-                    《心》
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">難度</span>
-                    ＋１
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">射程</span>
-                    ±０
-                  </span>
+                  <p class="note">悪しき心を静める霊術。</p>
                 </div>
-              </div>
-
-              <div class="area-detail">
-                <p>
-                  <span class="branch">
-                    <span class="condition">成功</span>
-                    ラウンド中、対象の攻撃判定に１のマイナス修正を与える。
-                  </span>
-                </p>
-
-                <p class="note">悪しき心を静める霊術。</p>
               </div>
             </div>
 
@@ -482,28 +624,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    ラウンド
+                    <span class="cover">タイミング</span>ラウンド開始
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    〈霊感〉
+                    <span class="cover">技能</span><span class="astral">〈幻想〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ２
+                    <span class="cover">難度</span>１
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    味方／１体
+                    <span class="cover">射程</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    １
+                    <span class="cover">対象</span>味方／１体
                   </span>
                 </div>
               </div>
@@ -511,8 +648,7 @@
               <div class="area-detail">
                 <p>
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    ラウンド中、対象の攻撃判定に１のプラス修正を与える。
+                    <span class="condition">成功</span>ラウンド中、対象の攻撃判定に１のプラス修正を与える。
                   </span>
                 </p>
 
@@ -530,28 +666,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    ラウンド
+                    <span class="cover">タイミング</span>ラウンド開始
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    〈霊感〉
+                    <span class="cover">技能</span><span class="astral">〈幻想〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ２
+                    <span class="cover">難度</span>１
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    味方／１体
+                    <span class="cover">射程</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    １
+                    <span class="cover">対象</span>味方／１体
                   </span>
                 </div>
               </div>
@@ -559,8 +690,7 @@
               <div class="area-detail">
                 <p>
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    ラウンド中、対象の防御判定に１のプラス修正を与える。
+                    <span class="condition">成功</span>ラウンド中、対象の防御判定に１のプラス修正を与える。
                   </span>
                 </p>
 
@@ -578,28 +708,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    ラウンド
+                    <span class="cover">タイミング</span>ラウンド開始
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    〈忍耐〉
+                    <span class="cover">技能</span><span class="astral">〈忍耐〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ２
+                    <span class="cover">難度</span>３
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    自身
+                    <span class="cover">射程</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
+                    <span class="cover">対象</span>自身
                   </span>
                 </div>
               </div>
@@ -607,12 +732,53 @@
               <div class="area-detail">
                 <p>
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    あなたの《心》を［成功数÷２（切り上げ）］点回復する。
+                    <span class="condition">成功</span>あなたの<span class="astral">《心》</span>を［成功数÷３（切り上げ）］点回復する。
                   </span>
                 </p>
 
                 <p class="note">心を落ち着け、精神ダメージを打ち消す。</p>
+              </div>
+            </div>
+
+            <!-- 凪の言霊 -->
+            <div class="card mental">
+              <div class="area-head">
+                <div class="title">
+                  <span class="ruby">なぎのことだま</span>
+                  <span class="main">凪の言霊</span>
+                </div>
+
+                <div class="data">
+                  <span class="cell fullWidth">
+                    <span class="cover">タイミング</span>ラウンド開始
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">技能</span><span class="mental">〈学知〉</span>
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">難度</span>５
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">射程</span>‐
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">対象</span>味方／１体
+                  </span>
+                </div>
+              </div>
+
+              <div class="area-detail">
+                <p>
+                  <span class="branch">
+                    <span class="condition">成功</span>ラウンド中、対象は判定へのマイナス修正を受けない。
+                  </span>
+                </p>
+
+                <p class="note">精神を安定させる言葉。</p>
               </div>
             </div>
 
@@ -626,28 +792,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    常時
+                    <span class="cover">タイミング</span>常時
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    ‐
+                    <span class="cover">技能</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ‐
+                    <span class="cover">難度</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
+                    <span class="cover">射程</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
+                    <span class="cover">対象</span>‐
                   </span>
                 </div>
               </div>
@@ -656,54 +817,6 @@
                 <p>セッション開始時、【加護】を３点獲得する。</p>
 
                 <p class="note">神霊に愛されており、より強い加護を得られる。</p>
-              </div>
-            </div>
-
-            <!--  -->
-            <div class="card">
-              <div class="area-head">
-                <div class="title">
-                  <span class="ruby"></span>
-                  <span class="main"></span>
-                </div>
-
-                <div class="data">
-                  <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">技能</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">難度</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
-                  </span>
-                </div>
-              </div>
-
-              <div class="area-detail">
-                <p>
-                  <span class="branch">
-                    <span class="condition">成功</span>
-
-                  </span>
-                </p>
-
-                <p class="note"></p>
               </div>
             </div>
           </div>
@@ -728,35 +841,30 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    コンボ：攻撃
+                    <span class="cover">タイミング</span>コンボ：攻撃
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    ‐
+                    <span class="cover">技能</span><span class="mental">〈洞察〉</span><span class="ether">〈反応〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ±０
+                    <span class="cover">難度</span>＋１
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
+                    <span class="cover">射程</span>＋１
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ＋１
+                    <span class="cover">対象</span>‐
                   </span>
                 </div>
               </div>
 
               <div class="area-detail">
                 <p>
-                  　その攻撃判定に１のマイナス修正を与える。
+                  性能変化のみ。
                 </p>
 
                 <p class="note">遠く離れた敵に狙いを定める。</p>
@@ -764,50 +872,46 @@
             </div>
 
             <!-- 急所狙い -->
-            <div class="card mental chain">
-              <div class="area-head">
-                <div class="title">
-                  <span class="ruby">きゅうしょねらい</span>
-                  <span class="main">急所狙い</span>
+            <div id="kyuusho_nerai" class="jump_tag">
+              <div class="card mental chain">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="ruby">きゅうしょねらい</span>
+                    <span class="main">急所狙い</span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>コンボ：攻撃
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">技能</span><span class="mental">〈洞察〉</span><span class="ether">〈反応〉</span>
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">難度</span>＋１
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">射程</span>±０
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">対象</span>‐
+                    </span>
+                  </div>
                 </div>
 
-                <div class="data">
-                  <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    コンボ：攻撃
-                  </span>
+                <div class="area-detail">
+                  <p>
+                    <span class="branch">
+                      <span class="condition">成功</span>与えるダメージを［判定ダイス中の『６』の数］点増加させる。
+                    </span>
+                  </p>
 
-                  <span class="cell">
-                    <span class="cover">技能</span>
-                    《技》
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">難度</span>
-                    ＋１
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">射程</span>
-                    ±０
-                  </span>
+                  <p class="note">弱点を的確に狙う。</p>
                 </div>
-              </div>
-
-              <div class="area-detail">
-                <p>
-                  <span class="branch">
-                    <span class="condition">成功</span>
-                    与えるダメージを［判定ダイス中の『６』の数］点増加させる。
-                  </span>
-                </p>
-
-                <p class="note">弱点を的確に狙う。</p>
               </div>
             </div>
 
@@ -821,28 +925,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    コンボ：攻撃
+                    <span class="cover">タイミング</span>コンボ：攻撃
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    《技》
+                    <span class="cover">技能</span><span class="mental">《技》</span><span class="ether">〈反応〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ＋１
+                    <span class="cover">難度</span>＋１
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
+                    <span class="cover">射程</span>±０
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ±０
+                    <span class="cover">対象</span>‐
                   </span>
                 </div>
               </div>
@@ -850,8 +949,7 @@
               <div class="area-detail">
                 <p>
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    対象の防御判定に［あなたの行動速度－対象の行動速度］（最低１）のマイナス修正を与える。
+                    <span class="condition">成功</span>対象の防御判定に［あなたの行動速度－対象の行動速度］（最低１）のマイナス修正を与える。
                   </span>
                 </p>
 
@@ -869,42 +967,78 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    ターン
+                    <span class="cover">タイミング</span>ターン
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    任意
+                    <span class="cover">技能</span>任意
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    １
+                    <span class="cover">難度</span>２
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    自身
+                    <span class="cover">射程</span>-
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    -
+                    <span class="cover">対象</span>自身
                   </span>
                 </div>
               </div>
 
               <div class="area-detail">
                 <p>
-                  あなたが習得している基本攻撃アーツ１つを選択して使用する。
+                  あなたが習得している攻撃アーツ１つを選択して使用する。
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    このラウンド中、選択したアーツの技能を、判定で使用したスキルに変更する。
+                    <span class="condition">成功</span>このラウンド中、選択したアーツの『技能』を、判定で使用したスキルに変更する。
                   </span>
                 </p>
 
                 <p class="note">変形機構を持つ装備や、柔軟な発想力により、あらゆる状況に対応する。</p>
+              </div>
+            </div>
+
+            <!-- アナライズ -->
+            <div class="card mental">
+              <div class="area-head">
+                <div class="title">
+                  <span class="ruby">アナライズ</span>
+                  <span class="main">アナライズ</span>
+                </div>
+
+                <div class="data">
+                  <span class="cell fullWidth">
+                    <span class="cover">タイミング</span>ラウンド開始
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">技能</span><span class="mental">〈学知〉</span>
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">難度</span>３
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">射程</span>１
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">対象</span>敵／１体
+                  </span>
+                </div>
+              </div>
+
+              <div class="area-detail">
+                <p>
+                  <span class="branch">
+                    <span class="condition">成功</span>ラウンド中、対象の防御判定に１のマイナス修正を与える。
+                  </span>
+                </p>
+
+                <p class="note">敵の弱点を見破る。</p>
               </div>
             </div>
 
@@ -918,28 +1052,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    判定直後
+                    <span class="cover">タイミング</span>判定直後
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    ‐
+                    <span class="cover">技能</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ‐
+                    <span class="cover">難度</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
+                    <span class="cover">射程</span>-
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    -
+                    <span class="cover">対象</span>‐
                   </span>
                 </div>
               </div>
@@ -951,54 +1080,6 @@
                 </p>
 
                 <p class="note">圧倒的な頭脳の回転により、窮地を脱する。</p>
-              </div>
-            </div>
-
-            <!--  -->
-            <div class="card">
-              <div class="area-head">
-                <div class="title">
-                  <span class="ruby"></span>
-                  <span class="main"></span>
-                </div>
-
-                <div class="data">
-                  <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">技能</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">難度</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
-                  </span>
-                </div>
-              </div>
-
-              <div class="area-detail">
-                <p>
-                  <span class="branch">
-                    <span class="condition">成功</span>
-
-                  </span>
-                </p>
-
-                <p class="note"></p>
               </div>
             </div>
           </div>
@@ -1021,84 +1102,116 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    コンボ：攻撃
+                    <span class="cover">タイミング</span>コンボ：攻撃
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    ‐
+                    <span class="cover">技能</span><span class="astral">〈忍耐〉</span><span class="ether">〈威風〉</span><span class="ether">〈迅速〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ±０
+                    <span class="cover">難度</span>±０
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
+                    <span class="cover">射程</span>＋２
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ＝０
+                    <span class="cover">対象</span>‐
                   </span>
                 </div>
               </div>
 
               <div class="area-detail">
                 <p>
-                  その攻撃判定に２のプラス修正を与える。<br>
+                  あなたがフロントエリアにいる場合にのみ使用できる。<br>
                   このラウンド中、あなたの防御判定に１のマイナス修正を与える。
                 </p>
 
-                <p class="note">危険を顧みず、敵の懐へと更に踏み込む。</p>
+                <p class="note">危険を顧みず、敵の懐へと踏み込む。</p>
               </div>
             </div>
 
-            <!-- 乱舞 -->
+            <!-- 横一文字 -->
             <div class="card chain">
               <div class="area-head">
                 <div class="title">
-                  <span class="ruby">らんぶ</span>
-                  <span class="main">乱舞</span>
+                  <span class="ruby">よこいちもんじ</span>
+                  <span class="main">横一文字</span>
                 </div>
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    コンボ：攻撃
+                    <span class="cover">タイミング</span>コンボ：攻撃
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    ‐
+                    <span class="cover">技能</span><span class="astral">〈忍耐〉</span><span class="ether">〈威風〉</span><span class="ether">〈迅速〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ±０
+                    <span class="cover">難度</span>±０
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    敵／１エリア
+                    <span class="cover">射程</span>±０
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    －１
+                    <span class="cover">対象</span>敵／１列
                   </span>
                 </div>
               </div>
 
               <div class="area-detail">
                 <p>
-                  攻撃判定に［対象エリア内の敵の数÷２（切り上げ）］のマイナス修正を与える。
+                  その攻撃判定に１のマイナス修正を与える。
                 </p>
 
-                <p class="note">乱れるような動きで、自分の周囲を攻撃する。</p>
+                <p class="note">薙ぎ払うように広範囲を攻撃する。</p>
+              </div>
+            </div>
+
+            <!-- 衝撃 -->
+            <div class="card chain">
+              <div class="area-head">
+                <div class="title">
+                  <span class="ruby">しょうげき</span>
+                  <span class="main">衝撃</span>
+                </div>
+
+                <div class="data">
+                  <span class="cell fullWidth">
+                    <span class="cover">タイミング</span>コンボ：攻撃
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">技能</span><span class="astral">〈幻想〉</span><span class="mental">〈器用〉</span><span class="ether">〈威風〉</span>
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">難度</span>±０
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">射程</span>‐
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">対象</span>‐
+                  </span>
+                </div>
+              </div>
+
+              <div class="area-detail">
+                <p>
+                  <span class="branch">
+                    <span class="condition">成功</span>対象をバックエリアへと移動させる。
+                  </span>
+                </p>
+
+                <p class="note">強い衝撃を与え、敵を吹き飛ばす。</p>
               </div>
             </div>
 
@@ -1112,37 +1225,32 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    コンボ：防御
+                    <span class="cover">タイミング</span>コンボ：防御
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    〈反応〉
+                    <span class="cover">技能</span><span class="mental">〈洞察〉</span><span class="ether">〈反応〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ‐
+                    <span class="cover">難度</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
+                    <span class="cover">射程</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
+                    <span class="cover">対象</span>‐
                   </span>
                 </div>
               </div>
 
               <div class="area-detail">
                 <p>
+                  攻撃を行うキャラクターがあなたと同列の場合、使用できる。
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    攻撃してきたキャラクターが同エリアの場合、［上回った成功数］点のダメージを与える。
+                    <span class="condition">成功</span>［上回った成功数］点のダメージを与える。
                   </span>
                 </p>
 
@@ -1160,28 +1268,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    ラウンド
+                    <span class="cover">タイミング</span>ラウンド開始
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    〈威風〉
+                    <span class="cover">技能</span><span class="ether">〈威風〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ２
+                    <span class="cover">難度</span>２
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    自身
+                    <span class="cover">射程</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
+                    <span class="cover">対象</span>自身
                   </span>
                 </div>
               </div>
@@ -1189,8 +1292,7 @@
               <div class="area-detail">
                 <p>
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    ラウンド中、あなたの攻撃判定に１のプラス修正を与える。
+                    <span class="condition">成功</span>ラウンド中、あなたの攻撃判定に１のプラス修正を与える。
                   </span>
                 </p>
 
@@ -1208,28 +1310,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    常時
+                    <span class="cover">タイミング</span>常時
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    ‐
+                    <span class="cover">技能</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ‐
+                    <span class="cover">難度</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
+                    <span class="cover">射程</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
+                    <span class="cover">対象</span>‐
                   </span>
                 </div>
               </div>
@@ -1242,54 +1339,6 @@
                 <p class="note">危機的な状況にあっても、決してあきらめない。</p>
               </div>
             </div>
-
-            <!--  -->
-            <div class="card">
-              <div class="area-head">
-                <div class="title">
-                  <span class="ruby"></span>
-                  <span class="main"></span>
-                </div>
-
-                <div class="data">
-                  <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">技能</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">難度</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
-                  </span>
-                </div>
-              </div>
-
-              <div class="area-detail">
-                <p>
-                  <span class="branch">
-                    <span class="condition">成功</span>
-
-                  </span>
-                </p>
-
-                <p class="note"></p>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -1300,6 +1349,47 @@
           </div>
 
           <div class="contents">
+            <!-- 憤怒の力 -->
+            <div class="card ether chain">
+              <div class="area-head">
+                <div class="title">
+                  <span class="ruby">ふんぬのちから</span>
+                  <span class="main">憤怒の力</span>
+                </div>
+
+                <div class="data">
+                  <span class="cell fullWidth">
+                    <span class="cover">タイミング</span>組み合わせ：攻撃
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">技能</span><span class="astral">〈忍耐〉</span>
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">難度</span>±０
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">射程</span>－１
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">対象</span>敵／１体
+                  </span>
+                </div>
+              </div>
+
+              <div class="area-detail">
+                <p>
+                  あなたの《命》に１点のダメージを与えて使用する。このダメージには【加護】の効果を使用できない。<br>
+                  その攻撃判定に［《命》に受けているダメージ点数］のプラス修正を与える。
+                </p>
+
+                <p class="note">受けた痛みを力に変え、解き放つ。しかし、強い怒りはケガレを呼ぶ。</p>
+              </div>
+            </div>
+
             <!-- 根性 -->
             <div class="card chain">
               <div class="area-head">
@@ -1310,28 +1400,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    コンボ：復活
+                    <span class="cover">タイミング</span>コンボ：復活
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    -
+                    <span class="cover">技能</span>-
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    -
+                    <span class="cover">難度</span>-
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
+                    <span class="cover">射程</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
+                    <span class="cover">対象</span>‐
                   </span>
                 </div>
               </div>
@@ -1355,28 +1440,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    ラウンド
+                    <span class="cover">タイミング</span>ラウンド開始
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    〈忍耐〉
+                    <span class="cover">技能</span><span class="astral">〈忍耐〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    -
+                    <span class="cover">難度</span>-
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    自身
+                    <span class="cover">射程</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
+                    <span class="cover">対象</span>自身
                   </span>
                 </div>
               </div>
@@ -1390,6 +1470,51 @@
               </div>
             </div>
 
+            <!-- 鉄壁 -->
+            <div class="card astral">
+              <div class="area-head">
+                <div class="title">
+                  <span class="ruby">てっぺき</span>
+                  <span class="main">鉄壁</span>
+                </div>
+
+                <div class="data">
+                  <span class="cell fullWidth">
+                    <span class="cover">タイミング</span>ターン
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">技能</span><span class="astral">〈博愛〉</span>
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">難度</span>３
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">射程</span>‐
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">対象</span>味方／全体
+                  </span>
+                </div>
+              </div>
+
+              <div class="area-detail">
+                <p>
+                  あなたがフロントエリアにいる場合にのみ使用できる。<br>
+                  使用後、あなたは行動終了状態になる。
+                  <span class="branch">
+                    <span class="condition">成功</span>
+                    対象の防御判定に２のプラス修正を与える。
+                  </span>
+                </p>
+
+                <p class="note">味方の前に立ち、敵の攻撃を受け止める。</p>
+              </div>
+            </div>
+
             <!-- かばう -->
             <div class="card astral">
               <div class="area-head">
@@ -1400,28 +1525,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    ラウンド
+                    <span class="cover">タイミング</span>ラウンド開始
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    〈博愛〉
+                    <span class="cover">技能</span><span class="astral">〈博愛〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    １
+                    <span class="cover">難度</span>１
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    味方／１体
+                    <span class="cover">射程</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ０
+                    <span class="cover">対象</span>味方／１体
                   </span>
                 </div>
               </div>
@@ -1429,60 +1549,11 @@
               <div class="area-detail">
                 <p>
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    このラウンド中、対象への攻撃はあなたが代わりに受ける。ただし、対象があなたとは違うエリアに移動した場合、このアーツは無効化される。
+                    <span class="condition">成功</span>このラウンド中、対象への攻撃はあなたが代わりに受ける。
                   </span>
                 </p>
 
                 <p class="note">味方への攻撃を肩代わりする。</p>
-              </div>
-            </div>
-
-            <!-- 救出 -->
-            <div class="card astral">
-              <div class="area-head">
-                <div class="title">
-                  <span class="ruby">きゅうしゅつ</span>
-                  <span class="main">救出</span>
-                </div>
-
-                <div class="data">
-                  <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    任意
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">技能</span>
-                    〈博愛〉
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">難度</span>
-                    １
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">対象</span>
-                    味方／１体
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">射程</span>
-                    １
-                  </span>
-                </div>
-              </div>
-
-              <div class="area-detail">
-                <p>
-                  <span class="branch">
-                    <span class="condition">成功</span>
-                    対象を、あなたと同じエリアに移動させる。
-                  </span>
-                </p>
-
-                <p class="note">味方を自身の下へ引き寄せる。</p>
               </div>
             </div>
 
@@ -1496,90 +1567,36 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    あなたがダメージを受ける時
+                    <span class="cover">タイミング</span>ダメージによって、あなたのライフが減少する時
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    任意
+                    <span class="cover">技能</span>任意
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ※
+                    <span class="cover">難度</span>※
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    自身
+                    <span class="cover">射程</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
+                    <span class="cover">対象</span>自身
                   </span>
                 </div>
               </div>
 
               <div class="area-detail">
                 <p>
-                  このアーツの難度は、［受けるダメージ点数÷２（切り上げ）］になる。
+                  難度は、［受けるダメージ点数÷２（切り上げ）］になる。
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    そのダメージを、指定技能に対応するライフで受ける。
+                    <span class="condition">成功</span>そのダメージを、技能に対応するライフで受ける。
                   </span>
                 </p>
 
                 <p class="note">大切な何かを守るため、別の何かを切り捨てる勇気。</p>
-              </div>
-            </div>
-
-            <!--  -->
-            <div class="card">
-              <div class="area-head">
-                <div class="title">
-                  <span class="ruby"></span>
-                  <span class="main"></span>
-                </div>
-
-                <div class="data">
-                  <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">技能</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">難度</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
-                  </span>
-                </div>
-              </div>
-
-              <div class="area-detail">
-                <p>
-                  <span class="branch">
-                    <span class="condition">成功</span>
-
-                  </span>
-                </p>
-
-                <p class="note"></p>
               </div>
             </div>
           </div>
@@ -1592,38 +1609,33 @@
           </div>
 
           <div class="contents">
-            <!-- 影縛り -->
-            <div class="card mental chain">
+            <!-- 引力 -->
+            <div class="card chain">
               <div class="area-head">
                 <div class="title">
-                  <span class="ruby">かげしばり</span>
-                  <span class="main">影縛り</span>
+                  <span class="ruby">いんりょく</span>
+                  <span class="main">引力</span>
                 </div>
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    コンボ：攻撃
+                    <span class="cover">タイミング</span>コンボ：攻撃
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    《技》
+                    <span class="cover">技能</span><span class="astral">〈博愛〉</span><span class="mental">〈学知〉</span><span class="ether">〈威風〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ＋１
+                    <span class="cover">難度</span>＋１
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
+                    <span class="cover">射程</span>＋１
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ±０
+                    <span class="cover">対象</span>敵／１体
                   </span>
                 </div>
               </div>
@@ -1631,12 +1643,53 @@
               <div class="area-detail">
                 <p>
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    このラウンド中、対象はそのエリアから移動できない。
+                    <span class="condition">成功</span>対象をフロントエリアへと移動させる。
                   </span>
                 </p>
 
-                <p class="note">影に小刀や針などを突き立て、動きを封じる忍術。</p>
+                <p class="note">敵を自身の下へと引き寄せる。</p>
+              </div>
+            </div>
+
+            <!-- 束縛 -->
+            <div class="card mental chain">
+              <div class="area-head">
+                <div class="title">
+                  <span class="ruby">そくばく</span>
+                  <span class="main">束縛</span>
+                </div>
+
+                <div class="data">
+                  <span class="cell fullWidth">
+                    <span class="cover">タイミング</span>コンボ：攻撃
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">技能</span><span class="astral">〈幻想〉</span><span class="mental">〈器用〉</span><span class="ether">〈威風〉</span>
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">難度</span>＋１
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">射程</span>±０
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">対象</span>‐
+                  </span>
+                </div>
+              </div>
+
+              <div class="area-detail">
+                <p>
+                  <span class="branch">
+                    <span class="condition">成功</span>このラウンド中、対象はそのエリアから移動できない。
+                  </span>
+                </p>
+
+                <p class="note">身体の自由を奪い、一か所に縛り付ける。</p>
               </div>
             </div>
 
@@ -1650,28 +1703,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    コンボ：攻撃
+                    <span class="cover">タイミング</span>コンボ：攻撃
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    〈洞察〉
+                    <span class="cover">技能</span><span class="mental">〈洞察〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ＋２
+                    <span class="cover">難度</span>＋３
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    敵／１体
+                    <span class="cover">射程</span>±０
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ±０
+                    <span class="cover">対象</span>敵／１体
                   </span>
                 </div>
               </div>
@@ -1679,8 +1727,7 @@
               <div class="area-detail">
                 <p>
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    対象は防御判定をおこなうことができない。
+                    <span class="condition">成功</span>対象は防御判定を行うことができない。
                   </span>
                 </p>
 
@@ -1698,28 +1745,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    コンボ：防御
+                    <span class="cover">タイミング</span>コンボ：防御
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    〈迅速〉
+                    <span class="cover">技能</span><span class="astral">〈幻想〉</span><span class="ether">〈迅速〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    －１
+                    <span class="cover">難度</span>－１
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
+                    <span class="cover">射程</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
+                    <span class="cover">対象</span>‐
                   </span>
                 </div>
               </div>
@@ -1727,12 +1769,10 @@
               <div class="area-detail">
                 <p>
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    あなたが受けるダメージを０点にする。
+                    <span class="condition">成功</span>あなたが受けるダメージを０点にする。
                   </span>
                   <span class="branch">
-                    <span class="condition">失敗</span>
-                    成功数に関わらず、あなたが受けるダメージが［ダメージ点数＋１］に変更される。
+                    <span class="condition">失敗</span>成功数に関わらず、あなたが受けるダメージが［ダメージ点数＋１］に変更される。
                   </span>
                 </p>
 
@@ -1750,38 +1790,32 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    コンボ：速度
+                    <span class="cover">タイミング</span>コンボ：速度
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    ※
+                    <span class="cover">技能</span>※
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ±０
+                    <span class="cover">難度</span>±０
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    自身
+                    <span class="cover">射程</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
+                    <span class="cover">対象</span>自身
                   </span>
                 </div>
               </div>
 
               <div class="area-detail">
                 <p>
-                  その速度判定の技能を〈知性〉に変更する。
+                  その速度判定の技能を<span class="mental">〈学知〉</span>に変更する。
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    あなたの行動速度を［０～達成値］に変更する。
+                    <span class="condition">成功</span>あなたの行動速度を［０～達成値］に変更する。
                   </span>
                 </p>
 
@@ -1799,28 +1833,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    ラウンド
+                    <span class="cover">タイミング</span>ラウンド開始
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    〈洞察〉
+                    <span class="cover">技能</span><span class="mental">〈洞察〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ３
+                    <span class="cover">難度</span>５
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
+                    <span class="cover">射程</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
+                    <span class="cover">対象</span>‐
                   </span>
                 </div>
               </div>
@@ -1828,60 +1857,11 @@
               <div class="area-detail">
                 <p>
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    あなたのターン直前まで、あなたは攻撃の対象にならない。
+                    <span class="condition">成功</span>あなたのターン直前まで、あなたは攻撃の対象にならない。
                   </span>
                 </p>
 
-                <p class="note">気配を断ち、相手から身を隠す忍術。</p>
-              </div>
-            </div>
-
-            <!--  -->
-            <div class="card">
-              <div class="area-head">
-                <div class="title">
-                  <span class="ruby"></span>
-                  <span class="main"></span>
-                </div>
-
-                <div class="data">
-                  <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">技能</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">難度</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
-                  </span>
-                </div>
-              </div>
-
-              <div class="area-detail">
-                <p>
-                  <span class="branch">
-                    <span class="condition">成功</span>
-
-                  </span>
-                </p>
-
-                <p class="note"></p>
+                <p class="note">気配を断ち、相手から身を隠す。</p>
               </div>
             </div>
           </div>
@@ -1894,38 +1874,33 @@
           </div>
 
           <div class="contents">
-            <!-- 点穴撃 -->
+            <!-- 麻痺 -->
             <div class="card mental chain">
               <div class="area-head">
                 <div class="title">
-                  <span class="ruby">てんけつげき</span>
-                  <span class="main">点穴撃</span>
+                  <span class="ruby">まひ</span>
+                  <span class="main">麻痺</span>
                 </div>
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    コンボ：攻撃
+                    <span class="cover">タイミング</span>コンボ：攻撃
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    〈器用〉
+                    <span class="cover">技能</span><span class="mental">〈器用〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ＋１
+                    <span class="cover">難度</span>＋１
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    敵／１体
+                    <span class="cover">射程</span>±０
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ±０
+                    <span class="cover">対象</span>‐
                   </span>
                 </div>
               </div>
@@ -1933,60 +1908,54 @@
               <div class="area-detail">
                 <p>
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    対象の行動速度を１減少させる。
+                    <span class="condition">成功</span>対象の行動速度を１減少させる（０以下にはできない）。
                   </span>
                 </p>
 
-                <p class="note">気の流れを妨げ、一時的に身体を麻痺させる。</p>
+                <p class="note">対象の身体を麻痺させる。</p>
               </div>
             </div>
 
-            <!-- 波紋拳 -->
+            <!-- 縦一文字 -->
             <div class="card ether chain">
               <div class="area-head">
                 <div class="title">
-                  <span class="ruby">はもんけん</span>
-                  <span class="main">波紋拳</span>
+                  <span class="ruby">たていちもんじ</span>
+                  <span class="main">縦一文字</span>
                 </div>
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    コンボ：攻撃
+                    <span class="cover">タイミング</span>コンボ：攻撃
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    《体》
+                    <span class="cover">技能</span><span class="astral">〈忍耐〉</span><span class="ether">〈威風〉</span><span class="ether">〈迅速〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ＋１
+                    <span class="cover">難度</span>＋１
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
+                    <span class="cover">射程</span>±０
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ±０
+                    <span class="cover">対象</span>‐
                   </span>
                 </div>
               </div>
 
               <div class="area-detail">
                 <p>
+                  対象が、敵フロントエリア内の場合にのみ使用できる。
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    対象の防御判定に１のマイナス修正を与える。
+                    <span class="condition">成功</span>敵バックエリア内のキャラクター１体を選ぶ。その１体に、［ダメージ点数÷２（切り上げ）］のダメージを与える（このダメージに対しても防御判定が行われる）。
                   </span>
                 </p>
 
-                <p class="note">生命エネルギーを流し込み、身体の内側からダメージを与える。</p>
+                <p class="note">直線状に並ぶ、複数の敵を攻撃する。</p>
               </div>
             </div>
 
@@ -2000,28 +1969,23 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    コンボ：攻撃
+                    <span class="cover">タイミング</span>コンボ：攻撃
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    〈迅速〉
+                    <span class="cover">技能</span><span class="ether">〈迅速〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ＋１
+                    <span class="cover">難度</span>＋１
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    敵／１体
+                    <span class="cover">射程</span>－１
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ＝０
+                    <span class="cover">対象</span>敵／１体
                   </span>
                 </div>
               </div>
@@ -2031,57 +1995,94 @@
                   対象のライフを０点にした場合、あなたは行動終了状態にならず、行動速度を［現在の値－２］に変更する。
                 </p>
 
-                <p class="note">己が力のみを頼りとする、熟達の武術家の証。</p>
+                <p class="note">己が力のみを頼りとする、熟達の戦士の証。</p>
               </div>
             </div>
 
             <!-- 回復気功 -->
+            <div id="kaihuku-kikou" class="jump_tag">
+              <div class="card astral">
+                <div class="area-head">
+                  <div class="title">
+                    <span class="ruby">かいふくきこう</span><span class="main">回復気功</span>
+                  </div>
+
+                  <div class="data">
+                    <span class="cell fullWidth">
+                      <span class="cover">タイミング</span>ターン
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">技能</span><span class="astral">〈博愛〉</span>
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">難度</span>※
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">射程</span>‐
+                    </span>
+
+                    <span class="cell">
+                      <span class="cover">対象</span>味方／１体
+                    </span>
+                  </div>
+                </div>
+
+                <div class="area-detail">
+                  <p>
+                    難度は、［対象が<span class="ether">《体》</span>に受けているダメージ点数］になる。<br>
+                    使用後、あなたは行動終了状態になる。
+                    <span class="branch">
+                      <span class="condition">成功</span>対象の<span class="ether">《体》</span>を［成功数÷２（切り上げ）］点回復する。
+                    </span>
+                  </p>
+
+                  <p class="note">身体に流れる気を操り、傷を癒す。</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 一喝 -->
             <div class="card astral">
               <div class="area-head">
                 <div class="title">
-                  <span class="ruby">かいふくきこう</span>
-                  <span class="main">回復気功</span>
+                  <span class="ruby">いっかつ</span>
+                  <span class="main">一喝</span>
                 </div>
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    ターン
+                    <span class="cover">タイミング</span>ラウンド開始
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    〈博愛〉
+                    <span class="cover">技能</span><span class="astral">〈博愛〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ※
+                    <span class="cover">難度</span>３
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    味方／１体
+                    <span class="cover">射程</span>０
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ０
+                    <span class="cover">対象</span>味方／同列
                   </span>
                 </div>
               </div>
 
               <div class="area-detail">
                 <p>
-                  攻撃の代わりに使用する。<br>
-                  難度は、［対象が《体》に受けているダメージ点数］になる。
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    対象の《体》を［成功数］点回復する。
+                    <span class="condition">成功</span>ラウンド中、自分を除く対象の防御判定に１のプラス修正を与える。
                   </span>
                 </p>
 
-                <p class="note">身体に流れる気を操り、傷を癒す。</p>
+                <p class="note">大声で𠮟咤し、気合を入れさせる。</p>
               </div>
             </div>
 
@@ -2095,94 +2096,40 @@
 
                 <div class="data">
                   <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    任意
+                    <span class="cover">タイミング</span>任意
                   </span>
 
                   <span class="cell">
-                    <span class="cover">技能</span>
-                    〈迅速〉
+                    <span class="cover">技能</span><span class="ether">〈迅速〉</span>
                   </span>
 
                   <span class="cell">
-                    <span class="cover">難度</span>
-                    ※
+                    <span class="cover">難度</span>４
                   </span>
 
                   <span class="cell">
-                    <span class="cover">対象</span>
-                    自身
+                    <span class="cover">射程</span>‐
                   </span>
 
                   <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
+                    <span class="cover">対象</span>自身
                   </span>
                 </div>
               </div>
 
               <div class="area-detail">
                 <p>
-                  難度は、自分のターン中なら『１』に、そうでない場合は『２』になる。
                   <span class="branch">
-                    <span class="condition">成功</span>
-                    １マス隣のエリアへ移動する。
+                    <span class="condition">成功</span>別エリアへ移動する。
                   </span>
                 </p>
 
                 <p class="note">離れた場所へと瞬間的に移動する。</p>
               </div>
             </div>
-
-            <!--  -->
-            <div class="card">
-              <div class="area-head">
-                <div class="title">
-                  <span class="ruby"></span>
-                  <span class="main"></span>
-                </div>
-
-                <div class="data">
-                  <span class="cell fullWidth">
-                    <span class="cover">タイミング</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">技能</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">難度</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">対象</span>
-                    ‐
-                  </span>
-
-                  <span class="cell">
-                    <span class="cover">射程</span>
-                    ‐
-                  </span>
-                </div>
-              </div>
-
-              <div class="area-detail">
-                <p>
-                  <span class="branch">
-                    <span class="condition">成功</span>
-
-                  </span>
-                </p>
-
-                <p class="note"></p>
-              </div>
-            </div>
           </div>
         </section>
+
       </div>
     </section>
   </main>
