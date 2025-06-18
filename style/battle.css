@@ -1,0 +1,33 @@
+/* -------------------------------------------------- */
+/* エリア */
+/* -------------------------------------------------- */
+
+/* エリア */
+.area {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 8px;
+    border: solid 3px var(--color-sub);
+    margin: 0;
+    padding: 8px;
+    text-align: center;
+}
+
+/* 敵・味方エリア */
+.area>.area>* {
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* フロントエリア */
+.area>.area-front {
+    background: rgba(128, 0, 0, 20%);
+}
+
+/* バックエリア */
+.area>.area-back {
+    background: rgba(0, 0, 128, 20%);
+}

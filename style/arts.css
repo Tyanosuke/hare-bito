@@ -6,14 +6,23 @@
   /* アーツ：下部マージン */
   --margin-arts: 12px;
 
-  /* カラー：《心》 */
-  --color-astral: #080;
+  /* 《心》；サブカラー */
+  --color-astral: rgb(128, 160, 128);
 
-  /* カラー：《技》 */
-  --color-mental: #008;
+  /* 《心》；サブカラー（透過） */
+  --color-astral-alpha: rgb(210, 230, 210);
 
-  /* カラー：《体》 */
-  --color-ether: #800;
+  /* 《技》；サブカラー */
+  --color-mental: rgb(128, 128, 160);
+
+  /* 《技》；サブカラー（透過） */
+  --color-mental-alpha: rgb(210, 210, 230);
+
+  /* 《体》；サブカラー */
+  --color-ether: rgb(160, 128, 128);
+
+  /* 《体》；サブカラー（透過） */
+  --color-ether-alpha: rgb(230, 210, 210);
 }
 
 /* -------------------------------------------------- */
@@ -27,35 +36,25 @@
 }
 
 /* -------------------------------------------------- */
-/* スキル */
-/* -------------------------------------------------- */
-
-/* 《心》 */
-span.astral {
-  color: var(--color-astral);
-}
-
-/* 《技》 */
-span.mental {
-  color: var(--color-mental);
-}
-
-/* 《体》 */
-span.ether {
-  color: var(--color-ether);
-}
-
-/* -------------------------------------------------- */
 /* カード */
 /* -------------------------------------------------- */
 
 /* コンテナ */
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+/* カード */
 .card {
   background: var(--color-sub);
   border-radius: 8px;
+  width: 950px;
   margin-bottom: var(--margin-arts);
   padding: 2px;
   position: relative;
+  box-sizing: border-box
 }
 
 /* ヘッダー */
@@ -74,13 +73,9 @@ span.ether {
   justify-content: center;
   width: 220px;
   padding: 12px;
+  position: relative;
   background-repeat: no-repeat;
   background-position: right 8px bottom 50%;
-}
-
-/* タイトル：併用 */
-.card.chain>.area-head>.title {
-  background-image: url(../img/arts/chain.png);
 }
 
 /* タイトル：常時 */
@@ -103,7 +98,7 @@ span.ether {
 /* データ */
 .card>.area-head>.data {
   display: grid;
-  grid-template-columns: 1fr calc(5em + 44px) calc(5em + 44px) calc(7em + 44px);
+  grid-template-columns: calc(10em + 44px) calc(5em + 44px) calc(5em + 44px) 1fr;
   flex: 1;
   background: #fff;
   border-top-right-radius: 8px;
@@ -143,24 +138,30 @@ span.ether {
   padding: 12px;
 }
 
-/* 説明文 */
-.card>.area-detail p {
+/* 説明文＞段落 */
+.card>.area-detail>p{
   margin: 0;
+  margin-bottom: 0.5em;
 }
 
-/* 説明文：間隔 */
-.card>.area-detail p+p {
-  margin-top: 8px;
-}
-
-/* 説明文：分岐 */
-.card>.area-detail .branch {
+/* 分岐 */
+.branch {
   display: flex;
   gap: 12px;
 }
 
+/* 分岐 */
+.area-detail>.branch:first-child {
+  margin-top: 0 !important;
+}
+
+/* 分岐：感覚 */
+.branch+.branch {
+  margin-top: 4px;
+}
+
 /* 説明文：分岐＞条件 */
-.card>.area-detail .branch>.condition {
+.branch>.condition {
   display: inline-block;
   background: var(--color-sub-alpha);
   height: fit-content;
@@ -172,55 +173,133 @@ span.ether {
 
 /* 説明文：フレーバー */
 .card>.area-detail>.note {
-  margin-top: 12px;
+  margin: 0;
+  margin-top: 1em;
   color: var(--color-sub);
   text-align: right;
   transform: skewX(-20deg);
 }
 
-/* 説明文：フレーバー（解説用） */
+/* -------------------------------------------------- */
+/* アクションの見方 */
+/* -------------------------------------------------- */
+
+/* 効果＞分岐 */
+#arts-tutorial .branch {
+  margin: 0.5em 0 0 0.75em;
+}
+
+/* 説明文：フレーバー */
 #arts-tutorial .card>.area-detail>.note {
   color: #000;
   transform: none;
 }
 
-/* 説明文なし：ヘッダー */
-.card.easy>.area-head {
-  border-bottom: none;
+/* -------------------------------------------------- */
+/* カード：《心》 */
+/* -------------------------------------------------- */
+
+/* カード */
+.card.astral {
+  background-color: var(--color-astral);
 }
 
-/* 説明文なし：右下角丸 */
-.card.easy>.area-head>.data,
-.card.easy>.area-head>.data>.cell:last-child {
-  border-bottom-right-radius: 8px;
+/* ヘッダー */
+.card.astral>.area-head {
+  background-color: var(--color-astral);
+  border-color: var(--color-astral);
 }
 
-/* 強調セル */
-.strong_cell,
-/* 無効セル */
-.invalid_cell {
-  background: #ffc;
+/* データ＞文章＞セル＞ */
+.card.astral>.area-head>.data>.cell {
+  border-color: var(--color-astral);
 }
 
-/* 無効セル */
-.invalid_cell {
-  color: rgba(0, 0, 0, 0.35);
+/* データ＞文章＞セル＞見出し */
+.card.astral>.area-head>.data>.cell>.cover {
+  background-color: var(--color-astral-alpha);
 }
 
-/* ベース判定 */
-.card.tag {
-  margin-top: 2em;
+/* 説明文 */
+.card.astral>.area-detail {
+  border-color: var(--color-astral);
 }
 
-/* ベース判定：先頭要素 */
-.card.tag::before {
-  content: attr(tag);
-  background: var(--color-main);
-  border-radius: 4px;
-  padding: 2px 8px;
-  position: absolute;
-  top: -12px;
-  left: -12px;
-  color: #fff;
-  font-size: 14px;
+/* 説明文：分岐＞条件 */
+.card.astral>.area-detail .branch>.condition {
+  background-color: var(--color-astral-alpha);
 }
+
+/* -------------------------------------------------- */
+/* カード：《技》 */
+/* -------------------------------------------------- */
+
+/* カード */
+.card.mental {
+  background-color: var(--color-mental);
+}
+
+/* ヘッダー */
+.card.mental>.area-head {
+  background-color: var(--color-mental);
+  border-color: var(--color-mental);
+}
+
+/* データ＞文章＞セル＞ */
+.card.mental>.area-head>.data>.cell {
+  border-color: var(--color-mental);
+}
+
+/* データ＞文章＞セル＞見出し */
+.card.mental>.area-head>.data>.cell>.cover {
+  background-color: var(--color-mental-alpha);
+}
+
+/* 説明文 */
+.card.mental>.area-detail {
+  border-color: var(--color-mental);
+}
+
+/* 説明文：分岐＞条件 */
+.card.mental>.area-detail .branch>.condition {
+  background-color: var(--color-mental-alpha);
+}
+
+/* -------------------------------------------------- */
+/* カード：《体》 */
+/* -------------------------------------------------- */
+
+/* カード */
+.card.ether {
+  background-color: var(--color-ether);
+}
+
+/* ヘッダー */
+.card.ether>.area-head {
+  background-color: var(--color-ether);
+  border-color: var(--color-ether);
+}
+
+/* データ＞文章＞セル＞ */
+.card.ether>.area-head>.data>.cell {
+  border-color: var(--color-ether);
+}
+
+/* データ＞文章＞セル＞見出し */
+.card.ether>.area-head>.data>.cell>.cover {
+  background-color: var(--color-ether-alpha);
+}
+
+/* 説明文 */
+.card.ether>.area-detail {
+  border-color: var(--color-ether);
+}
+
+/* 説明文：分岐＞条件 */
+.card.ether>.area-detail .branch>.condition {
+  background-color: var(--color-ether-alpha);
+}
+
+/* -------------------------------------------------- */
+/* カード：オート */
+/* -------------------------------------------------- */

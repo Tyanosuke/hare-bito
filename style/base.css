@@ -87,6 +87,14 @@
   text-align: center !important;
 }
 
+/* マーカー */
+.keyword {
+  padding: 0 4px;
+  font-weight: bold;
+  background: linear-gradient(transparent 40%, rgba(255, 255, 0, 30%) 40%);
+  word-break: keep-all;
+}
+
 /* -------------------------------------------------- */
 /* 基本 */
 /* -------------------------------------------------- */
@@ -172,6 +180,12 @@ h4+.contents>p {
   margin-top: 0;
 }
 
+/* 平行線 */
+hr {
+  border: solid 1px #ccc;
+  margin: 0.5em 0;
+}
+
 /* -------------------------------------------------- */
 /* レイアウト */
 /* -------------------------------------------------- */
@@ -179,6 +193,11 @@ h4+.contents>p {
 /* コンテンツ */
 .contents {
   padding-left: 1em;
+}
+
+/* コンテンツ＞段落 */
+.contents>p {
+  margin-top: 0;
 }
 
 /* インナーコンテンツ */
@@ -198,7 +217,7 @@ h4+.contents>p {
 }
 
 /* フレックス：間隔 */
-.d-flex+.d-flex  {
+.d-flex+.d-flex {
   margin-top: 0.5em;
 }
 
@@ -216,6 +235,23 @@ h4+.contents>p {
 .d-flex>p {
   flex: 1;
   margin: 0;
+}
+
+/* コンテンツ＆フレックス */
+.contents.d-flex {
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+/* フレックス＞コンテンツ */
+.d-flex>.contents {
+  flex: 1;
+}
+
+/* 非表示 */
+.hidden {
+  display: none;
 }
 
 /* -------------------------------------------------- */
@@ -453,28 +489,28 @@ p>.num {
 
 /* 処理順 */
 .rule_text>.process {
-    padding: 1em 0;
+  padding: 1em 0;
 }
 
 /* 処理順：最初の要素 */
 .rule_text>.process:first-child {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 /* 処理順：最後の要素 */
 .rule_text>.process:last-child {
-    padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 /* 処理順：洞察 */
 .process+.process {
-    border-top: solid 3px var(--color-sub);
+  border-top: solid 3px var(--color-sub);
 }
 
 /* 処理順＞内容 */
 .process>.detail {
-    margin-top: 0.5em;
-    padding-left: 2em;
+  margin-top: 0.5em;
+  padding-left: 2em;
 }
 
 /* -------------------------------------------------- */

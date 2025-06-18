@@ -1,6 +1,7 @@
 <head>
   <link rel="stylesheet" href="/style/base.css" type="text/css" />
   <link rel="stylesheet" href="/style/rule.css" type="text/css" />
+  <link rel="stylesheet" href="/style/battle.css" type="text/css" />
   <link rel="stylesheet" href="/style/arts.css" type="text/css" />
 </head>
 
@@ -11,7 +12,7 @@
     <h1>ハラエフェイズ</h1>
 
     <p>
-      　<span class="t-bold">ハラエフェイズ</span>とは、ケガレビトと直接対決し、打ち倒すための戦闘シーンです。<br>
+      　<span class="keyword">ハラエフェイズ</span>とは、ケガレビトと直接対決し、打ち倒すための戦闘シーンです。<br>
       　ミソギフェイズが終了すると、このフェイズに移行します。<br>
       <br>
       　このページでは、ハラエフェイズに関連するルールをまとめて解説します。
@@ -39,19 +40,13 @@
 
             <div class="detail">
               <span class="num">1-1</span><a href="#battle_speed">行動速度の決定</a><br>
-              <span class="num">1-2</span><a href="#timing-round_start">タイミング『ラウンド開始』のアーツの使用</a>
+              <span class="num">1-2</span><a href="#timing-round_start">タイミング『ラウンド開始』のアクションの使用</a>
             </div>
           </div>
 
           <div class="process">
             <div class="title">
               <span class="num">2</span><a href="#turn">ターン</a>
-            </div>
-
-            <div class="detail">
-              <span class="num">2-1</span><a href="#timing-turn">タイミング『ターン』のアーツの使用</a><br>
-              <span class="num">2-2</span><a href="#move">移動</a><br>
-              <span class="num">2-3</span><a href="#attack">攻撃</a>
             </div>
           </div>
 
@@ -61,7 +56,7 @@
             </div>
 
             <div class="detail">
-              <span class="num">3-1</span><a href="#timing-round_end">タイミング『ラウンド終了』のアーツの使用</a><br>
+              <span class="num">3-1</span><a href="#timing-round_end">タイミング『ラウンド終了』のアクションの使用</a><br>
               <span class="num">3-2</span><a href="#effect_clear">ラウンド中効果の消滅</a>
             </div>
           </div>
@@ -92,55 +87,58 @@
 
           <div class="contents">
             <p>
-              　まず、戦闘に参加している全てのキャラクターは<span class="t-bold">速度判定</span>を行い、そのラウンドでの<span class="t-bold">行動速度</span>を決定します。<br>
-              　ターンは、この値が高い順に行われます。なお、ＰＣと敵で同値のキャラクターがいる場合、ＰＣが優先されます。ＰＣ間の順番は、相談して決めて構いません。
+              　まず、戦闘に参加している全てのキャラクターは<span class="keyword">【速度決定】</span>を行い、そのラウンドでの<span class="keyword">行動速度</span>を決定します。ターンは、この値が高い順に行われます。なお、ＰＣと敵で同値のキャラクターがいる場合、ＰＣが優先されます。ＰＣ間の順番は、相談して決めて構いません。
             </p>
 
-            <!-- 速度判定 -->
+            <!-- 速度決定 -->
             <div class="contents">
               <h4>
-                速度判定
+                速度決定
               </h4>
 
               <div class="contents">
                 <p>
-                  　速度判定は、<span class="ether">《体》</span>＋<span class="ether">〈迅速〉</span>で判定します。難度はありません。また、<a href="#battle-combo">コンボ</a>が可能です。<br>
-                  　<span class="ether">《体》</span>が０点になっていて速度判定が行えない場合、行動速度は『１』になります。
+                  　《体》が０点になっていて【速度決定】が行えない場合、行動速度は『１』になります。
                 </p>
 
-                <div class="card">
-                  <div class="area-head">
-                    <div class="title">
-                      <span class="main">速度判定</span>
+                <div class="cards">
+                  <div class="card ether">
+                    <div class="area-head">
+                      <div class="title">
+                        <span class="ruby">そくどけってい</span>
+                        <span class="main">速度決定</span>
+                      </div>
+
+                      <div class="data">
+                        <span class="cell fullWidth">
+                          <span class="cover">タイミング</span>速度決定
+                        </span>
+
+                        <span class="cell">
+                          <span class="cover">技能</span>《体》＋〈迅速〉
+                        </span>
+
+                        <span class="cell">
+                          <span class="cover">難度</span>‐
+                        </span>
+
+                        <span class="cell">
+                          <span class="cover">射程</span>‐
+                        </span>
+
+                        <span class="cell">
+                          <span class="cover">対象</span>自身
+                        </span>
+                      </div>
                     </div>
 
-                    <div class="data">
-                      <span class="cell fullWidth">
-                        <span class="cover">タイミング</span> 速度
-                      </span>
+                    <div class="area-detail">
+                      <p>
+                        あなたの行動速度を［成功数＋１］にする。
+                      </p>
 
-                      <span class="cell">
-                        <span class="cover">技能</span><span class="ether">〈迅速〉</span>
-                      </span>
-
-                      <span class="cell">
-                        <span class="cover">難度</span>‐
-                      </span>
-
-                      <span class="cell">
-                        <span class="cover">射程</span>‐
-                      </span>
-
-                      <span class="cell">
-                        <span class="cover">対象</span>自身
-                      </span>
+                      <p class="note">行動の順番を決定する。</p>
                     </div>
-                  </div>
-
-                  <div class="area-detail">
-                    <p>
-                      　あなたの行動速度を［成功数＋１］にする。
-                    </p>
                   </div>
                 </div>
               </div>
@@ -154,25 +152,26 @@
 
               <div class="contents">
                 <p>
-                  　<a href="#attack">攻撃</a>を行ったキャラクターは、この状態になります。<br>
+                  　<a href="#attack">攻撃アクション</a>を行なうか、アクションを３つ使用したキャラクターは、この状態になります。あるいは、ターン中、自発的にこの状態になることも可能です。<br>
                   　行動速度は『０』になり、次のラウンドまで行動できません
                 </p>
               </div>
             </div>
+
           </div>
         </section>
 
-        <!-- タイミング『ラウンド』のアーツの使用 -->
+        <!-- タイミング『ラウンド』のアクションの使用 -->
         <section id="timing-round_start">
           <div class="sticky">
             <h3>
-              <span class="num">1-2</span>タイミング『ラウンド開始』のアーツの使用
+              <span class="num">1-2</span>タイミング『ラウンド開始』のアクションの使用
             </h3>
           </div>
 
           <div class="contents">
             <p>
-              　タイミングが『ラウンド』、または『任意』のアーツを１つ使用できます。
+              　タイミングが『ラウンド』、または『任意』のアクションを１つ使用できます。
             </p>
           </div>
         </section>
@@ -189,76 +188,59 @@
 
       <div class="contents">
         <p>
-          　各キャラクターは、行動速度が高い順に<span class="t-bold">ターン</span>を行います。<br>
-          　以下の順番で行動できます。順番を入れ替えることはできません。
+          　各キャラクターは、行動速度が高い順に<span class="keyword">ターン</span>を行います。<br>
+          　ターンでは、アクションを最大で３つまで使用できます。<br>
+          　なお、何もせずに行動終了することも可能です。
         </p>
 
-        <!-- タイミング『ターン』のアーツの使用 -->
-        <section id="timing-turn">
+        <!-- アクションの制限 -->
+        <section>
           <div class="sticky">
             <h3>
-              <span class="num">2-1</span>タイミング『ターン』のアーツの使用
+              <span class="num">2-A</span>アクションの制限
             </h3>
           </div>
 
           <div class="contents">
             <p>
-              　タイミングが『ターン』、または『任意』のアーツを１つ使用できます。<br>
-              　アーツによっては、その時点で行動終了状態になる場合があります（<a href="/page/data/arts.html#kaihuku-kikou" target="_blank">【回復気功】</a>など）。
+              　ターン中に行う全てのアクションは、判定で使用するライフが重複してはいけません。つまり、《心》《技》《体》のアクションを１回ずつ行うことができるということです。<br>
+              　また、攻撃アクションを使用した場合、その時点でターンが終了する点に注意してください。
             </p>
           </div>
         </section>
 
-        <!-- 移動 -->
-        <section id="move">
-          <div class="sticky">
-            <h3>
-              <span class="num">2-2</span>移動
-            </h3>
-          </div>
-
-          <div class="contents">
-            <p>
-              　フロントエリアからバックエリアへ、バックエリアからフロントエリアへ移動することができます。<br>
-              　一度のみ行うことができます。
-            </p>
-          </div>
-        </section>
-
-        <!-- 攻撃 -->
+        <!-- 攻撃アクション -->
         <section id="attack">
           <div class="sticky">
             <h3>
-              <span class="num">2-3</span>攻撃
+              <span class="num">2-B</span>攻撃アクション
             </h3>
           </div>
 
           <div class="contents">
             <div class="inner_contents">
               <p>
-                　攻撃アーツを１つ使用し、敵を<span class="t-bold">攻撃</span>します。<br>
-                　一度のみ行うことができ、攻撃後は行動終了状態になります。<br>
-                <br>
-                　攻撃を行うキャラクターは<span class="t-bold">攻撃判定</span>を、攻撃の対象となったキャラクターは<span class="t-bold">防御判定</span>をそれぞれ行います。この２つはセットで行われ、以下の手順で処理します。解説中では、攻撃判定を行うキャラクターを『攻撃側』、防御判定を行うキャラクターを『防御側』と表記します。
+                　攻撃アクションを使用した際、以下のような処理を行います。<br>
+                　攻撃を行うキャラクターは<span class="keyword">攻撃判定</span>を、攻撃の対象となったキャラクターは<span class="keyword">防御判定</span>をそれぞれ行います。この２つはセットで行われ、以下の手順で処理します。解説中では、攻撃判定を行うキャラクターを『攻撃側』、防御判定を行うキャラクターを『防御側』と表記します。
               </p>
 
               <p class="rule_text">
-                <span class="num">2-3-1</span><a href="#roll-attack">攻撃判定</a><br>
-                <span class="num">2-3-2</span><a href="#roll-guard">防御判定</a><br>
-                <span class="num">2-3-3</span><a href="#decide_damage">ダメージの決定</a>
+                <span class="num">2-B-1</span><a href="#roll-attack">攻撃判定</a><br>
+                <span class="num">2-B-2</span><a href="#roll-guard">防御判定</a><br>
+                <span class="num">2-B-3</span><a href="#decide_damage">ダメージの決定</a>
               </p>
             </div>
 
             <!-- 攻撃判定 -->
             <section id="roll-attack">
               <h4>
-                <span class="num">2-3-1</span>攻撃判定
+                <span class="num">2-B-1</span>攻撃判定
               </h4>
 
               <div class="contents">
                 <p>
-                  　攻撃側は、習得している<a href="/page/data/arts.html#arts-wearpon" target="_blank">攻撃アーツ</a>を１つ選び、その使用を宣言してください。その後、選んだアーツで指定された技能で判定を行ってください。この判定では、<a href="#battle-combo">コンボ</a>を行うことが可能です。<br>
-                  　判定に成功した場合、成功数を<span class="t-bold">ダメージ</span>とします。なお、ダメージを増減させる効果（<a href="/page/data/arts.html#kyuusho_nerai" target="_blank">【急所狙い】</a>など）は、この時点で適用されます。<br>
+                  　攻撃アクションで指定された技能で判定を行ってください。<br>
+                  　判定に成功した場合、成功数を<span class="keyword">ダメージ</span>とします。なお、ダメージを増減させる効果（<a href="/page/data/arts.html#kyuusho_nerai" target="_blank">【急所狙い】</a>など）は、この時点で適用されます。<br>
                   失敗した場合、以降の処理はスキップされます。
                 </p>
               </div>
@@ -267,19 +249,19 @@
             <!-- 防御判定 -->
             <section id="roll-guard">
               <h4>
-                <span class="num">2-3-2</span>防御判定
+                <span class="num">2-B-2</span>防御判定
               </h4>
 
               <div class="contents">
                 <p>
-                  　防御側は、攻撃判定で使用されたライフと、それに対応したいずれかのスキルで判定を行ってください。難度は、ダメージと同じ値になります。この判定では、<a href="/page/rule/battle.html#combo">コンボ</a>を行うことが可能です。<br>
-                  　判定の成否に関わらず、次の処理へ進んでください。
+                  　防御側は、攻撃判定で使用されたライフと、それに対応するスキルを選んで判定を行ってください。
                 </p>
 
                 <div class="card">
                   <div class="area-head">
                     <div class="title">
-                      <span class="main">防御判定</span>
+                      <span class="ruby">ぼうぎょ</span>
+                      <span class="main">防御</span>
                     </div>
 
                     <div class="data">
@@ -288,11 +270,11 @@
                       </span>
 
                       <span class="cell">
-                        <span class="cover">技能</span> ※
+                        <span class="cover">技能</span>※
                       </span>
 
                       <span class="cell">
-                        <span class="cover">難度</span> ※
+                        <span class="cover">難度</span>０
                       </span>
 
                       <span class="cell">
@@ -307,11 +289,16 @@
 
                   <div class="area-detail">
                     <p>
-                      　技能は、攻撃判定で使用されたライフに対応するものをあなたが選ぶ。<br>
-                      　難度は、［ダメージ点数］になる。<br>
-                      　あなたが受けるダメージを［成功数］点減少させる。
+                      技能は、攻撃判定で使用されたライフに対応するものをあなたが選ぶ。
                     </p>
 
+                    <hr>
+
+                    <p>
+                      あなたが受けるダメージを［成功数］点減少させる。
+                    </p>
+
+                    <p class="note">攻撃を防ぎ、ダメージを軽減する。</p>
                   </div>
                 </div>
               </div>
@@ -320,26 +307,10 @@
             <!-- ダメージの決定 -->
             <section id="decide_damage">
               <h4>
-                <span class="num">2-3-3</span>ダメージの決定
+                <span class="num">2-B-3</span>ダメージの決定
               </h4>
 
               <div class="contents">
-                <p>
-                  　防御判定の成否によって、以下のように処理を行います。
-                </p>
-
-                <div class="branch_title">
-                  防御判定が成功した場合
-                </div>
-
-                <p>
-                  　攻撃判定が失敗した扱いとなります。ダメージが０点になる他、成功時に適用される効果（<a href="/page/data/arts.html#choubuku_no_chikara" target="_blank">【調伏の力】</a>など）は無効化されます。
-                </p>
-
-                <div class="branch_title">
-                  防御判定が失敗した場合
-                </div>
-
                 <p>
                   　防御側は、攻撃判定で使用されたものと同じライフにダメージを受けることとなります。<br>
                   　この際、防御判定の成功数分、ダメージが減少します。
@@ -360,17 +331,17 @@
       </div>
 
       <div class="contents">
-        <!-- タイミング『ラウンド終了』のアーツの使用 -->
+        <!-- タイミング『ラウンド終了』のアクションの使用 -->
         <section id="timing-round_end">
           <div class="sticky">
             <h3>
-              <span class="num">3-1</span>タイミング『ラウンド終了』のアーツの使用
+              <span class="num">3-1</span>タイミング『ラウンド終了』のアクションの使用
             </h3>
           </div>
 
           <div class="contents">
             <p>
-              　タイミングが『ラウンド終了』、または『任意』のアーツを１つ使用できます。
+              　タイミングが『ラウンド終了』、または『任意』のアクションを１つ使用できます。
             </p>
           </div>
         </section>
@@ -392,20 +363,82 @@
       </div>
     </section>
 
-    <!-- アーツの発動 -->
-    <section id="round_start">
+    <!-- アクション -->
+    <section id="action">
       <div class="sticky">
         <h2>
-          アーツの発動
+          アクション
         </h2>
       </div>
 
       <div class="contents">
-        <p>
-          　戦闘中の攻撃、防御、回復、補助などは、各キャラクターが習得しているアーツによって行われます。<br>
-          　アーツの発動は、指定されたタイミングで発動を宣言し、指定された技能での判定――<span class="t-bold">発動判定</span>に成功する必要があります。<br>
-          　同名のアーツは、１ラウンド中に１度しか発動を宣言できません。発動判定に失敗した場合でも、再び発動を試みることはできません。
-        </p>
+        <section id="action-execute">
+          <div class="sticky">
+            <h3>
+              アクションの発動
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　戦闘中の攻撃、防御、回復、補助などは、各キャラクターが習得しているアクションによって行われます。<br>
+              　アクションの発動は、指定されたタイミングで発動を宣言し、指定された技能での判定――<span class="keyword">発動判定</span>に成功する必要があります。<br>
+              　同名のアクションは、１ラウンド中に１度しか発動を宣言できません。発動判定に失敗した場合でも、再び発動を試みることはできません。
+            </p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- エリア -->
+    <section id="battle_area">
+      <div class="sticky">
+        <h2>
+          エリア
+        </h2>
+      </div>
+
+      <div class="contents d-flex">
+        <div class="contents">
+          <p>
+            　戦闘シーン中のキャラクターの立ち位置を示すのが、<span class="keyword">エリア</span>です。<br>
+            　右の図のように、敵・味方エリアに分けられ、更にそれぞれがフロント・バックエリアに分かれます。
+          </p>
+          <p>
+            　名前の通り、敵エリアは敵のみが配置され、味方エリアは味方のみが配置されます。
+          </p>
+          <p>
+            　フロント・バックエリアは、<a href="/page/data/arts.html#range" target="_blank">アーツの射程</a>に関わり、<a href="#move">移動</a>によって立ち位置を変更することができます。<br>
+            　例えば、射程『２』の攻撃アーツを持つキャラクターの場合、フロントエリアにいれば、敵エリア全体を射程内に入れることができます。バックエリアに下がれば、敵フロントエリアのみが射程内となりますが、敵にも射程の概念があるため、狙われる確率が下がるかもしれません。<br>
+            　戦闘開始時にフロント・バックエリアのどちらにいるかは、各ＰＣが決めてください。
+          </p>
+        </div>
+
+        <div class="area">
+          <div class="area">
+            敵エリア
+
+            <div class="area-back">
+              敵バックエリア
+            </div>
+
+            <div class="area-front">
+              敵フロントエリア
+            </div>
+          </div>
+
+          <div class="area">
+            <div class="area-front">
+              味方フロントエリア
+            </div>
+
+            <div class="area-back">
+              味方バックエリア
+            </div>
+
+            味方エリア
+          </div>
+        </div>
       </div>
     </section>
 
@@ -420,7 +453,7 @@
       <div class="contents">
         <div class="inner_contents">
           <p>
-            　ＰＣは特定の条件を満たした場合、<span class="t-bold">戦闘不能</span>や<span class="t-bold">撤退</span>という状態になります。<br>
+            　ＰＣは特定の条件を満たした場合、<span class="keyword">戦闘不能</span>や<span class="keyword">撤退</span>という状態になります。<br>
             　ＰＣ全員がこれらの状態になった場合、<a href="#battle-defeat">全滅</a>した扱いとなります。
           </p>
         </div>
@@ -435,27 +468,26 @@
 
           <div class="contents">
             <p>
-              　ライフのいずれかが０点になった際、ＰＣは<span class="t-bold">戦闘不能</span>になります。<br>
-              　この状態では、<span class="t-bold">復活判定</span>以外の判定を行うことができなくなります。
+              　ライフのいずれかが０点になった際、ＰＣは<span class="keyword">戦闘不能</span>になります。<br>
+              　この状態では、<span class="keyword">復活判定</span>以外の判定を行うことができなくなります。
             </p>
 
-            <!-- 復活判定 -->
+            <!-- 復活 -->
             <section>
               <h4>
-                復活判定
+                復活
               </h4>
 
               <div class="contents">
                 <p>
-                  　戦闘不能状態のＰＣが、各ラウンドの終了時に行える特殊な判定です。<br>
-                  　この判定は、<a href="#battle-combo">コンボ</a>を行うことが可能です。<br>
+                  　戦闘不能状態のＰＣが、各ラウンドの終了時に行える特殊なアクションです。<br>
                   　判定に成功すれば、戦闘不能状態を解除できます。ただし、前述の通りライフが回復することはなく、０点のままです。<br>
                 </p>
 
                 <div class="card">
                   <div class="area-head">
                     <div class="title">
-                      <span class="main">復活判定</span>
+                      <span class="main">復活</span>
                     </div>
 
                     <div class="data">
@@ -495,6 +527,7 @@
                       </span>
                     </p>
 
+                    <p class="note">失ったものを他のもので代替して戦う。</p>
                   </div>
                 </div>
               </div>
@@ -513,7 +546,7 @@
           <div class="contents">
             <div class="inner_contents">
               <p>
-                　全てのライフが０点になると、ＰＣは即座に<span class="t-bold">撤退</span>します。<br>
+                　全てのライフが０点になると、ＰＣは即座に<span class="keyword">撤退</span>します。<br>
                 　この状態になると、エンディングフェイズ開始時まで一切の行動ができなくなります。復活判定も行うことはできません。
               </p>
             </div>
@@ -532,12 +565,13 @@
       <div class="contents">
         <div class="inner_contents">
           <p>
-            　<span class="t-bold">ケガレビト</span>とは、ハレビトと敵対し、人々の暮らしを脅かす存在です。<br>
-            　<span class="t-bold">ボス</span>と<span class="t-bold">ザコ</span>の２種類があります。<br>
-            　また、<span class="t-bold">ＨＰ</span>という耐久力を持っています。
+            　<span class="keyword">ケガレビト</span>とは、ハレビトと敵対し、人々の暮らしを脅かす存在です。<br>
+            　<span class="keyword">ボス</span>と<span class="keyword">ザコ</span>の２種類があります。<br>
+            　また、<span class="keyword">ＨＰ</span>という耐久力を持っています。
           </p>
         </div>
 
+        <!-- ケガレビトの種類 -->
         <section>
           <div class="sticky">
             <h3>
@@ -546,24 +580,26 @@
           </div>
 
           <div class="contents">
-            <div class="contents">
+            <!-- ボス -->
+            <div class="inner_contents">
               <h4>
                 ボス
               </h4>
 
               <p>
-                　<span class="t-bold">ボス</span>とは、名前の通り、シナリオ上の事件を引き起こした張本人です。<br>
+                　<span class="keyword">ボス</span>とは、名前の通り、シナリオ上の事件を引き起こした張本人です。<br>
                 　基本的に、このボスを倒すことがハレビトたちの最終目標となります。
               </p>
             </div>
 
-            <div class="contents">
+            <!-- ザコ -->
+            <div class="inner_contents">
               <h4>
                 ザコ
               </h4>
 
               <p>
-                　<span class="t-bold">ザコ</span>とは、ボスの取り巻きです。<br>
+                　<span class="keyword">ザコ</span>とは、ボスの取り巻きです。<br>
                 　ケガレによって生まれた存在であったり、ただボスに操られているだけだったりします。なので、ザコを倒すことは必須ではありません。
               </p>
             </div>
@@ -579,18 +615,20 @@
           </div>
 
           <div class="contents">
-            <div class="contents">
+            <!-- ＨＰ -->
+            <div class="inner_contents">
               <h4>
                 ＨＰ
               </h4>
 
               <p>
-                　ケガレビトは<span class="t-bold">ＨＰ</span>という耐久力を持っています。<br>
+                　ケガレビトは、ＨＰという耐久力を持っています。<br>
                 　この値が０点になった場合、ケガレビトを倒したという扱いになります。
               </p>
             </div>
 
-            <div class="contents">
+            <!-- ライフとスキル -->
+            <div class="inner_contents">
               <h4>
                 ライフとスキル
               </h4>
@@ -667,1115 +705,6 @@
             </div>
           </section>
         </div>
-      </div>
-    </section>
-
-    <!-- コンボ -->
-    <section id="battle-combo">
-      <div class="sticky">
-        <h2>
-          コンボ
-        </h2>
-      </div>
-
-      <div class="contents">
-        <div class="inner_contents">
-          <p>
-            　<span class="t-bold">コンボ</span>とは、攻撃判定や防御判定などの判定（以下、ベース判定）と<span class="t-bold">サポートアーツ</span>を組み合わせた特殊な判定です。１回の判定につき、２つまでサポートアーツを組み合わせることができます。<br>
-            　以下のように処理を行います。
-          </p>
-
-          <p class="rule_text">
-            <span class="num">1</span><a href="#combo-1">タイミングの確認</a><br>
-            <span class="num">2</span><a href="#combo-2">技能の確認</a><br>
-            <span class="num">3</span><a href="#combo-3">難度の決定</a><br>
-            <span class="num">4</span><a href="#combo-4">射程の決定</a><br>
-            <span class="num">5</span><a href="#combo-5">対象の決定</a><br>
-            <span class="num">6</span><a href="#combo-6">判定の実行</a>
-          </p>
-        </div>
-
-        <!-- タイミングの確認 -->
-        <section id="combo-1">
-          <div class="sticky">
-            <h3>
-              <span class="num">1</span>タイミングの確認
-            </h3>
-          </div>
-
-          <div class="contents">
-            <p>
-              　全てのサポートアーツの『タイミング』が、ベース判定のものと対応していることを確認します。
-            </p>
-
-            <div class="inner_contents">
-              <h4>組み合わせ例</h4>
-
-              <p>
-                ベース判定のタイミング『攻撃』に対し、組み合わせるサポートアーツはタイミング『コンボ：攻撃』で、一致しています。
-              </p>
-
-              <div class="card easy ether tag" tag="ベース判定">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="main">攻撃判定<span class="t-small">（近距離武器）</span></span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth strong_cell">
-                      <span class="cover">タイミング</span>攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="ether">〈迅速〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>１
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">射程</span>１
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>敵／１体
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card easy ether chain">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="ruby">こんしん</span>
-                    <span class="main">渾身</span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth strong_cell">
-                      <span class="cover">タイミング</span>コンボ：攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="ether">《体》</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>±０
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">射程</span>‐
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>-
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card easy ether chain">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="ruby">いっきとうせん</span>
-                    <span class="main">一騎当千</span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth strong_cell">
-                      <span class="cover">タイミング</span>コンボ：攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="ether">〈迅速〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>＋１
-                    </span>
-
-
-                    <span class="cell">
-                      <span class="cover">射程</span>‐
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>-
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-        <!-- 技能の確認 -->
-        <section id="combo-2">
-          <div class="sticky">
-            <h3>
-              <span class="num">2</span>技能の確認
-            </h3>
-          </div>
-
-          <div class="contents">
-            <p>
-              　全てのサポートアーツの技能が、ベース判定のものと一致していることを確認します。サポートアーツの技能に「<span class="ether">《体》</span>」などのライフが記載されている場合は、ライフのみが一致していれば組み合わせが可能です。
-            </p>
-
-            <div class="inner_contents">
-              <h4>組み合わせ例</h4>
-
-              <p>
-                技能が、『<span class="ether">《体》＋〈迅速〉</span>』で一致しています。
-              </p>
-
-              <div class="card easy ether tag" tag="ベース判定">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="main">攻撃判定<span class="t-small">（近距離武器）</span></span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>攻撃
-                    </span>
-
-                    <span class="cell strong_cell">
-                      <span class="cover">技能</span><span class="ether">〈迅速〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>１
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">射程</span>１
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>敵／１体
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card easy ether chain">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="ruby">こんしん</span>
-                    <span class="main">渾身</span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>コンボ：攻撃
-                    </span>
-
-                    <span class="cell strong_cell">
-                      <span class="cover">技能</span><span class="ether">《体》</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>±０
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">射程</span>‐
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>-
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card easy ether chain">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="ruby">いっきとうせん</span>
-                    <span class="main">一騎当千</span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>コンボ：攻撃
-                    </span>
-
-                    <span class="cell strong_cell">
-                      <span class="cover">技能</span><span class="ether">〈迅速〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>＋１
-                    </span>
-
-
-                    <span class="cell">
-                      <span class="cover">射程</span>‐
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>-
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- 難度の決定 -->
-        <section id="combo-3">
-          <div class="sticky">
-            <h3>
-              <span class="num">3</span>難度の決定
-            </h3>
-          </div>
-
-          <div class="contents">
-            <p>
-              　難度は、判定と全てのサポートアーツのものを合計した値になります。
-            </p>
-
-            <div class="inner_contents">
-              <h4>組み合わせ例：１</h4>
-
-              <p>
-                難度は、『２』になります。
-              </p>
-
-              <div class="card easy astral tag" tag="ベース判定">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="main">攻撃判定<span class="t-small">（近距離武器）</span></span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="astral">〈幻想〉</span>
-                    </span>
-
-                    <span class="cell strong_cell">
-                      <span class="cover">難度</span>１
-                    </span>
-
-
-                    <span class="cell">
-                      <span class="cover">射程</span>１
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>敵／１体
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card easy astral chain">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="ruby">ちょうぶくのちから</span>
-                    <span class="main">調伏の力</span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>コンボ：攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="astral">《心》</span>
-                    </span>
-
-                    <span class="cell strong_cell">
-                      <span class="cover">難度</span>＋１
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">射程</span>‐
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>‐
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="inner_contents">
-              <h4>組み合わせ例：２</h4>
-
-              <p>
-                難度は、『０』になります。この場合は判定ダイスを振らず、成功扱いとなります。
-              </p>
-
-              <div class="card easy ether tag" tag="ベース判定">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="main">防御判定<span class="t-small">（《体》ダメージ１点）</span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>
-
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="ether">〈迅速〉</span>
-                    </span>
-
-                    <span class="cell strong_cell">
-                      <span class="cover">難度</span>１
-                    </span>
-
-
-                    <span class="cell">
-                      <span class="cover">対象</span>‐
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>自身
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card easy ether chain">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="ruby">かいひ</span>
-                    <span class="main">回避</span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>コンボ：防御
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="astral">〈幻想〉</span><span class="ether">〈迅速〉</span>
-                    </span>
-
-                    <span class="cell strong_cell">
-                      <span class="cover">難度</span>－１
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>‐
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">射程</span>‐
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- 射程の決定 -->
-        <section id="combo-4">
-          <div class="sticky">
-            <h3>
-              <span class="num">4</span>射程の決定
-            </h3>
-          </div>
-
-          <div class="contents">
-            <p>
-              　射程は、判定と全てのサポートアーツのものを合計した値になります。結果が０以下になった場合は、『１』として扱います。<br>
-              　射程に「＝（数字）」と記載されたサポートアーツがある場合、その中で最小のものが優先されます。
-            </p>
-
-            <div class="inner_contents">
-              <h4>組み合わせ例：１</h4>
-
-              <p>
-                射程は、『３』になります。
-              </p>
-
-              <div class="card easy tag" tag="ベース判定">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="main">攻撃判定<span class="t-small">（遠距離武器）</span></span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="ether">〈反応〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>０
-                    </span>
-
-                    <span class="cell strong_cell">
-                      <span class="cover">射程</span>２
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>敵／１体
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card easy chain">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="ruby">たかのめ</span>
-                    <span class="main">鷹の目</span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>コンボ：攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="mental">〈洞察〉</span><span class="ether">〈反応〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>±０
-                    </span>
-
-                    <span class="cell strong_cell">
-                      <span class="cover">射程</span>＋１
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>‐
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="inner_contents">
-              <h4>組み合わせ例：２</h4>
-
-              <p>
-                射程は、『１』になります。
-              </p>
-
-              <div class="card easy mental tag" tag="ベース判定">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="main">攻撃判定<span class="t-small">（遠距離武器）</span></span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="ether">〈威風〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>１
-                    </span>
-
-
-                    <span class="cell strong_cell">
-                      <span class="cover">射程</span>２
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>敵／１体
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card easy chain">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="ruby">ふみこみ</span>
-                    <span class="main">踏み込み</span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>コンボ：攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="astral">〈忍耐〉</span><span class="ether">〈威風〉</span><span class="ether">〈迅速〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>±０
-                    </span>
-
-                    <span class="cell strong_cell">
-                      <span class="cover">射程</span>－１
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>‐
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="inner_contents">
-              <h4>組み合わせ例：３</h4>
-
-              <p>
-                射程は、『１』になります（マイナスの値になることはありません）。
-              </p>
-
-              <div class="card easy mental tag" tag="ベース判定">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="main">攻撃判定<span class="t-small">（近距離武器）</span></span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="ether">〈威風〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>１
-                    </span>
-
-                    <span class="cell strong_cell">
-                      <span class="cover">射程</span>１
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>敵／１体
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card easy chain">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="ruby">よこいちもんじ</span>
-                    <span class="main">横一文字</span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>コンボ：攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="astral">〈忍耐〉</span><span class="ether">〈威風〉</span><span class="ether">〈迅速〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>±０
-                    </span>
-
-                    <span class="cell strong_cell">
-                      <span class="cover">射程</span>－１
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>敵／１列
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- 対象の決定 -->
-        <section id="combo-5">
-          <div class="sticky">
-            <h3>
-              <span class="num">5</span>対象の決定
-            </h3>
-          </div>
-
-          <div class="contents">
-            <p>
-              　対象は、サポートアーツの中で最少のもの（１体＜１列）になります。<br>
-              　サポートアーツの対象が全て『‐』だった場合のみ、ベース判定のものが適用されます。
-            </p>
-
-            <div class="inner_contents">
-              <h4>組み合わせ例：１</h4>
-
-              <p>
-                対象は、『敵／１列』になります。
-              </p>
-
-              <div class="card easy mental tag" tag="ベース判定">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="main">攻撃判定<span class="t-small">（近距離武器）</span></span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="astral">〈忍耐〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>１
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">射程</span>１
-                    </span>
-
-                    <span class="cell invalid_cell">
-                      <span class="cover">対象</span>敵／１体
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card easy chain">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="ruby">よこいちもんじ</span>
-                    <span class="main">横一文字</span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>コンボ：攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="astral">〈忍耐〉</span><span class="ether">〈威風〉</span><span class="ether">〈迅速〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>±０
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">射程</span>－１
-                    </span>
-
-                    <span class="cell strong_cell">
-                      <span class="cover">対象</span>敵／１列
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="inner_contents">
-              <h4>組み合わせ例：２</h4>
-
-              <p>
-                対象は、『敵／１体』になります（つまり、【横一文字】はデメリットにしかならないので、組み合わせる意味がありません）。
-              </p>
-
-              <div class="card easy mental tag" tag="ベース判定">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="main">攻撃判定<span class="t-small">（近距離武器）</span></span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="ether">〈威風〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>１
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">射程</span>１
-                    </span>
-
-                    <span class="cell invalid_cell">
-                      <span class="cover">対象</span>敵／１体
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card easy chain">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="ruby">よこいちもんじ</span>
-                    <span class="main">横一文字</span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>コンボ：攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="astral">〈忍耐〉</span><span class="ether">〈威風〉</span><span class="ether">〈迅速〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>±０
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">射程</span>－１
-                    </span>
-
-                    <span class="cell invalid_cell">
-                      <span class="cover">対象</span>敵／１列
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card easy chain">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="ruby">いんりょく</span>
-                    <span class="main">引力</span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>コンボ：攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="astral">〈博愛〉</span><span class="mental">〈学知〉</span><span class="ether">〈威風〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>＋１
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">射程</span>＋１
-                    </span>
-
-                    <span class="cell strong_cell">
-                      <span class="cover">対象</span>敵／１体
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="inner_contents">
-              <h4>組み合わせ例：３</h4>
-
-              <p>
-                対象は、『敵／１体』になります。
-              </p>
-
-              <div class="card easy mental tag" tag="ベース判定">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="main">攻撃判定<span class="t-small">（遠距離武器）</span></span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="mental">〈洞察〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>１
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">射程</span>２
-                    </span>
-
-                    <span class="cell strong_cell">
-                      <span class="cover">対象</span>敵／１体
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card easy mental chain">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="ruby">ひらめき</span>
-                    <span class="main">閃き</span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>コンボ：攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="mental">《技》</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>±０
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">射程</span>-
-                    </span>
-
-                    <span class="cell strong_cell">
-                      <span class="cover">対象</span>‐
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card easy mental chain">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="ruby">きゅうしょねらい</span>
-                    <span class="main">急所狙い</span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>コンボ：攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="mental">〈洞察〉</span><span class="ether">〈反応〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>＋１
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">射程</span>‐
-                    </span>
-
-                    <span class="cell strong_cell">
-                      <span class="cover">対象</span>‐
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- 判定の実行 -->
-        <section id="combo-6">
-          <div class="sticky">
-            <h3>
-              <span class="num">6</span>判定の実行
-            </h3>
-          </div>
-
-          <div class="contents">
-            <p>
-              　ベース判定と全てのサポートアーツを一つの判定として統合し、処理を行います。<br>
-              　効果は、全てのアーツのものが適用されます。
-            </p>
-
-
-            <div class="inner_contents">
-              <h4>組み合わせ例</h4>
-
-              <div class="card mental tag" tag="ベース判定">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="main">攻撃判定<span class="t-small">（遠距離武器）</span></span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="astral">〈忍耐〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>１
-                    </span>
-
-
-                    <span class="cell">
-                      <span class="cover">射程</span>２
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>敵／１体
-                    </span>
-                  </div>
-                </div>
-
-                <div class="area-detail">
-                  <p>
-                    <span class="branch">
-                      <span class="condition">成功</span>対象に［成功数］点のダメージを与える。
-                    </span>
-                  </p>
-                </div>
-              </div>
-
-              <div class="card chain">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="ruby">ふんぬのちから</span>
-                    <span class="main">憤怒の力</span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>組み合わせ：攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="astral">〈忍耐〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>±０
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">射程</span>－１
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>敵／１体
-                    </span>
-                  </div>
-                </div>
-
-                <div class="area-detail">
-                  <p>
-                    あなたの《命》に１点のダメージを与えて使用する。このダメージには【加護】の効果を使用できない。<br>
-                    その攻撃判定に［《命》に受けているダメージ点数］のプラス修正を与える。
-                  </p>
-                </div>
-              </div>
-
-              <div class="card chain">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="ruby">たていちもんじ</span>
-                    <span class="main">縦一文字</span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>コンボ：攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="astral">〈忍耐〉</span><span class="ether">〈威風〉</span><span class="ether">〈迅速〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>＋１
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">射程</span>±０
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>‐
-                    </span>
-                  </div>
-                </div>
-
-                <div class="area-detail">
-                  <p>
-                    対象が、敵フロントエリア内の場合にのみ使用できる。
-                    <span class="branch">
-                      <span class="condition">成功</span>敵バックエリア内のキャラクター１体を選ぶ。その１体に、［ダメージ点数÷２（切り上げ）］のダメージを与える（このダメージに対しても防御判定が行われる）。
-                    </span>
-                  </p>
-                </div>
-              </div>
-
-              <p class="t-center t-color-main">
-                ▼
-              </p>
-
-              <div class="card tag" tag="統合後の判定">
-                <div class="area-head">
-                  <div class="title">
-                    <span class="main">攻撃判定</span>
-                  </div>
-
-                  <div class="data">
-                    <span class="cell fullWidth">
-                      <span class="cover">タイミング</span>攻撃
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">技能</span><span class="astral">〈忍耐〉</span>
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">難度</span>２
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">射程</span>１
-                    </span>
-
-                    <span class="cell">
-                      <span class="cover">対象</span>敵／１体
-                    </span>
-                  </div>
-                </div>
-
-                <div class="area-detail">
-                  <p>
-                    あなたの《命》に１点のダメージを与えて使用する。このダメージには【加護】の効果を使用できない。<br>
-                    その攻撃判定に［《命》に受けているダメージ点数］のプラス修正を与える。<br>
-                    対象が、敵フロントエリア内の場合にのみ使用できる。
-                    <span class="branch">
-                      <span class="condition">成功</span>対象に［成功数］点のダメージを与える。<br>
-                      敵バックエリア内のキャラクター１体を選ぶ。その１体に、［ダメージ点数÷２（切り上げ）］のダメージを与える（このダメージに対しても防御判定が行われる）。
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </section>
 
