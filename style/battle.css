@@ -8,6 +8,7 @@
     flex: 1;
     flex-direction: column;
     gap: 8px;
+    height: fit-content;
     border: solid 3px var(--color-sub);
     margin: 0;
     padding: 8px;

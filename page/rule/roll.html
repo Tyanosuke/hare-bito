@@ -1,10 +1,10 @@
 <head>
-  <link rel="stylesheet" href="/style/base.css" type="text/css" />
-  <link rel="stylesheet" href="/style/rule.css" type="text/css" />
+  <link rel="stylesheet" href="../../style/base.css" type="text/css" />
+  <link rel="stylesheet" href="../../style/rule.css" type="text/css" />
 </head>
 
 <body>
-  <a href="/index.html">戻る</a>
+  <a class="button-prev" href="../../index.html">戻る</a>
 
   <main>
     <h1>判定</h1>
@@ -25,7 +25,7 @@
             　判定は、以下の順番で処理を行います。
           </p>
 
-          <p class="rule_text">
+          <p class="list_container">
             <span class="num">1</span><a href="#roll-1">使用する技能の決定</a><br>
             <span class="num">2</span><a href="#roll-2">判定ダイスの個数の決定</a><br>
             <span class="num">3</span><a href="#roll-3">難度の決定</a><br>
@@ -61,7 +61,7 @@
           <div class="contents">
             <p>
               　ＰＣは、指定されたライフとスキルのレベルを合計し、<span class="keyword">判定ダイス</span>の個数とします。ダイスは６面のものを使用します。<br>
-              　この際、判定に<span class="keyword">修正</span>が与えられていたならば、ダイス個数がその数値分増減します。修正は、<a href="/page/data/arts.html" target="_blank">アクション</a>の効果や<a href="#blessing">加護</a>によって与えられます。修正の結果、判定ダイスが０個以下になった場合、その時点で<span class="keyword">失敗</span>扱いとなり、以降の手順をスキップします。
+              　この際、判定に<span class="keyword">修正</span>が与えられていたならば、ダイス個数がその数値分増減します。修正は、<a href="../../page/data/arts.html" target="_blank">アクション</a>の効果や<a href="#blessing">加護</a>によって与えられます。修正の結果、判定ダイスが０個以下になった場合、その時点で<span class="keyword">失敗</span>扱いとなり、以降の手順をスキップします。
             </p>
           </div>
         </section>
@@ -77,11 +77,10 @@
           <div class="contents">
             <p>
               　ＧＭは、判定の<span class="keyword">難度</span>を決定します。<br>
-              　こちらもシナリオに記載されているため、それを参照してください。
-            </p>
-
-            <p>
-              　シナリオ上必須ではない、突発的な判定の場合は、以下を参考に決定してください。
+              　こちらもシナリオに記載されているため、それを参照してください。<br>
+              <br>
+              　シナリオを作成する場合は、以下を参考にしてください。<br>
+              　便宜上記載していますが、『５』以上の難度は推奨しません。（シナリオ上不必要な、演出のための判定ならともかく、）強い運要素はマイナスに働くことが圧倒的に多いためです。
             </p>
 
             <table class="difficulty">
@@ -123,7 +122,7 @@
                   <td>５０％</td>
                   <td>８５％</td>
                   <td>９４％</td>
-                  <td class="t-left">専門家でなければ困難な行動。</td>
+                  <td class="t-left">専門家ならば簡単な行動。</td>
                 </tr>
 
                 <tr>
@@ -132,7 +131,7 @@
                   <td>１８％</td>
                   <td>６３％</td>
                   <td>８２％</td>
-                  <td class="t-left">専門家でも困難な行動。</td>
+                  <td class="t-left">専門家でもたまに失敗する行動。</td>
                 </tr>
 
                 <tr>
@@ -141,6 +140,15 @@
                   <td>３％</td>
                   <td>３６％</td>
                   <td>６２％</td>
+                  <td class="t-left">専門家でも困難な行動。<span class="t-red">※非推奨</span></td>
+                </tr>
+
+                <tr>
+                  <td>６</td>
+                  <td>０％</td>
+                  <td>０％</td>
+                  <td>１４％</td>
+                  <td>３７％</td>
                   <td class="t-left">運に任せた不確実な行動。<span class="t-red">※非推奨</span></td>
                 </tr>
               </tbody>
@@ -192,16 +200,37 @@
       <div class="contents">
         <p>
           　<span class="keyword">加護</span>は個人ではなく、セッション中にＰＣ全体で共有するポイントです。<br>
-          　セッション開始時は０点になっており、<a href="" target="_blank">キズナ判定</a>や、判定ダイスで『６』の出目が出た際に獲得します。<br>
+          　<a href="" target="_blank">キズナ判定</a>や、判定ダイスで『６』の出目が出た際に獲得します。<br>
+          　セッション開始時は０点になっており、最大で１２点まで貯めることができます。
           <br>
-          　１点消費するごとに、下記の効果を得られます。
+          　消費することによって、下記のような効果を得られます。
         </p>
 
-        <ul>
-          <li>ライフへのダメージを１点減少させる。１回のダメージにつき、何回でも使用できる。</li>
-          <li>判定に１のプラス修正を与える。１回の判定につき、３回まで使用できる。</li>
-        </ul>
+        <table>
+          <tbody>
+            <tr>
+              <th>消費</th>
+              <th>効果</th>
+            </tr>
+
+            <tr>
+              <td>１点</td>
+              <td class="t-left">判定に１のプラス修正を与える。１回の判定につき、３回まで使用できる。</td>
+            </tr>
+
+            <tr>
+              <td>３点</td>
+              <td class="t-left">ライフへのダメージを１点減少させる。１回のダメージにつき、何回でも使用できる。</td>
+            </tr>
+
+            <tr>
+              <td>９点</td>
+              <td class="t-left">エネミーアクションを１つ選び、それを強制的に失敗させる。１ラウンドにつき、１回まで使用できる。</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
+
   </main>
 </body>

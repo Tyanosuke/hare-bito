@@ -1,58 +1,62 @@
 <head>
-  <link rel="stylesheet" href="/style/base.css" type="text/css" />
-  <link rel="stylesheet" href="/style/making.css" type="text/css" />
+  <link rel="stylesheet" href="../../style/base.css" type="text/css" />
+  <link rel="stylesheet" href="../../style/making.css" type="text/css" />
 </head>
 
 <body>
-  <a href="/index.html">戻る</a>
+  <a class="button-prev" href="../../index.html">戻る</a>
 
   <main>
     <h1>ＰＣ作成</h1>
 
-    <div class="content">
-      <p>
-        　ＰＣの作成手順について解説します。
-      </p>
-
-      <div class="rule_text">
-        <div class="process">
-          <div class="title">
-            <span class="num">1</span><a href="#personality">パーソナリティ</a>
-          </div>
+    <section>
+      <div class="contents">
+        <div class="inner_contents">
+          <p>
+            　ＰＣの作成手順について解説します。
+          </p>
         </div>
 
-        <div class="process">
-          <div class="title">
-            <span class="num">2</span><a href="#class">クラス</a>
+        <div class="list_container">
+          <div class="process">
+            <div class="title">
+              <span class="num">1</span><a href="#personality">パーソナリティ</a>
+            </div>
           </div>
+
+          <div class="process">
+            <div class="title">
+              <span class="num">2</span><a href="#class">クラス</a>
+            </div>
+          </div>
+
+          <div class="process">
+            <div class="title">
+              <span class="num">3</span><a href="#ability">技能</a>
+            </div>
+
+            <div class="detail">
+              <span class="num">3-1</span><a href="#ability-life">ライフの習得</a><br>
+              <span class="num">3-2</span><a href="#ability-skill">スキルの習得</a><br>
+              <span class="num">3-3</span><a href="#ability-free">スキルの自由習得</a>
+            </div>
+          </div>
+
+          <div class="process">
+            <div class="title">
+              <span class="num">4</span><a href="#arts">アクション</a>
+            </div>
+
+            <div class="detail">
+              <span class="num">4-1</span><a href="#arts-wearpon">攻撃アクションの習得</a><br>
+              <span class="num">4-2</span><a href="#arts-primary">プライマリクラスのアクションの習得</a><br>
+              <span class="num">4-3</span><a href="#arts-free">アクションの自由習得</a>
+            </div>
+          </div>
+
         </div>
-
-        <div class="process">
-          <div class="title">
-            <span class="num">3</span><a href="#ability">技能</a>
-          </div>
-
-          <div class="detail">
-            <span class="num">3-1</span><a href="#ability-life">ライフの習得</a><br>
-            <span class="num">3-2</span><a href="#ability-skill">スキルの習得</a><br>
-            <span class="num">3-3</span><a href="#ability-free">スキルの自由習得</a>
-          </div>
-        </div>
-
-        <div class="process">
-          <div class="title">
-            <span class="num">4</span><a href="#arts">アクション</a>
-          </div>
-
-          <div class="detail">
-            <span class="num">4-1</span><a href="#arts-wearpon">攻撃アクションの習得</a><br>
-            <span class="num">4-2</span><a href="#arts-primary">プライマリクラスのアクションの習得</a><br>
-            <span class="num">4-3</span><a href="#arts-free">アクションの自由習得</a>
-          </div>
-        </div>
-
       </div>
-    </div>
+    </section>
 
     <!-- 【１】パーソナリティ -->
     <section id="personality">
@@ -79,16 +83,18 @@
       </div>
 
       <div class="contents">
-        <p>
-          　<span class="keyword">クラス</span>とは、ハレビトにおける戦いの流派です。<br>
-          　ＰＣは、<span class="keyword">プライマリクラス</span>と<span class="keyword">セカンダリクラス</span>の２つのクラスを持ちます。<br>
-          　それぞれ、<a href="#ability">技能</a>のレベルと、習得できる<a href="#arts">アクション</a>に影響します。詳しい説明は各項目内で行いますので、そちらを見ながら選んでください。
-        </p>
-
-        <div class="rule_text">
+        <div class="inner_contents">
           <p>
-            　下記のクラスの中から、プライマリクラスとセカンダリクラスを１つずつ選択します。両方とも同じものを選択しても構いません。
+            　<span class="keyword">クラス</span>とは、ハレビトにおける戦いの流派です。<br>
+            　ＰＣは、<span class="keyword">プライマリクラス</span>と<span class="keyword">セカンダリクラス</span>の２つのクラスを持ちます。<br>
+            　それぞれ、<a href="#ability">技能</a>のレベルと、習得できる<a href="#arts">アクション</a>に影響します。詳しい説明は各項目内で行いますので、そちらを見ながら選んでください。
           </p>
+
+          <div class="rule_text">
+            <p>
+              　下記のクラスの中から、プライマリクラスとセカンダリクラスを１つずつ選択します。両方とも同じものを選択しても構いません。
+            </p>
+          </div>
         </div>
 
         <div class="grid-class">
@@ -107,8 +113,8 @@
                 </p>
 
                 <div class="class_image">
-                  <img src="/img/class/test4.png" />
-                  <img src="/img/class/test3.png" />
+                  <img src="../../img/class/test4.png" />
+                  <img src="../../img/class/test3.png" />
                 </div>
               </div>
             </div>
@@ -129,8 +135,8 @@
                 </p>
 
                 <div class="class_image">
-                  <img src="/img/class/test5.png" />
-                  <img src="/img/class/test1.png" />
+                  <img src="../../img/class/test5.png" />
+                  <img src="../../img/class/test1.png" />
                 </div>
               </div>
             </div>
@@ -151,8 +157,8 @@
                 </p>
 
                 <div class="class_image">
-                  <img src="/img/class/test9.png" />
-                  <img src="/img/class/test8.png" />
+                  <img src="../../img/class/test9.png" />
+                  <img src="../../img/class/test8.png" />
                 </div>
               </div>
             </div>
@@ -173,8 +179,8 @@
                 </p>
 
                 <div class="class_image">
-                  <img src="/img/class/test11.png" />
-                  <img src="/img/class/test10.png" />
+                  <img src="../../img/class/test11.png" />
+                  <img src="../../img/class/test10.png" />
                 </div>
               </div>
             </div>
@@ -195,8 +201,8 @@
                 </p>
 
                 <div class="class_image">
-                  <img src="/img/class/test7.png" />
-                  <img src="/img/class/test12.png" />
+                  <img src="../../img/class/test7.png" />
+                  <img src="../../img/class/test12.png" />
                 </div>
               </div>
             </div>
@@ -217,8 +223,8 @@
                 </p>
 
                 <div class="class_image">
-                  <img src="/img/class/test2.png" />
-                  <img src="/img/class/test6.png" />
+                  <img src="../../img/class/test2.png" />
+                  <img src="../../img/class/test6.png" />
                 </div>
               </div>
             </div>
@@ -236,42 +242,44 @@
       </div>
 
       <div class="contents">
-        <p>
-          　<span class="keyword">技能</span>には下記の表のように、３つの<span class="keyword">ライフ</span>と、それらに紐づく<span class="keyword">スキル</span>があります。<br>
-          　それぞれにはレベルがあり、「《心》５」や「〈博愛〉２」のように表記されます。これらは<a href="roll.html" target="_blank">判定</a>で振るダイスの数に関係します。
-        </p>
+        <div class="inner_contents">
+          <p>
+            　<span class="keyword">技能</span>には下記の表のように、３つの<span class="keyword">ライフ</span>と、それらに紐づく<span class="keyword">スキル</span>があります。<br>
+            　それぞれにはレベルがあり、「《心》５」や「〈博愛〉２」のように表記されます。これらは<a href="roll.html" target="_blank">判定</a>で振るダイスの数に関係します。
+          </p>
 
-        <table>
-          <tbody>
-            <tr>
-              <!-- 《見出し -->
-              <th>ライフ</th>
-              <!-- 《心》 -->
-              <td class="astral" colspan="3">《心》</td>
-              <!-- 《技》 -->
-              <td class="mental" colspan="3">《技》</td>
-              <!-- 《体》 -->
-              <td class="ether" colspan="3">《体》</td>
-            </tr>
+          <table>
+            <tbody>
+              <tr>
+                <!-- 《見出し -->
+                <th>ライフ</th>
+                <!-- 《心》 -->
+                <td class="astral" colspan="3">《心》</td>
+                <!-- 《技》 -->
+                <td class="mental" colspan="3">《技》</td>
+                <!-- 《体》 -->
+                <td class="ether" colspan="3">《体》</td>
+              </tr>
 
-            <tr>
-              <!-- 《見出し -->
-              <th>スキル</th>
-              <!-- 《心》 -->
-              <td class="astral">〈博愛〉</td>
-              <td class="astral">〈忍耐〉</td>
-              <td class="astral">〈幻想〉</td>
-              <!-- 《技》 -->
-              <td class="mental">〈器用〉</td>
-              <td class="mental">〈学知〉</td>
-              <td class="mental">〈洞察〉</td>
-              <!-- 《体》 -->
-              <td class="ether">〈威風〉</td>
-              <td class="ether">〈反応〉</td>
-              <td class="ether">〈迅速〉</td>
-            </tr>
-          </tbody>
-        </table>
+              <tr>
+                <!-- 《見出し -->
+                <th>スキル</th>
+                <!-- 《心》 -->
+                <td class="astral">〈博愛〉</td>
+                <td class="astral">〈忍耐〉</td>
+                <td class="astral">〈幻想〉</td>
+                <!-- 《技》 -->
+                <td class="mental">〈器用〉</td>
+                <td class="mental">〈学知〉</td>
+                <td class="mental">〈洞察〉</td>
+                <!-- 《体》 -->
+                <td class="ether">〈威風〉</td>
+                <td class="ether">〈反応〉</td>
+                <td class="ether">〈迅速〉</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <!-- ライフ -->
         <section>
@@ -741,7 +749,7 @@
             <div class="rule_text">
               <p>
                 　プライマリクラスとセカンダリクラスが同一の場合は『４』レベル分、そうでない場合は『３』レベル分のスキルを追加で習得します。<br>
-                　ただし、各スキルのレベルは『５』までです。
+                　ただし、各スキルのレベルの上限は『５』です。
               </p>
             </div>
           </div>

@@ -1,5 +1,5 @@
 /* -------------------------------------------------- */
-/* 定数 */
+/* フォント */
 /* -------------------------------------------------- */
 
 @font-face {
@@ -87,14 +87,6 @@
   text-align: center !important;
 }
 
-/* マーカー */
-.keyword {
-  padding: 0 4px;
-  font-weight: bold;
-  background: linear-gradient(transparent 40%, rgba(255, 255, 0, 30%) 40%);
-  word-break: keep-all;
-}
-
 /* -------------------------------------------------- */
 /* 基本 */
 /* -------------------------------------------------- */
@@ -117,7 +109,17 @@ main {
 
 /* セクション */
 section {
+  margin-bottom: 3em;
+}
+
+/* セクション内セクション */
+section section {
   margin-bottom: 2em;
+}
+
+/* 段落 */
+p {
+  margin: 0;
 }
 
 /* 段落の次 */
@@ -127,7 +129,7 @@ p+* {
 
 /* 箇条書きリスト */
 ul {
-  padding-left: 2em;
+  margin: 0;
 }
 
 /* -------------------------------------------------- */
@@ -180,35 +182,28 @@ h4+.contents>p {
   margin-top: 0;
 }
 
-/* 平行線 */
-hr {
-  border: solid 1px #ccc;
-  margin: 0.5em 0;
-}
-
 /* -------------------------------------------------- */
-/* レイアウト */
-/* -------------------------------------------------- */
-
 /* コンテンツ */
+/* -------------------------------------------------- */
+
+/* 基本 */
 .contents {
   padding-left: 1em;
 }
 
-/* コンテンツ＞段落 */
+/* 段落 */
 .contents>p {
   margin-top: 0;
 }
 
 /* インナーコンテンツ */
-.inner_contents {
+.contents>.inner_contents {
   margin-bottom: 2em;
 }
 
-/* インナーコンテンツ：間隔 */
-.inner_contents+.inner_contents {
-  margin-top: 2em;
-}
+/* -------------------------------------------------- */
+/* レイアウト */
+/* -------------------------------------------------- */
 
 /* フレックス */
 .d-flex {
@@ -231,17 +226,17 @@ hr {
   font-weight: bold;
 }
 
-/* フレックス＞段落 */
-.d-flex>p {
-  flex: 1;
-  margin: 0;
-}
-
 /* コンテンツ＆フレックス */
 .contents.d-flex {
   gap: 24px;
   margin: 0;
   padding: 0;
+}
+
+/* フレックス＞段落 */
+.d-flex>p {
+  flex: 1;
+  margin: 0;
 }
 
 /* フレックス＞コンテンツ */
@@ -255,11 +250,32 @@ hr {
 }
 
 /* -------------------------------------------------- */
+/* リスト */
+/* -------------------------------------------------- */
+
+/* 基本 */
+span.list_item {
+  margin-left: -2em;
+  text-indent: 2em;
+}
+
+/* 戦闘要素 */
+span.list_item::before {
+  content: "";
+  display: inline-block;
+  background: currentColor;
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+  margin-right: 4px;
+}
+
+/* -------------------------------------------------- */
 /* タグジャンプ */
 /* -------------------------------------------------- */
 
 /* ヘッダー分マージン */
-section section {
+section section[id] {
   margin-top: calc(var(--sticky-row-height) * -1);
   padding-top: calc(var(--sticky-row-height));
 }
@@ -268,10 +284,18 @@ section section {
 /* 文章 */
 /* -------------------------------------------------- */
 
+/* マーカー */
+.keyword {
+  padding: 0 4px;
+  font-weight: bold;
+  background: linear-gradient(transparent 40%, rgba(255, 255, 0, 30%) 40%);
+  word-break: keep-all;
+}
+
 /* ルール */
 .rule_text {
   position: relative;
-  border: solid 3px var(--color-sub);
+  background: rgba(255, 255, 0, 15%);
   margin: 1em 0;
   padding: 12px;
 }
@@ -301,7 +325,7 @@ section section {
 }
 
 /* -------------------------------------------------- */
-/* ボタン */
+/* リンクボタン */
 /* -------------------------------------------------- */
 
 /* リンク */
@@ -373,17 +397,31 @@ a.link_button:hover {
 }
 
 /* -------------------------------------------------- */
+/* 戻るボタン */
+/* -------------------------------------------------- */
+
+/* 基本 */
+.button-prev {
+  border-radius: 0 0 8px 8px;
+  min-width: 100px;
+  padding: 8px;
+  position: fixed;
+  top: 0;
+  right: 24px;
+  z-index: 3;
+  text-align: center;
+}
+
+/* -------------------------------------------------- */
 /* テーブル */
 /* -------------------------------------------------- */
 
 /* テーブル */
 table {
-  table-layout: fixed;
   background: var(--color-sub-alpha);
   border-radius: 8px;
   border-spacing: 4px;
   width: 100%;
-  margin: 0 auto;
   margin: 1em 0;
   padding: 8px;
 }
@@ -397,20 +435,11 @@ table>tbody>tr>* {
 
 /* ヘッダーセル */
 table>tbody>tr>th {
+  width: 0;
   background: var(--color-sub);
   color: #fff;
   font-weight: normal;
-}
-
-/* 説明テーブル＞セル */
-table.tutorial td {
-  text-align: left;
-}
-
-/* 説明テーブル＞ヘッダーセル */
-table.tutorial th {
-  width: 7em;
-  text-align: center;
+  white-space: nowrap;
 }
 
 /* -------------------------------------------------- */
@@ -487,30 +516,53 @@ p>.num {
 /* 処理順 */
 /* -------------------------------------------------- */
 
+/* コンテナ */
+.list_container {
+  border: solid 3px var(--color-sub);
+  margin-bottom: 2em;
+  padding: 12px;
+}
+
+/* コンテナ内コンテナ */
+.list_container .list_container {
+  margin-bottom: 0;
+}
+
 /* 処理順 */
-.rule_text>.process {
+.list_container>.process {
   padding: 1em 0;
 }
 
 /* 処理順：最初の要素 */
-.rule_text>.process:first-child {
+.list_container>.process:first-child {
   padding-top: 0;
 }
 
 /* 処理順：最後の要素 */
-.rule_text>.process:last-child {
+.list_container>.process:last-child {
   padding-bottom: 0;
 }
 
 /* 処理順：洞察 */
 .process+.process {
-  border-top: solid 3px var(--color-sub);
+  border-top: solid 3px var(--color-sub-alpha);
 }
 
 /* 処理順＞内容 */
 .process>.detail {
   margin-top: 0.5em;
-  padding-left: 2em;
+  padding-left: 1em;
+}
+
+/* 番号 */
+.process span.num {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* ２段落目リスト */
+.process>.list_container {
+  margin-top: 1em;
 }
 
 /* -------------------------------------------------- */

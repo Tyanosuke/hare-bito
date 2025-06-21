@@ -1,9 +1,18 @@
 /* -------------------------------------------------- */
+/* フォント */
+/* -------------------------------------------------- */
+
+@font-face {
+  font-family: "kanji_font";
+  src: url(../font/玉ねぎ楷書激無料版v7改.ttf);
+}
+
+/* -------------------------------------------------- */
 /* 定数 */
 /* -------------------------------------------------- */
 
 :root {
-  /* アーツ：下部マージン */
+  /* アクション：下部マージン */
   --margin-arts: 12px;
 
   /* 《心》；サブカラー */
@@ -23,6 +32,20 @@
 
   /* 《体》；サブカラー（透過） */
   --color-ether-alpha: rgb(230, 210, 210);
+}
+
+/* -------------------------------------------------- */
+/* テーブル */
+/* -------------------------------------------------- */
+
+/* 説明テーブル＞セル */
+table.tutorial td {
+  text-align: left;
+}
+
+/* 説明テーブル＞ヘッダーセル */
+table.tutorial th {
+  text-align: center;
 }
 
 /* -------------------------------------------------- */
@@ -61,7 +84,6 @@
 .card>.area-head {
   display: flex;
   background: var(--color-sub);
-  border-bottom: solid 1px var(--color-sub);
   border-radius: 8px 8px 0 0;
   color: #fff;
 }
@@ -71,11 +93,23 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 220px;
+  width: 200px;
   padding: 12px;
   position: relative;
   background-repeat: no-repeat;
   background-position: right 8px bottom 50%;
+}
+
+/* タイトル：末尾要素 */
+.card>.area-head>.title::after {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  color: #fff;
+  font-family: kanji_font;
+  font-size: 48px;
+  opacity: 0.25;
+  transform: translate(0, -50%);
 }
 
 /* タイトル：常時 */
@@ -98,7 +132,7 @@
 /* データ */
 .card>.area-head>.data {
   display: grid;
-  grid-template-columns: calc(10em + 44px) calc(5em + 44px) calc(5em + 44px) 1fr;
+  grid-template-columns: repeat(4, 1fr);
   flex: 1;
   background: #fff;
   border-top-right-radius: 8px;
@@ -126,8 +160,30 @@
 }
 
 /* データ＞文章＞セル：全幅 */
-.card>.area-head>.data>.cell.fullWidth {
-  grid-column: 1 / 5;
+.card>.area-head>.data>.cell:nth-child(1) {
+  grid-column: 1 / 3;
+}
+
+/* データ＞文章＞セル：全幅 */
+.card>.area-head>.data>.cell:nth-child(2) {
+  grid-column: 3 / 5;
+}
+
+/* データ＞文章＞セル：全幅 */
+.card>.area-head>.data>.cell:nth-child(5) {
+  grid-column: 3 / 5;
+}
+
+/* 条件文 */
+.card>.area-condition {
+  background: #fff;
+  border: solid 1px var(--color-sub);
+  padding: 8px;
+}
+
+/* 条件文 */
+.card>.area-condition>p {
+  margin: 0;
 }
 
 /* 説明文 */
@@ -135,7 +191,7 @@
   background: #fff;
   border: solid 1px var(--color-sub);
   border-radius: 0 0 8px 8px;
-  padding: 12px;
+  padding: 8px;
 }
 
 /* 説明文＞段落 */
@@ -210,6 +266,11 @@
   border-color: var(--color-astral);
 }
 
+/* タイトル：末尾要素 */
+.card.astral>.area-head>.title::after {
+  content: "心";
+}
+
 /* データ＞文章＞セル＞ */
 .card.astral>.area-head>.data>.cell {
   border-color: var(--color-astral);
@@ -218,6 +279,11 @@
 /* データ＞文章＞セル＞見出し */
 .card.astral>.area-head>.data>.cell>.cover {
   background-color: var(--color-astral-alpha);
+}
+
+/* 条件文 */
+.card.astral>.area-condition {
+  border-color: var(--color-astral);
 }
 
 /* 説明文 */
@@ -245,6 +311,11 @@
   border-color: var(--color-mental);
 }
 
+/* タイトル：末尾要素 */
+.card.mental>.area-head>.title::after {
+  content: "技";
+}
+
 /* データ＞文章＞セル＞ */
 .card.mental>.area-head>.data>.cell {
   border-color: var(--color-mental);
@@ -253,6 +324,11 @@
 /* データ＞文章＞セル＞見出し */
 .card.mental>.area-head>.data>.cell>.cover {
   background-color: var(--color-mental-alpha);
+}
+
+/* 条件文 */
+.card.mental>.area-condition {
+  border-color: var(--color-mental);
 }
 
 /* 説明文 */
@@ -280,6 +356,11 @@
   border-color: var(--color-ether);
 }
 
+/* タイトル：末尾要素 */
+.card.ether>.area-head>.title::after {
+  content: "体";
+}
+
 /* データ＞文章＞セル＞ */
 .card.ether>.area-head>.data>.cell {
   border-color: var(--color-ether);
@@ -288,6 +369,11 @@
 /* データ＞文章＞セル＞見出し */
 .card.ether>.area-head>.data>.cell>.cover {
   background-color: var(--color-ether-alpha);
+}
+
+/* 条件文 */
+.card.ether>.area-condition {
+  border-color: var(--color-ether);
 }
 
 /* 説明文 */

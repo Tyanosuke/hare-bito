@@ -1,365 +1,38 @@
 <head>
-  <link rel="stylesheet" href="/style/base.css" type="text/css" />
-  <link rel="stylesheet" href="/style/rule.css" type="text/css" />
-  <link rel="stylesheet" href="/style/battle.css" type="text/css" />
-  <link rel="stylesheet" href="/style/arts.css" type="text/css" />
+  <link rel="stylesheet" href="../../style/base.css" type="text/css" />
+  <link rel="stylesheet" href="../../style/rule.css" type="text/css" />
+  <link rel="stylesheet" href="../../style/battle.css" type="text/css" />
+  <link rel="stylesheet" href="../../style/arts.css" type="text/css" />
 </head>
 
 <body>
-  <a href="/index.html">戻る</a>
+  <a class="button-prev" href="../../index.html">戻る</a>
 
   <main>
     <h1>ハラエフェイズ</h1>
 
-    <p>
-      　<span class="keyword">ハラエフェイズ</span>とは、ケガレビトと直接対決し、打ち倒すための戦闘シーンです。<br>
-      　ミソギフェイズが終了すると、このフェイズに移行します。<br>
-      <br>
-      　このページでは、ハラエフェイズに関連するルールをまとめて解説します。
-    </p>
+    <section>
+      <p>
+        　<span class="keyword">ハラエフェイズ</span>とは、ケガレビトと直接対決し、打ち倒すための戦闘シーンです。<br>
+        　ミソギフェイズが終了すると、このフェイズに移行します。<br>
+        <br>
+        　このページでは、ハラエフェイズに関連するルールをまとめて解説します。
+      </p>
+    </section>
 
-    <!-- 戦闘の流れ -->
-    <section id="battle">
+    <!-- 陣営 -->
+    <section id="action">
       <div class="sticky">
         <h2>
-          戦闘の流れ
+          陣営
         </h2>
       </div>
 
       <div class="contents">
         <p>
-          　戦闘シーンは、以下の流れで進行します。<br>
-          　<a href="#battle_finish">戦闘終了条件</a>を満たすまで、ラウンドを繰り返します。
+          　戦闘シーンに登場するキャラクターは、<span class="keyword">敵</span>か<span class="keyword">味方</span>のどちらかの陣営に所属します。<br>
+          　ＰＣは、必ず味方陣営に含まれます。
         </p>
-
-        <div class="rule_text">
-          <div class="process">
-            <div class="title">
-              <span class="num">1</span><a href="#round_start">ラウンド開始</a>
-            </div>
-
-            <div class="detail">
-              <span class="num">1-1</span><a href="#battle_speed">行動速度の決定</a><br>
-              <span class="num">1-2</span><a href="#timing-round_start">タイミング『ラウンド開始』のアクションの使用</a>
-            </div>
-          </div>
-
-          <div class="process">
-            <div class="title">
-              <span class="num">2</span><a href="#turn">ターン</a>
-            </div>
-          </div>
-
-          <div class="process">
-            <div class="title">
-              <span class="num">3</span><a href="#round_end">ラウンド終了</a>
-            </div>
-
-            <div class="detail">
-              <span class="num">3-1</span><a href="#timing-round_end">タイミング『ラウンド終了』のアクションの使用</a><br>
-              <span class="num">3-2</span><a href="#effect_clear">ラウンド中効果の消滅</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ラウンド開始 -->
-    <section id="round_start">
-      <div class="sticky">
-        <h2>
-          <span class="num">1</span>ラウンド開始
-        </h2>
-      </div>
-
-      <div class="contents">
-        <p>
-          　以下の処理を順番に行います。順番を入れ替えることはできません。
-        </p>
-
-        <!-- 行動速度の決定 -->
-        <section id="battle_speed">
-          <div class="sticky">
-            <h3>
-              <span class="num">1-1</span>行動速度の決定
-            </h3>
-          </div>
-
-          <div class="contents">
-            <p>
-              　まず、戦闘に参加している全てのキャラクターは<span class="keyword">【速度決定】</span>を行い、そのラウンドでの<span class="keyword">行動速度</span>を決定します。ターンは、この値が高い順に行われます。なお、ＰＣと敵で同値のキャラクターがいる場合、ＰＣが優先されます。ＰＣ間の順番は、相談して決めて構いません。
-            </p>
-
-            <!-- 速度決定 -->
-            <div class="contents">
-              <h4>
-                速度決定
-              </h4>
-
-              <div class="contents">
-                <p>
-                  　《体》が０点になっていて【速度決定】が行えない場合、行動速度は『１』になります。
-                </p>
-
-                <div class="cards">
-                  <div class="card ether">
-                    <div class="area-head">
-                      <div class="title">
-                        <span class="ruby">そくどけってい</span>
-                        <span class="main">速度決定</span>
-                      </div>
-
-                      <div class="data">
-                        <span class="cell fullWidth">
-                          <span class="cover">タイミング</span>速度決定
-                        </span>
-
-                        <span class="cell">
-                          <span class="cover">技能</span>《体》＋〈迅速〉
-                        </span>
-
-                        <span class="cell">
-                          <span class="cover">難度</span>‐
-                        </span>
-
-                        <span class="cell">
-                          <span class="cover">射程</span>‐
-                        </span>
-
-                        <span class="cell">
-                          <span class="cover">対象</span>自身
-                        </span>
-                      </div>
-                    </div>
-
-                    <div class="area-detail">
-                      <p>
-                        あなたの行動速度を［成功数＋１］にする。
-                      </p>
-
-                      <p class="note">行動の順番を決定する。</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- 行動終了 -->
-            <div class="contents">
-              <h4>
-                行動終了
-              </h4>
-
-              <div class="contents">
-                <p>
-                  　<a href="#attack">攻撃アクション</a>を行なうか、アクションを３つ使用したキャラクターは、この状態になります。あるいは、ターン中、自発的にこの状態になることも可能です。<br>
-                  　行動速度は『０』になり、次のラウンドまで行動できません
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- タイミング『ラウンド』のアクションの使用 -->
-        <section id="timing-round_start">
-          <div class="sticky">
-            <h3>
-              <span class="num">1-2</span>タイミング『ラウンド開始』のアクションの使用
-            </h3>
-          </div>
-
-          <div class="contents">
-            <p>
-              　タイミングが『ラウンド』、または『任意』のアクションを１つ使用できます。
-            </p>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <!-- ターン -->
-    <section id="turn">
-      <div class="sticky">
-        <h2>
-          <span class="num">2</span>ターン
-        </h2>
-      </div>
-
-      <div class="contents">
-        <p>
-          　各キャラクターは、行動速度が高い順に<span class="keyword">ターン</span>を行います。<br>
-          　ターンでは、アクションを最大で３つまで使用できます。<br>
-          　なお、何もせずに行動終了することも可能です。
-        </p>
-
-        <!-- アクションの制限 -->
-        <section>
-          <div class="sticky">
-            <h3>
-              <span class="num">2-A</span>アクションの制限
-            </h3>
-          </div>
-
-          <div class="contents">
-            <p>
-              　ターン中に行う全てのアクションは、判定で使用するライフが重複してはいけません。つまり、《心》《技》《体》のアクションを１回ずつ行うことができるということです。<br>
-              　また、攻撃アクションを使用した場合、その時点でターンが終了する点に注意してください。
-            </p>
-          </div>
-        </section>
-
-        <!-- 攻撃アクション -->
-        <section id="attack">
-          <div class="sticky">
-            <h3>
-              <span class="num">2-B</span>攻撃アクション
-            </h3>
-          </div>
-
-          <div class="contents">
-            <div class="inner_contents">
-              <p>
-                　攻撃アクションを使用した際、以下のような処理を行います。<br>
-                　攻撃を行うキャラクターは<span class="keyword">攻撃判定</span>を、攻撃の対象となったキャラクターは<span class="keyword">防御判定</span>をそれぞれ行います。この２つはセットで行われ、以下の手順で処理します。解説中では、攻撃判定を行うキャラクターを『攻撃側』、防御判定を行うキャラクターを『防御側』と表記します。
-              </p>
-
-              <p class="rule_text">
-                <span class="num">2-B-1</span><a href="#roll-attack">攻撃判定</a><br>
-                <span class="num">2-B-2</span><a href="#roll-guard">防御判定</a><br>
-                <span class="num">2-B-3</span><a href="#decide_damage">ダメージの決定</a>
-              </p>
-            </div>
-
-            <!-- 攻撃判定 -->
-            <section id="roll-attack">
-              <h4>
-                <span class="num">2-B-1</span>攻撃判定
-              </h4>
-
-              <div class="contents">
-                <p>
-                  　攻撃アクションで指定された技能で判定を行ってください。<br>
-                  　判定に成功した場合、成功数を<span class="keyword">ダメージ</span>とします。なお、ダメージを増減させる効果（<a href="/page/data/arts.html#kyuusho_nerai" target="_blank">【急所狙い】</a>など）は、この時点で適用されます。<br>
-                  失敗した場合、以降の処理はスキップされます。
-                </p>
-              </div>
-            </section>
-
-            <!-- 防御判定 -->
-            <section id="roll-guard">
-              <h4>
-                <span class="num">2-B-2</span>防御判定
-              </h4>
-
-              <div class="contents">
-                <p>
-                  　防御側は、攻撃判定で使用されたライフと、それに対応するスキルを選んで判定を行ってください。
-                </p>
-
-                <div class="card">
-                  <div class="area-head">
-                    <div class="title">
-                      <span class="ruby">ぼうぎょ</span>
-                      <span class="main">防御</span>
-                    </div>
-
-                    <div class="data">
-                      <span class="cell fullWidth">
-                        <span class="cover">タイミング</span> 防御
-                      </span>
-
-                      <span class="cell">
-                        <span class="cover">技能</span>※
-                      </span>
-
-                      <span class="cell">
-                        <span class="cover">難度</span>０
-                      </span>
-
-                      <span class="cell">
-                        <span class="cover">射程</span> ‐
-                      </span>
-
-                      <span class="cell">
-                        <span class="cover">対象</span> 自身
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="area-detail">
-                    <p>
-                      技能は、攻撃判定で使用されたライフに対応するものをあなたが選ぶ。
-                    </p>
-
-                    <hr>
-
-                    <p>
-                      あなたが受けるダメージを［成功数］点減少させる。
-                    </p>
-
-                    <p class="note">攻撃を防ぎ、ダメージを軽減する。</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- ダメージの決定 -->
-            <section id="decide_damage">
-              <h4>
-                <span class="num">2-B-3</span>ダメージの決定
-              </h4>
-
-              <div class="contents">
-                <p>
-                  　防御側は、攻撃判定で使用されたものと同じライフにダメージを受けることとなります。<br>
-                  　この際、防御判定の成功数分、ダメージが減少します。
-                </p>
-              </div>
-            </section>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <!-- ラウンド終了 -->
-    <section id="round_end">
-      <div class="sticky">
-        <h2>
-          <span class="num">3</span>ラウンド終了
-        </h2>
-      </div>
-
-      <div class="contents">
-        <!-- タイミング『ラウンド終了』のアクションの使用 -->
-        <section id="timing-round_end">
-          <div class="sticky">
-            <h3>
-              <span class="num">3-1</span>タイミング『ラウンド終了』のアクションの使用
-            </h3>
-          </div>
-
-          <div class="contents">
-            <p>
-              　タイミングが『ラウンド終了』、または『任意』のアクションを１つ使用できます。
-            </p>
-          </div>
-        </section>
-
-        <!-- ラウンド中効果の消滅 -->
-        <section id="effect_clear">
-          <div class="sticky">
-            <h3>
-              <span class="num">3-2</span>ラウンド中効果の消滅
-            </h3>
-          </div>
-
-          <div class="contents">
-            <p>
-              　「ラウンド中、～」のように書かれた効果が、全て消滅します。
-            </p>
-          </div>
-        </section>
       </div>
     </section>
 
@@ -372,18 +45,55 @@
       </div>
 
       <div class="contents">
+        <div class="inner_contents">
+          <p>
+            　戦闘中の攻撃、防御、回復、補助、移動などは、各ＰＣが習得しているアクションによって行われます。
+          </p>
+        </div>
+
+        <!-- アクションの使用 -->
         <section id="action-execute">
           <div class="sticky">
             <h3>
-              アクションの発動
+              アクションの使用
             </h3>
           </div>
 
           <div class="contents">
             <p>
-              　戦闘中の攻撃、防御、回復、補助などは、各キャラクターが習得しているアクションによって行われます。<br>
-              　アクションの発動は、指定されたタイミングで発動を宣言し、指定された技能での判定――<span class="keyword">発動判定</span>に成功する必要があります。<br>
-              　同名のアクションは、１ラウンド中に１度しか発動を宣言できません。発動判定に失敗した場合でも、再び発動を試みることはできません。
+              　アクションの発動を試みることを、「アクションを使用する」と表現します。<br>
+              　発動には、各アクションで指定された『<a href="../data/arts.html#timing" target="_blank">タイミング</a>』で、『<a href="../data/arts.html#skill" target="_blank">使用技能</a>』での判定――<span class="keyword">発動判定</span>に成功する必要があります。『<a href="../data/arts.html#difficulty" target="_blank">難度</a>』を参照し、判定を行ってください。<br>
+              　同名のアクションは、１ラウンド中に１度しか使用できません。発動判定に失敗した場合でも、それは変わりません。
+            </p>
+          </div>
+        </section>
+
+        <!-- ターンアクション・攻撃アクション-->
+        <section id="action-type">
+          <div class="sticky">
+            <h3>
+              ターンアクション・攻撃アクション
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　タイミングに『ターン』が含まれるのものを<span class="keyword">ターンアクション</span>と呼びます。その中でも、タイミングが『ターン／攻撃』のものを「<span class="keyword">攻撃アクション</span>」と呼びます。
+            </p>
+          </div>
+        </section>
+
+        <!-- 攻撃判定 -->
+        <section id="action-execute">
+          <div class="sticky">
+            <h3>
+              攻撃判定
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　攻撃アクションの発動判定を、<span class="keyword">攻撃判定</span>と呼びます。
             </p>
           </div>
         </section>
@@ -400,18 +110,34 @@
 
       <div class="contents d-flex">
         <div class="contents">
-          <p>
-            　戦闘シーン中のキャラクターの立ち位置を示すのが、<span class="keyword">エリア</span>です。<br>
-            　右の図のように、敵・味方エリアに分けられ、更にそれぞれがフロント・バックエリアに分かれます。
-          </p>
-          <p>
-            　名前の通り、敵エリアは敵のみが配置され、味方エリアは味方のみが配置されます。
-          </p>
-          <p>
-            　フロント・バックエリアは、<a href="/page/data/arts.html#range" target="_blank">アーツの射程</a>に関わり、<a href="#move">移動</a>によって立ち位置を変更することができます。<br>
-            　例えば、射程『２』の攻撃アーツを持つキャラクターの場合、フロントエリアにいれば、敵エリア全体を射程内に入れることができます。バックエリアに下がれば、敵フロントエリアのみが射程内となりますが、敵にも射程の概念があるため、狙われる確率が下がるかもしれません。<br>
-            　戦闘開始時にフロント・バックエリアのどちらにいるかは、各ＰＣが決めてください。
-          </p>
+          <div class="inner_contents">
+            <p>
+              　戦闘シーン中のキャラクターの立ち位置を示すのが、右の図で示す<span class="keyword">エリア</span>です。<br>
+              　大きく敵・味方エリアに分けられ、更にそれぞれがフロント・バックエリアに分かれます。
+            </p>
+          </div>
+
+          <section>
+            <h3>
+              敵・味方エリア
+            </h3>
+
+            <p>
+              　名前の通り、それぞれの陣営内のキャラクターしか配置できません。
+            </p>
+          </section>
+
+          <section>
+            <h3>
+              フロント・バックエリア
+            </h3>
+
+            <p>
+              　戦闘開始時、キャラクターはフロント・バックエリアのどちらかに配置されます。ＰＣの配置はそれぞれが決めてください。
+              　これらは、<a href="../../page/data/arts.html#range" target="_blank">アクションの射程</a>に関わります。例えば、射程『２』の攻撃アクションを持つキャラクターの場合、フロントエリアにいれば、敵エリア全体を射程内に入れることができます。バックエリアに下がれば、敵フロントエリアのみが射程内となりますが、敵にも射程の概念があるため、狙われる確率が下がるかもしれません。<br>
+              　ターン中、<a href="../data/arts.html" target="_blank">【移動】</a>によって、別エリアに移動することができます。
+            </p>
+          </section>
         </div>
 
         <div class="area">
@@ -469,7 +195,7 @@
           <div class="contents">
             <p>
               　ライフのいずれかが０点になった際、ＰＣは<span class="keyword">戦闘不能</span>になります。<br>
-              　この状態では、<span class="keyword">復活判定</span>以外の判定を行うことができなくなります。
+              　この状態では、<span class="keyword">【復活】</span>以外のアクションを行うことができなくなります。
             </p>
 
             <!-- 復活 -->
@@ -480,56 +206,9 @@
 
               <div class="contents">
                 <p>
-                  　戦闘不能状態のＰＣが、各ラウンドの終了時に行える特殊なアクションです。<br>
-                  　判定に成功すれば、戦闘不能状態を解除できます。ただし、前述の通りライフが回復することはなく、０点のままです。<br>
+                  　<a href="../data/arts.html" target="_blank">【復活】</a>は、戦闘不能状態のＰＣが、各ラウンドの終了時に行える基本アクションです。<br>
+                  　判定に成功すれば、戦闘不能状態を解除できます。ただし、再び行動が行えるようになるだけであり、ライフは０点のままです。<br>
                 </p>
-
-                <div class="card">
-                  <div class="area-head">
-                    <div class="title">
-                      <span class="main">復活</span>
-                    </div>
-
-                    <div class="data">
-                      <span class="cell fullWidth">
-                        <span class="cover">タイミング</span>
-                        復活（ラウンド終了時）
-                      </span>
-
-                      <span class="cell">
-                        <span class="cover">技能</span>
-                        任意
-                      </span>
-
-                      <span class="cell">
-                        <span class="cover">難度</span>
-                        ※
-                      </span>
-
-                      <span class="cell">
-                        <span class="cover">対象</span>
-                        自身
-                      </span>
-
-                      <span class="cell">
-                        <span class="cover">射程</span>
-                        ‐
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="area-detail">
-                    <p>
-                      難度は、［戦闘不能になった回数×２］（初回は２）になる。
-                      <span class="branch">
-                        <span class="condition">成功</span>
-                        あなたの戦闘不能を解除する。
-                      </span>
-                    </p>
-
-                    <p class="note">失ったものを他のもので代替して戦う。</p>
-                  </div>
-                </div>
               </div>
             </section>
           </div>
@@ -544,12 +223,10 @@
           </div>
 
           <div class="contents">
-            <div class="inner_contents">
-              <p>
-                　全てのライフが０点になると、ＰＣは即座に<span class="keyword">撤退</span>します。<br>
-                　この状態になると、エンディングフェイズ開始時まで一切の行動ができなくなります。復活判定も行うことはできません。
-              </p>
-            </div>
+            <p>
+              　全てのライフが０点になると、ＰＣは即座に<span class="keyword">撤退</span>します。<br>
+              　この状態になると、エンディングフェイズ開始時まで一切の行動ができなくなります。復活判定も行うことはできません。
+            </p>
         </section>
       </div>
     </section>
@@ -566,8 +243,7 @@
         <div class="inner_contents">
           <p>
             　<span class="keyword">ケガレビト</span>とは、ハレビトと敵対し、人々の暮らしを脅かす存在です。<br>
-            　<span class="keyword">ボス</span>と<span class="keyword">ザコ</span>の２種類があります。<br>
-            　また、<span class="keyword">ＨＰ</span>という耐久力を持っています。
+            　戦闘における、敵キャラクターです。
           </p>
         </div>
 
@@ -581,7 +257,7 @@
 
           <div class="contents">
             <!-- ボス -->
-            <div class="inner_contents">
+            <section>
               <h4>
                 ボス
               </h4>
@@ -590,10 +266,10 @@
                 　<span class="keyword">ボス</span>とは、名前の通り、シナリオ上の事件を引き起こした張本人です。<br>
                 　基本的に、このボスを倒すことがハレビトたちの最終目標となります。
               </p>
-            </div>
+            </section>
 
             <!-- ザコ -->
-            <div class="inner_contents">
+            <section>
               <h4>
                 ザコ
               </h4>
@@ -602,21 +278,21 @@
                 　<span class="keyword">ザコ</span>とは、ボスの取り巻きです。<br>
                 　ケガレによって生まれた存在であったり、ただボスに操られているだけだったりします。なので、ザコを倒すことは必須ではありません。
               </p>
-            </div>
+            </section>
           </div>
         </section>
 
-        <!-- 技能 -->
+        <!-- 能力 -->
         <section>
           <div class="sticky">
             <h3>
-              技能
+              能力
             </h3>
           </div>
 
           <div class="contents">
             <!-- ＨＰ -->
-            <div class="inner_contents">
+            <section>
               <h4>
                 ＨＰ
               </h4>
@@ -625,86 +301,383 @@
                 　ケガレビトは、ＨＰという耐久力を持っています。<br>
                 　この値が０点になった場合、ケガレビトを倒したという扱いになります。
               </p>
-            </div>
+            </section>
 
-            <!-- ライフとスキル -->
-            <div class="inner_contents">
+            <!-- エネミーアクション -->
+            <section id="kegarebito-enemy_action">
               <h4>
-                ライフとスキル
+                エネミーアクション
               </h4>
 
               <p>
-                　ケガレビトはＰＣと同じく、ライフとスキルを持ちます。<br>
-                　ただし、ダメージを受けてもライフは減少せず、代わりにＨＰが減少します。
+                　ケガレビトは、専用のアクションを使用します。<br>
+                　ＰＣたちが使うそれとは処理が異なり、条件によって効果が変わるイベントのようなものです。
               </p>
-            </div>
+            </section>
           </div>
         </section>
       </div>
     </section>
 
-    <!-- 戦闘の終了条件 -->
-    <section id="battle_finish">
+    <!-- 戦闘の流れ -->
+    <section id="battle">
       <div class="sticky">
         <h2>
-          戦闘の終了条件
+          戦闘の流れ
+        </h2>
+      </div>
+
+      <div class="contents">
+        <div class="inner_contents">
+          <p>
+            　戦闘シーンは、以下の流れで進行します。<br>
+            　<a href="#battle_finish">戦闘終了条件</a>を満たすまで、ラウンドを繰り返します。
+          </p>
+        </div>
+
+        <div class="list_container">
+          <div class="process">
+            <div class="title">
+              <span class="num">1</span><a href="#battle_start">戦闘開始</a>
+            </div>
+          </div>
+
+          <div class="process">
+            <div class="title">
+              <span class="num">2</span><a href="#battle_start">ラウンド</a>
+            </div>
+
+            <div class="list_container">
+              <div class="process">
+                <div class="title">
+                  <span class="num">2-1</span><a href="#round_start">ラウンド開始</a>
+                </div>
+
+                <div class="detail">
+                  <span class="num">2-1-1</span><a href="#show_enemy_action">エネミーアクションの開示</a><br>
+                  <span class="num">2-1-2</span><a href="#timing-round_start">タイミング：ラウンド開始</a>
+                </div>
+              </div>
+
+              <div class="process">
+                <div class="title">
+                  <span class="num">2-2</span><a href="#turn-pc">味方ターン</a>
+                </div>
+
+                <div class="detail">
+                  <span class="num">2-2-1</span><a href="#timing-turn">ターンアクションの使用</a><br>
+                  <span class="num">2-2-2</span><a href="#turn_end">ターンの終了</a>
+                </div>
+              </div>
+
+              <div class="process">
+                <div class="title">
+                  <span class="num">2-3</span><a href="#turn-enemy">敵ターン</a>
+                </div>
+
+                <div class="detail">
+                  <span class="num">2-3-1</span><a href="#enemy_action">エネミーアクションの実行</a>
+                </div>
+              </div>
+
+              <div class="process">
+                <div class="title">
+                  <span class="num">2-4</span><a href="#round_end">ラウンド終了</a>
+                </div>
+
+                <div class="detail">
+                  <span class="num">2-4-1</span><a href="#timing-round_end">タイミング：ラウンド終了</a><br>
+                  <span class="num">2-4-2</span><a href="#effect_clear">ラウンド中効果の消滅</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="process">
+            <div class="title">
+              <span class="num">3</span><a href="#battle_end">戦闘終了</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 【１】戦闘開始 -->
+    <section id="battle_start">
+      <div class="sticky">
+        <h2>
+          <span class="num">1</span>戦闘開始
         </h2>
       </div>
 
       <div class="contents">
         <p>
-          　戦闘が終了する条件は、以下の３つがあります。
         </p>
 
-        <div class="contents">
-          <!-- ボスの撃破 -->
-          <section id="battle-victory">
-            <div class="sticky">
-              <h3>
-                ボスの撃破
-              </h3>
-            </div>
+        <!--  -->
+        <section id="enemy_action">
+          <div class="sticky">
+            <h3>
+              <span class="num"></span>
+            </h3>
+          </div>
 
-            <div class="contents">
+          <div class="contents">
+            <p>
+            </p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- 【２】ラウンド -->
+    <section id="round">
+      <div class="sticky">
+        <h2>
+          <span class="num">2</span>ラウンド
+        </h2>
+      </div>
+
+      <div class="contents">
+        <!-- 【２－１】ラウンド開始 -->
+        <section id="round_start">
+          <div class="sticky">
+            <h3>
+              <span class="num">2-1</span>ラウンド開始
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　以下の処理を行います。
+            </p>
+
+            <!-- エネミーアクションの開示 -->
+            <section id="show_enemy_action">
+              <div class="sticky">
+                <h4>
+                  <span class="num">2-1-1</span>エネミーアクションの開示
+                </h4>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　このラウンドで使用されるエネミーアクションが開示されます。
+                </p>
+              </div>
+            </section>
+
+            <!-- タイミング：ラウンド開始 -->
+            <section id="timing-round_start">
+              <div class="sticky">
+                <h4>
+                  <span class="num">2-1-2</span>タイミング：ラウンド開始
+                </h4>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　各ＰＣは、タイミングが『ラウンド開始』のアクションを１つ使用できます。
+                </p>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- 【２－２】味方ターン -->
+        <section id="turn">
+          <div class="sticky">
+            <h3>
+              <span class="num">2-2</span>味方ターン
+            </h3>
+          </div>
+
+          <div class="contents">
+            <div class="inner_contents">
               <p>
-                　ボスのＨＰを０点にした場合、戦闘が終了します。ボスが複数いる場合、それら全てのＨＰを０点にする必要があります。<br>
-                　エンディングとしては、事件が解決し、グッドエンドとなるでしょう。
+                　各ＰＣは、それぞれ<span class="keyword">ターン</span>を行います。順番は、ＰＣ間で相談して決めてください。
               </p>
             </div>
-          </section>
 
-          <!-- ＰＣの全滅 -->
-          <section id="battle-defeat">
-            <div class="sticky">
-              <h3>
-                ＰＣの全滅
-              </h3>
-            </div>
+            <!-- ターンアクション -->
+            <section id="timing-turn">
+              <div class="sticky">
+                <h4>
+                  <span class="num">2-2-1</span>ターンアクションの使用
+                </h4>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　ターンアクションを最大３つまで使用できます。ただし、使用技能のライフが重複してはいけません。例えば、使用技能に《心》が含まれるアクションを、同じターン中に複数回使用することはできません。<br>
+                  　攻撃アクションのように、使用した時点でターンの終了となるものもあるので、注意してください。
+                </p>
+              </div>
+            </section>
+
+            <!-- ターンの終了 -->
+            <section id="turn_end">
+              <div class="sticky">
+                <h4>
+                  <span class="num">2-2-2</span>ターンの終了
+                </h4>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　ターンアクションを３つ使用するか、攻撃アクションを使用した時点で、キャラクターは<span class="keyword">行動終了</span>状態になります。この状態では、行動速度は『０』になます。<br>
+                  　ＰＣ全員が行動終了状態になった時点で、その味方ターンが終了します。
+                </p>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- 【２－３】敵ターン -->
+        <section id="turn-enemy">
+          <div class="sticky">
+            <h3>
+              <span class="num">2-3</span>敵ターン
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+            </p>
+
+            <!-- エネミーアクションの実行 -->
+            <section id="enemy_action">
+              <div class="sticky">
+                <h4>
+                  <span class="num">2-3-1</span>エネミーアクションの実行
+                </h4>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　エネミーアクションが実行され、その効果が適用されます。
+                </p>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- 【２－３】ラウンド終了 -->
+        <section id="round_end">
+          <div class="sticky">
+            <h3>
+              <span class="num">2-3</span>ラウンド終了
+            </h3>
+          </div>
+
+          <div class="contents">
+            <!-- タイミング：ラウンド終了 -->
+            <section id="timing-round_end">
+              <div class="sticky">
+                <h4>
+                  <span class="num">2-3-1</span>タイミング：ラウンド終了
+                </h4>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　各ＰＣは、タイミングが『ラウンド終了』のアクションを１つ使用できます。
+                </p>
+              </div>
+            </section>
+
+            <!-- ラウンド中効果の消滅 -->
+            <section id="effect_clear">
+              <div class="sticky">
+                <h4>
+                  <span class="num">2-3-2</span>ラウンド中効果の消滅
+                </h4>
+              </div>
+
+              <div class="contents">
+                <p>
+                  　「ラウンド中、～」のように書かれた効果が、全て消滅します。
+                </p>
+              </div>
+            </section>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- 【３】戦闘終了 -->
+    <section id="battle_start">
+      <div class="sticky">
+        <h2>
+          <span class="num">3</span>戦闘終了
+        </h2>
+      </div>
+
+      <div class="contents">
+        <!-- 戦闘の終了条件 -->
+        <section id="battle_finish">
+          <div class="sticky">
+            <h3>
+              戦闘の終了条件
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　戦闘が終了する条件は、以下の３つがあります。
+            </p>
 
             <div class="contents">
-              <p>
-                　ＰＣ全員が戦闘不能、あるいは撤退状態になった場合、戦闘が終了します。<br>
-                　エンディングとしては、事件が解決せず、バッドエンドとなるでしょう。
-              </p>
-            </div>
-          </section>
+              <!-- ボスの撃破 -->
+              <section id="battle-victory">
+                <div class="sticky">
+                  <h4>
+                    ボスの撃破
+                  </h4>
+                </div>
 
-          <!-- シナリオで設定された条件を満たす -->
-          <section>
-            <div class="sticky">
-              <h3>
-                シナリオで設定された条件を満たす
-              </h3>
-            </div>
+                <div class="contents">
+                  <p>
+                    　ボスのＨＰを０点にした場合、戦闘が終了します。ボスが複数いる場合、それら全てのＨＰを０点にする必要があります。<br>
+                    　エンディングとしては、事件が解決し、グッドエンドとなるでしょう。
+                  </p>
+                </div>
+              </section>
 
-            <div class="contents">
-              <p>
-                　シナリオで設定された条件を満たした場合、戦闘が終了します。<br>
-                　エンディングがどうなるかは、シナリオ次第です。
-              </p>
+              <!-- ＰＣの全滅 -->
+              <section id="battle-defeat">
+                <div class="sticky">
+                  <h4>
+                    ＰＣの全滅
+                  </h4>
+                </div>
+
+                <div class="contents">
+                  <p>
+                    　ＰＣ全員が戦闘不能、あるいは撤退状態になった場合、戦闘が終了します。<br>
+                    　エンディングとしては、事件が解決せず、バッドエンドとなるでしょう。
+                  </p>
+                </div>
+              </section>
+
+              <!-- シナリオで設定された条件を満たす -->
+              <section>
+                <div class="sticky">
+                  <h4>
+                    シナリオで設定された条件を満たす
+                  </h4>
+                </div>
+
+                <div class="contents">
+                  <p>
+                    　シナリオで設定された条件を満たした場合、戦闘が終了します。<br>
+                    　エンディングがどうなるかは、シナリオ次第です。
+                  </p>
+                </div>
+              </section>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
     </section>
 
