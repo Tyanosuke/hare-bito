@@ -431,15 +431,21 @@ table>tbody>tr>* {
   background: #fff;
   padding: 8px;
   text-align: center;
+  white-space: nowrap;
 }
 
 /* ヘッダーセル */
 table>tbody>tr>th {
-  width: 0;
   background: var(--color-sub);
+  padding: 8px 12px;
   color: #fff;
+  font-size: 1.1em;
   font-weight: normal;
-  white-space: nowrap;
+}
+
+/* 最終セル */
+table:not(.table-evenly)>tbody>tr>td:last-child {
+  width: 100%;
 }
 
 /* -------------------------------------------------- */
@@ -555,7 +561,8 @@ p>.num {
 }
 
 /* 番号 */
-.process span.num {
+.process span.num,
+.list_container span.num {
   margin-top: 4px;
   margin-bottom: 4px;
 }
@@ -568,11 +575,6 @@ p>.num {
 /* -------------------------------------------------- */
 /* 技能テーブル */
 /* -------------------------------------------------- */
-
-/* セル */
-table.ability>tbody>tr>th:first-child {
-  width: 90px;
-}
 
 /* セル：《心》 */
 table td.astral {
